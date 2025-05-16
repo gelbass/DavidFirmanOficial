@@ -1,0 +1,11 @@
+@use"_variables" as *;
+@use"_mixing" as *;
+* {
+    margin: 0;
+    padding: 0;
+    font-family:$fuentePrincipal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
