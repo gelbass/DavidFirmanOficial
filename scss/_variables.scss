@@ -1,13 +1,14 @@
-$fuentePrincipal:"Montserrat", sans-serif;
+$fuentePrincipal:"Poppins", sans-serif;
 
-$colorMenu: '';
+$colorMenu: rgba(25, 0, 0, 0.50);;
 $colorMenuInvertido: '';
 
-$colorPrincipal: '';
+$colorPrincipal: #AC0000;
 $colorSegundario: '';
-$colorButton:'';
-$colorTextB: #fff;
-$colorTextN: #000;
+$colorButton:#AC0000;
+$colorButtonHover:#FFF;
+$colorTextB: #FFFAF7;
+$colorTextN: #1E1E1E;
 
 $breakpoints: (
   "none": 0px, 

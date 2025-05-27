@@ -24,14 +24,28 @@
   background-size: cover;
   background-position: center;
 }
-@mixin text($font,$size,$style,$weight,$height,$color){
+@mixin text($font,$size,$color,$style:normal,$weight:400,$height:normal){
     font-family: $font;
-    font-size: $size;
+    font-size: $size !important;
+    color: $color !important;
     font-style: $style;
     font-weight: $weight;
-    line-height: $heigth;
+    line-height: $height;
     margin: 0px;
+}
+@mixin button($width: 100%, $height: 50px, $border-radius: 40px,$background: $colorButton, $color: $colorTextB, $hover-color-bg: $colorButtonHover,$hover-color-tx: $colorTextN) {
+    width: $width;
+    height: $height;
+    background-color: $background !important;
     color: $color !important;
+    border-radius: $border-radius !important;
+    border: none !important;
+    cursor: pointer !important;
+
+    &:hover {
+        background-color: $hover-color-bg !important;
+        color: $hover-color-tx !important;
+    }
 }
 @mixin respond-between($min, $max) {
     $min-width: map.get($breakpoints, $min);

@@ -1,16 +1,64 @@
-@use "_variables" as *;
+ @use "_variables" as *;
 @use "_mixing" as *;
 
 .container__menu{
+    @include containers(1728px, 100px, flex, 0px, 40px 60px, row, space-between, center);
 
+    background: rgba(25, 0, 0, 0.50);
+    background: color(display-p3 0.0846 0 0 / 0.50);
+    backdrop-filter: blur(19.5px);
 }
 .container__menu--bar{
-
+    //flex-direction: row-reverse;
+    padding: 20px;
+    z-index: 1;
 }
 
 .container__menu--items{
-
+    display: flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 40px;
 }
 .container__menu--item{
-    
+    @include text('Poppins',25px,$colorTextB);
+    &:hover {
+        @include text('Poppins',25px,$colorPrincipal);
+    }
+}
+
+.container__home{
+    @include containers(100%, 100vh, flex);
+    @include container_img('../img/BackgroundHome.webp');
+    background-size: cover;
+    background-position: center;
+    margin: 0px
+}
+.container__home--text{
+    @include containers(70%, 100vh, flex, 10px, 52px, column, center, flex-start);
+
+    //background: linear-gradient(180deg, rgba(172, 0, 0, 0.5) 0%, rgba(172, 0, 0, 0.5) 100%);
+    @include text('Poppins', 28px, $colorTextB, normal, 300);
+    h1{
+        @include text('Poppins', 70px, $colorTextB, normal, 700);
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    z-index: 10;
+}
+.container__home--img{
+    width: 50%;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.btn-home{
+    @include button(459px,auto, 50px, #AC0000, $colorTextB, $colorButtonHover);
+    padding: 20px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
