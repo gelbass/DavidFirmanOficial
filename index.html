@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="./css/styles.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <title>David Firman Oficial</title>
   <meta name="description"
     content="">
@@ -32,7 +33,13 @@
   <meta name="twitter:title" content="MI EMPRESAs">
   <meta name="twitter:description" content="DESCRIPCION.">
   <meta name="twitter:image" content="https://www.Mi_Pagina.com/image.jpg"> <!-- Replace with a relevant image URL -->
+  
   <link rel="shortcut icon" href="img/icono.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/img/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
 </head>
 
 <body>
@@ -41,9 +48,7 @@
     <head id="header">
       <nav class="navbar navbar-expand-lg fixed-top container__menu" id="menu">
         <div class="container_logo">
-          <!--  
-          <a href="#home"><img class="imgMenu" src="./img/FresHarmony.png" alt="Fres Harmony"></a>
-          -->
+          <a href="#home"><img class="imgMenu" src="./img/DavidFirmaLogo.svg" alt="David Firman Oficial"></a>        
         </div>
         <div class="container-fluid container__menu--icon">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -60,10 +65,10 @@
                 <a class="nav-link container__menu--item" href="#sobreMi">Sobre mi</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link container__menu--item" href="#cursos">Cursos</a>
+                <a class="nav-link container__menu--item" href="#servicios">Servicios</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link container__menu--item" href="#servicios">Servicios</a>
+                <a class="nav-link container__menu--item" href="#cursos">Cursos</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link container__menu--item" href="#invitaciones">Invitaciones</a>
@@ -101,30 +106,102 @@
     <!--SECCIONES INICIO-->
     <!-- SOBRE MI INICIO -->
     <section id="sobreMi">
-      <div class="container">
-        <h2>Sobre mí</h2>
-        <p>Aquí va la información sobre ti.</p>
+      <div class="container_sobreMi">
+        <div class="container__sobreMi--img">
+          <img src="./img/SobreMi.webp" alt="Familia David Firman" class="img-fluid">
+        </div>
+        <div class="container__sobreMi--text">
+          <h2>Sobre mí</h2>
+          <p><strong>Soy esposo</strong> de Denise Martínez desde 1999. <strong>Padre</strong> de Elías y Ana Paula.</p>
+          <p>De profesión <strong>Psicólogo clínico</strong> desde el año 1998 con especialidad en <strong>Terapia Familiar Sistémica</strong>.</p>
+          <p>Soy <strong>Bachiller en Teología</strong> y<strong>Pastor</strong>  en “Todo Nuevo en Cristo”.</p>
+          <p>Apasionado <strong>Escritor</strong> de libros sobre el ser integral, noviazgo, matrimonio y familia. Disfruto mucho brindar <strong>Conferencias</strong> a nivel internacional edificando a las familias y la Iglesia.</p>
+        </div>
       </div>
     </section>
     <!-- SOBRE MI FIN -->
+    
+    <!-- SERVICIOS INICIO -->
+    <section id="servicios">
+      <div class="container-servicios">
+        <h2>Acompañamiento profesional</h2>
+        <div class="container-servicios--cards">
+          <div class="container-servicios--card">
+            <div class="container-servicios--card-text">
+              <h3>Consultas psicoterapeuticas</h3>
+              <p>Con más de 28 años de experiencia clínica trabajo en resolución de conflictos o terapia breve considerando el ser integral: espíritu, alma y cuerpo.</p>
+              <a href="#" class="btn btn-home">Solicitar</a>
+            </div>
+            <img class="container-servicios--card-img" src="./img/ConsultasPsicoterapeuticas.webp" alt="Consultas Psicoterapeuticas">
+          </div>
+          <div class="container-servicios--card">
+            <div class="container-servicios--card-text">
+              <h3>Entrenamiento de profesionales de la Salud mental</h3>
+              <p>Trabajamos para salir del secuestro del humanismo entendiendo la sabiduría eterna de Dios para solucionar de fondo los problemas humanos. Material grabado y encuentros en vivo vía zoom.</p>
+              <a href="#" class="btn btn-home">Solicitar</a>
+            </div>
+            <img class="container-servicios--card-img" src="./img/EntrenamientoDeprofesionalesDeLaSaludMental.webp" alt="Entrenamiento de profesionales de la Salud mental">
+          </div>
+          <div class="container-servicios--card">
+            <div class="container-servicios--card-text">
+              <h3>Supervisión de casos clínicos</h3>
+              <p>En encuentros en vivo vía zoom poniendo a disposición mi experiencia para colaborar orientando en los casos de profesionales que lo soliciten.</p>
+              <a href="#" class="btn btn-home">Solicitar</a>
+            </div>
+            <img class="container-servicios--card-img" src="./img/SupervisiónDeCasosClínicos.webp" alt="Supervisión de casos clínicos">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SERVICIOS FIN -->
 
     <!-- CURSOS INICIO -->
     <section id="cursos">
-      <div class="container">
+      <div class="container-cursos">
         <h2>Cursos</h2>
-        <p>Listado o información de cursos.</p>
+        <p>Cursos dirigidos a pastores, líderes, profesionales de la salud mental y a toda persona con el anhelo de conocer y vivir los diseños eternos de Dios.</p>
+        <div class="swiper cursosSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card-curso">
+                <img src="./img/psicologia.webp" alt="La Psicología de Dios">
+                <h3>La Psicología de Dios</h3>
+                <p>En este curso se aborda cómo la mente, la voluntad y las emociones (alma) son parte del diseño de Dios del ser integral y cuál es el objetivo de Dios para el alma humana.</p>
+                <a href="#" class="btn btn-card">Inscríbete aquí</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-curso">
+                <img src="./img/familia.webp" alt="Familias Alineadas a lo Eterno">
+                <h3>Familias Alineadas a lo Eterno</h3>
+                <p>Descubre el diseño y las intenciones originales de Dios y aprende a incorporarlas a tu familia.</p>
+                <a href="#" class="btn btn-card">Inscríbete aquí</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-curso">
+                <img src="./img/adversidad.webp" alt="Cómo enfrentar la adversidad">
+                <h3>Cómo enfrentar la adversidad</h3>
+                <p>Este curso aborda un tema clave: el dolor, la tragedia, el sufrimiento, la muerte y el duelo, brindando herramientas para afrontarlos.</p>
+                <a href="#" class="btn btn-card">Inscríbete aquí</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-curso">
+                <img src="./img/salvarFamilia.webp" alt="Cómo salvamos a la familia">
+                <h3>Cómo salvamos a la familia</h3>
+                <p>Es uno de los grandes interrogantes de las últimas generaciones atacadas por ideologías anti-diseño.</p>
+                <a href="#" class="btn btn-card">Inscríbete aquí</a>
+              </div>
+            </div>
+          </div>
+          <!-- Paginación opcional -->
+          <div class="swiper-pagination"></div>
+        </div>
       </div>
     </section>
     <!-- CURSOS FIN -->
 
-    <!-- SERVICIOS INICIO -->
-    <section id="servicios">
-      <div class="container">
-        <h2>Servicios</h2>
-        <p>Descripción de los servicios ofrecidos.</p>
-      </div>
-    </section>
-    <!-- SERVICIOS FIN -->
 
     <!-- INVITACIONES INICIO -->
     <section id="invitaciones">
@@ -180,6 +257,7 @@
   <script type="text/javascript">
     emailjs.init('cq8RBcup3_7AZUwJo')
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="./js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -190,6 +268,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
     integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
     crossorigin="anonymous"></script>
+  
 </body>
 
 </html>

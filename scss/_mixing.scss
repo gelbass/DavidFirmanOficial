@@ -34,8 +34,8 @@
     margin: 0px;
 }
 @mixin button($width: 100%, $height: 50px, $border-radius: 40px,$background: $colorButton, $color: $colorTextB, $hover-color-bg: $colorButtonHover,$hover-color-tx: $colorTextN) {
-    width: $width;
-    height: $height;
+    width: $width !important;
+    height: $height !important;
     background-color: $background !important;
     color: $color !important;
     border-radius: $border-radius !important;
@@ -59,3 +59,5 @@
       @warn "Uno o ambos de los puntos de quiebre '#{$min}' o '#{$max}' no existen en el mapa.";
     }
   }
+
+  
