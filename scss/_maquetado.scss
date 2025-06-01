@@ -23,14 +23,19 @@ html {
     background-size: cover;
     background-position: center;
 }
+#invitaciones{
+    background: linear-gradient(279deg, #FCF2E1 -21.31%, #FFFAF7 77.82%);
+    background: linear-gradient(279deg, color(display-p3 0.9804 0.949 0.8902) -21.31%, color(display-p3 0.9961 0.9804 0.9686) 77.82%);
+}
 #cursos{
     background: linear-gradient(279deg, #FCF2E1 -21.31%, #FFFAF7 77.82%);
     background: linear-gradient(279deg, color(display-p3 0.9804 0.949 0.8902) -21.31%, color(display-p3 0.9961 0.9804 0.9686) 77.82%);
 }
 
 #libros{
-    background: linear-gradient(279deg, #FCF2E1 -21.31%, #FFFAF7 77.82%);
-    background: linear-gradient(279deg, color(display-p3 0.9804 0.949 0.8902) -21.31%, color(display-p3 0.9961 0.9804 0.9686) 77.82%);
+    @include container_img('../img/Backlibros.webp');
+    background-size: cover;
+    background-position: center;
 }
 
 #videos{

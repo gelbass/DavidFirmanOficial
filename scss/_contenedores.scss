@@ -148,6 +148,13 @@
     border-radius: 20px;
 
 }
+.btn-servicios{
+    @include button(459px,auto, 50px, #AC0000, $colorTextB, $colorButtonHover);
+    padding: 20px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 
 .container-cursos{
     @include containers(100%, '', flex, 0px, 85px 60px, column, center, normal); 
@@ -220,11 +227,102 @@
         align-self: stretch;
     }
 }
-.btn-card{
+.btn-curso{
      @include button(auto,auto, 50px, #AC0000, $colorTextB, $colorButtonHoverOpcional,$colorTextB);
     padding: 20px 30px;
     justify-content: center;
     align-items: center;
     gap: 10px;
     
+}
+
+.container__invitaciones{
+    @include containers(100%,auto, flex, 0px, 85px 60px, column, center, normal); 
+    h2{
+        @include text('Poppins', 60px, $colorTextN, normal, 600);
+        margin-bottom: 20px;
+    };
+}
+.container__invitaciones--contenido{
+    @include containers(100%, auto, flex, 0px, 0pc, row, center, normal); 
+}
+.container__invitaciones--text{
+    @include containers(100%, auto, flex, 10px, 0px, column, center, flex-start);
+    @include text('Poppins', 20px, $colorTextNAlternativo, normal, 300);
+    margin: 0px;
+    p{
+        @include text('Poppins', 25px, $colorTextNAlternativo, normal, 300);
+    }
+}
+.btn-invitaciones{
+     @include button(459px,auto, 50px, #AC0000, $colorTextB, $colorButtonHover);
+    padding: 20px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.container__libros{
+    @include containers(100%, auto, flex, 0px, 85px 60px, column, center, normal); 
+    h2{
+        @include text('Poppins', 69px, $colorTextB, normal, 600);
+        margin-bottom: 20px;
+    };
+    p{
+        @include text('Poppins', 30px, $colorTextB, normal, 300);
+        margin: 0px;
+    }
+}
+
+.container__libros--compra--cards{
+    @include containers(100%, auto, flex, 0px, 40px 60px, row !important, center, center); 
+    gap: 40px;
+}
+.container__libros--descarga--cards{
+    @include containers(100%, auto, flex, 0px, 40px 60px, row, center, center); 
+    gap: 40px;
+}
+.container__libros--card{
+    @include containers(400px, auto, flex, 20px, 40px 60px, column !important, space-between, center); 
+    border-radius: 30px;
+    h3{
+        @include text('Poppins', 15px, $colorTextB, normal, 600);
+    }
+    img    {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        //height: 364px;
+        align-self: stretch;
+    }
+    
+
+
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; // O un valor fijo si lo prefieres
+}
+.librosDescargaSwiper {
+  width: 100%;
+  min-height: 350px; // Ajusta según el tamaño de tus cards
+
+    .swiper-pagination-bullet {
+        background: $colorTextB !important; // Cambia este color por el que desees
+        opacity: 0.5;
+        width: 18px !important;   // Tamaño más grande
+        height: 18px !important;  // Tamaño más grande
+        margin: 0 6px !important; // Espaciado opcional
+    }
+
+    // Cambia el color del punto activo
+    .swiper-pagination-bullet-active {
+        background: #AC0000 !important; // Cambia este color por el que desees
+        opacity: 1;
+        width: 18px !important;   // Tamaño más grande
+        height: 18px !important;  // Tamaño más grande
+        margin: 0 6px !important; // Espaciado opcional
+    }
 }

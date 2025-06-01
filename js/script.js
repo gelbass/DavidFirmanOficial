@@ -77,3 +77,95 @@ const cursosSwiper = new Swiper('.cursosSwiper', {
     }
   }
 });
+
+const librosCompraSwiper = new Swiper('.librosCompraSwiper', {
+  direction: 'horizontal', // Dirección por defecto
+  slidesPerView: 3,
+  spaceBetween: 10,
+  loop: true,
+  navigation: {
+    nextEl: '.cursos-next',
+    prevEl: '.cursos-prev',
+  },
+  pagination: {
+    el: '.librosCompra-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 1, // 1 card en tablets/móvil
+    },
+    1200: {
+      slidesPerView: 3, // 3 cards en escritorio
+    }
+  }
+});
+/*const librosCompraSwiper = new Swiper('.librosCompraSwiper', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 1,
+  loop: false,
+  spaceBetween: 10,
+  coverflowEffect: {
+    rotate: 30,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  pagination: {
+    el: '.librosCompra-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    768: { slidesPerView: 1 },
+    1200: { slidesPerView: 2 }
+  }
+});*/
+
+
+const librosDescargaSwiper = new Swiper('.librosDescargaSwiper', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 3,
+  loop: true,
+  spaceBetween: 10,
+  coverflowEffect: {
+    rotate: 30,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  pagination: {
+    el: '.librosDescarga-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    768: { slidesPerView: 1 },
+    1200: { slidesPerView: 3 }
+  }
+});
+document.querySelectorAll('.btn-curso, .btn-invitaciones, .btn-servicios').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    let motivo = '';
+    // Busca el h3 más cercano hacia arriba en la jerarquía
+    const h3 = this.closest('.container-servicios--card, .swiper-slide, .container__invitaciones--contenido, .card-curso')?.querySelector('h3');
+    if (h3) motivo = h3.textContent.trim();
+    document.getElementById('motivo').value = motivo;
+    const modal = new bootstrap.Modal(document.getElementById('formModal'));
+    modal.show();
+  });
+});
+document.getElementById('contactoModalForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  // Aquí tu lógica de envío (EmailJS, fetch, etc.)
+  alert('¡Mensaje enviado!');
+  const modal = bootstrap.Modal.getInstance(document.getElementById('formModal'));
+  modal.hide();
+  this.reset();
+});
+
