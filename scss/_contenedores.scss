@@ -236,14 +236,7 @@
     
 }
 
-.btn-card{
-     @include button(auto,auto, 50px, #AC0000, $colorTextB, $colorButtonHoverOpcional,$colorTextB);
-    padding: 20px 30px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    
-}
+
 
 .container__invitaciones{
     @include containers(100%,auto, flex, 0px, 85px 60px, column, center, normal); 
@@ -304,9 +297,15 @@
         //height: 364px;
         align-self: stretch;
     }
+
+}
+.btn-card{
+     @include button(auto,auto, 50px, #AC0000, $colorTextB, $colorButtonHoverOpcional,$colorTextB);
+    padding: 20px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     
-
-
 }
 .swiper-slide {
   display: flex;
