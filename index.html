@@ -26,20 +26,20 @@
     content="">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.www.Mi_Pagina.com.com/">
-  <meta property="og:image" content=""> <!-- Replace with a relevant image URL -->
+  <meta property="og:image" content="./img/DavidFirmaLogo.svg"> <!-- Replace with a relevant image URL -->
 
   <!-- Twitter Cards para Redes Sociales -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="MI EMPRESAs">
   <meta name="twitter:description" content="DESCRIPCION.">
-  <meta name="twitter:image" content="https://www.Mi_Pagina.com/image.jpg"> <!-- Replace with a relevant image URL -->
+  <meta name="twitter:image" content="./img/DavidFirmaLogo.svg"> <!-- Replace with a relevant image URL -->
   
-  <link rel="shortcut icon" href="img/icono.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
   <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/img/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
+ <!--  <link rel="manifest" href="/site.webmanifest" /> -->
 </head>
 
 <body>
@@ -269,11 +269,9 @@
               <h3>Noviazgo de la mano de Dios</h3>
               <a href="#" class="btn btn-card">Descargar</a>
             </div>
-            <!-- Agrega más slides aquí si tienes más libros de descarga -->
           </div>
           <div class="swiper-pagination librosDescarga-pagination"></div>
         </div>
-        <!-- Libros en venta -->
         
       </div>
     </section>
@@ -281,10 +279,38 @@
 
     <!-- VIDEOS INICIO -->
     <section id="videos">
-      <div class="container">
-        <h2>Videos</h2>
-        <p>Galería o enlaces a videos.</p>
+      <div class="container__videos">
+        <div class="container__videos--text">
+          <h2>Videos Recomendados</h2>
+          <p>Aquí tienes videos recomendados que encontrarás en mi canal en YouTube</p>
+          <a href="https://www.youtube.com/@DavidFirmanOficial" class="btn btn-card" target="_blank">Ir al canal</a>
+        </div>
+        <div class="container__videos--principal">
+            <iframe src="https://www.youtube.com/embed/XNbfDSbAdK8" title="Video 1" frameborder="0" allowfullscreen></iframe>
+        </div>
       </div>
+       <div class="swiper videosSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide container__videos--card">
+              <iframe src="https://www.youtube.com/embed/duns_ft1PTI" title="Entrevista sobre Psicología De Dios de David Firman" frameborder="0" allowfullscreen></iframe>
+              <h3>Entrevista sobre Psicología De Dios de David Firman</h3>
+            </div>
+            <div class="swiper-slide container__videos--card">
+              <iframe src="https://www.youtube.com/embed/oQg8RwW3LLU" title="El Espíritu Santo en la consulta..." frameborder="0" allowfullscreen></iframe>
+              <h3>El Espíritu Santo en la consulta...</h3>
+            </div>
+            <div class="swiper-slide container__videos--card">
+              <iframe src="https://www.youtube.com/embed/6z1EJrR65D0" title="¿Podemos confiar en nuestra mente y emociones? Parte 1" frameborder="0" allowfullscreen></iframe>
+              <h3>¿Podemos confiar en nuestra mente y emociones? Parte 1</h3>
+            </div>
+            <div class="swiper-slide container__videos--card">
+              <iframe src="https://www.youtube.com/embed/7zJ1NOWcV4w" title="¿Podemos confiar en nuestra mente y emociones? Parte 2" frameborder="0" allowfullscreen></iframe>
+              <h3>¿Podemos confiar en nuestra mente y emociones? Parte 2</h3>
+            </div>
+          </div>
+          <div class="swiper-pagination videos-pagination"></div>
+        </div>
+      
     </section>
     <!-- VIDEOS FIN -->
     <!--SECCIONES FIN-->
@@ -292,23 +318,59 @@
     <footer id="footer">
       <div class="container__footer">
         <div class="container__footer--logo">
-          <img src="./img/logo.png" alt="Logo" class="img-fluid">
+          <!-- <img src="./img/DavidFirmaLogo.svg" alt="Logo"> -->
         </div>
         <div class="container__footer--text">
           <p>© 2025 David Firman. Todos los derechos reservados.</p>
         </div>
         <div class="container__footer--social">
-          <a href="https://www.facebook.com/david.firman.5" target="_blank"><img src="./img/facebook.png"
+          <!-- <a href="https://www.facebook.com/david.firman.5" target="_blank"><img src="./img/facebook.png"
               alt="Facebook"></a>
           <a href="https://www.instagram.com/davidfirmanoficial/" target="_blank"><img src="./img/instagram.png"
               alt="Instagram"></a>
           <a href="https://www.youtube.com/@davidfirmanoficial" target="_blank"><img src="./img/youtube.png"
-              alt="YouTube"></a>
+              alt="YouTube"></a> -->
         </div>
       </div>
     <!-- FOOTER FIN-->
 
   </main>
+  <!-- Modal de contacto -->
+    <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form id="contactoModalForm">
+            <div class="modal-header">
+              <h5 class="modal-title" id="formModalLabel">Formulario de contacto</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="motivo" class="form-label">Motivo</label>
+                <input type="text" class="form-control" id="motivo" name="motivo" readonly>
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
   <!-- SCRIPT EVIO MAIL-->
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -327,41 +389,7 @@
     integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
     crossorigin="anonymous"></script>
   
-  <!-- Modal de contacto -->
-<div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <form id="contactoModalForm">
-        <div class="modal-header">
-          <h5 class="modal-title" id="formModalLabel">Formulario de contacto</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <div class="modal-body">
-          <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre" name="nombre" required>
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Correo electrónico</label>
-            <input type="email" class="form-control" id="email" name="email" required>
-          </div>
-          <div class="mb-3">
-            <label for="motivo" class="form-label">Motivo</label>
-            <input type="text" class="form-control" id="motivo" name="motivo" readonly>
-          </div>
-          <div class="mb-3">
-            <label for="mensaje" class="form-label">Mensaje</label>
-            <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required></textarea>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="submit" class="btn btn-primary">Enviar</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
+
   
 </body>
 

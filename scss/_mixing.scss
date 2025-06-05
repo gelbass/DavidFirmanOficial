@@ -1,7 +1,7 @@
 @use 'sass:map';
 @use "_variables" as *;
 
-@mixin containers($width: '100%',$height: '100vh',$display:null,$gap:'0px',$padding:'0px',$direction: 'column',$justify: 'center',$align: 'center') {
+@mixin containers($width: 100%,$height: 100dvh,$display:null,$gap:0px,$padding:0px,$direction: column,$justify: center,$align: center) {
     width: $width;
     height: $height;
     display: $display;

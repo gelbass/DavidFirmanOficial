@@ -300,7 +300,7 @@
 
 }
 .btn-card{
-     @include button(auto,auto, 50px, #AC0000, $colorTextB, $colorButtonHoverOpcional,$colorTextB);
+    @include button(auto,auto, 50px, #AC0000, $colorTextB, $colorButtonHoverOpcional,$colorTextB);
     padding: 20px 30px;
     justify-content: center;
     align-items: center;
@@ -314,7 +314,7 @@
   height: auto; // O un valor fijo si lo prefieres
 }
 .librosDescargaSwiper {
-  width: 100%;
+  width: 90%;
   min-height: 350px; // Ajusta según el tamaño de tus cards
 
     .swiper-pagination-bullet {
@@ -332,5 +332,51 @@
         width: 18px !important;   // Tamaño más grande
         height: 18px !important;  // Tamaño más grande
         margin: 0 6px !important; // Espaciado opcional
+    }
+}
+
+.container__videos{
+    @include containers(100%, auto, flex, 0px, 85px 60px, row); 
+}
+.container__videos--text{
+    @include containers(100%, auto, flex, 0px, 0px, column, center, flex-start); 
+    h2{
+        @include text('Poppins', 60px, $colorTextN, normal, 600);
+        margin-bottom: 20px;
+    };
+    p{
+        @include text('Poppins', 20px, $colorTextNAlternativo, normal, 300);
+        padding-bottom: 10px;
+        margin: 0px;
+    }
+}
+.container__videos--principal{
+    @include containers(100%, auto, flex, 0px, 40px 60px, row, center, center); 
+    gap: 40px;
+    iframe{
+        width: 100%;
+        height: 400px;
+        border-radius: 11.164px;
+    }
+}
+.videosSwiper{
+    width: 100%; 
+}
+.container__videos--card{
+    @include containers(460px !important, 310px !important, flex, 0px, 20px, column !important, space-between, flex-start); 
+    border-radius: 30px;
+    background: #FFF;
+    background: color(display-p3 1 1 1);
+    box-shadow: 0px 4px 54px 0px rgba(46, 0, 0, 0.10);
+    box-shadow: 0px 4px 54px 0px color(display-p3 0.1608 0 0 / 0.10);
+    h3{
+        @include text('Poppins', 15px, $colorTextN, normal, 600);
+    }
+    iframe{
+        width: 100%;
+        height: 220px !important;
+        border-radius: 10px;
+        //height: 364px;
+        align-self: stretch;
     }
 }

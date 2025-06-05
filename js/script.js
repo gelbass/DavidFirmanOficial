@@ -167,5 +167,29 @@ document.getElementById('contactoModalForm').addEventListener('submit', function
   const modal = bootstrap.Modal.getInstance(document.getElementById('formModal'));
   modal.hide();
   this.reset();
-});
+}); 
 
+
+const videosSwiper = new Swiper('.videosSwiper', {
+  direction: 'horizontal',
+  slidesPerView: 1,
+  spaceBetween: 10,
+  loop: true,
+   speed: 800, 
+  autoplay: {
+    delay: 4000, // Tiempo en milisegundos entre slides (4 segundos)
+    disableOnInteraction: false // El autoplay no se detiene al interactuar
+  },
+  pagination: {
+    el: '.videos-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+    1200: {
+      slidesPerView: 3,
+    }
+  }
+});
