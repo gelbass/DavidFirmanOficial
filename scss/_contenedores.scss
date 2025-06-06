@@ -24,7 +24,7 @@
     border-radius: 40px;
 }
 .container__menu--item{
-    @include text('Poppins',22px,$colorTextB);
+    @include text('Poppins',18px,$colorTextB);
     padding: 40px 0px;
     border-radius: 50px;
     transition: background-color 0.3s, border-radius 0.3s;
@@ -49,7 +49,7 @@
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    @include text('Poppins',22px,$colorTextB);
+    @include text('Poppins',18px,$colorTextB);
 }
 .imgMenu{
     width: 50px;
@@ -57,14 +57,14 @@
     //padding-left: 10px
 }
 .container__home{
-    @include containers(100%, 100dvh, flex, 10px, 52px, row, center, flex-start);
+    @include containers(100%, 100dvh, flex, 10px, 0px, row, center,  flex-end);
     margin: 0px
 }
 .container__home--text{
-    @include containers(70%, 100dvh, flex, 10px, 52px, column, center, flex-start);
+    @include containers(70%, 100dvh, flex, 10px, 52px 0px 0px 60px, column, center, flex-start);
 
     //background: linear-gradient(180deg, rgba(172, 0, 0, 0.5) 0%, rgba(172, 0, 0, 0.5) 100%);
-    @include text('Poppins', 28px, $colorTextB, normal, 300);
+    @include text('Poppins', 20px, $colorTextB, normal, 300);
     h1{
         @include text('Poppins', 70px, $colorTextB, normal, 700);
         text-transform: uppercase;
@@ -76,9 +76,6 @@
 .container__home--img{
     display: flex;
     width: 50%;
-    //position: absolute;
-    bottom: 0px;
-    right: 0px;
 }
 .btn-home{
     @include button(459px,auto, 50px, #AC0000, $colorTextB, $colorButtonHover);
@@ -271,11 +268,11 @@
     @include containers(100%, auto, flex, 0px, 0pc, row, center, normal); 
 }
 .container__invitaciones--text{
-    @include containers(100%, auto, flex, 10px, 0px, column, center, flex-start);
+    @include containers(100%, auto, flex, 20px, 0px, column, flex-start, flex-start);
     @include text('Poppins', 20px, $colorTextNAlternativo, normal, 300);
     margin: 0px;
     p{
-        @include text('Poppins', 25px, $colorTextNAlternativo, normal, 300);
+        @include text('Poppins', 20px, $colorTextNAlternativo, normal, 300);
     }
 }
 .btn-invitaciones{
