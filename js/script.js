@@ -155,7 +155,7 @@ document.querySelectorAll('.btn-curso, .btn-invitaciones, .btn-servicios').forEa
     // Busca el h3 más cercano hacia arriba en la jerarquía
     const h3 = this.closest('.container-servicios--card, .swiper-slide, .container__invitaciones--contenido, .card-curso')?.querySelector('h3');
     if (h3) motivo = h3.textContent.trim();
-    document.getElementById('motivo').value = motivo;
+    document.getElementById('motivoModal').value = motivo;
     const modal = new bootstrap.Modal(document.getElementById('formModal'));
     modal.show();
   });

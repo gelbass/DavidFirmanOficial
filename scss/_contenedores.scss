@@ -57,7 +57,7 @@
     //padding-left: 10px
 }
 .container__home{
-    @include containers(100%, 100dvh, flex);
+    @include containers(100%, 100dvh, flex, 10px, 52px, column, center, flex-start);
     margin: 0px
 }
 .container__home--text{
@@ -379,4 +379,120 @@
         //height: 364px;
         align-self: stretch;
     }
+}
+
+.container__contacto{
+    @include containers(100%, auto, flex, 0px, 85px 60px, row, space-between, flex-start); 
+}
+
+.container__contacto--text{
+    @include containers(50%, auto, flex, 0px, 40px 60px, column, center, flex-start); 
+    @include text('Poppins', 20px, $colorTextNAlternativo, normal, 300);
+    h2{
+        @include text('Poppins', 60px, $colorTextN, normal, 600);
+        margin-bottom: 20px;
+    }
+    p{
+        margin: 0px;
+    }
+}
+
+.container__contacto--redesSociales{
+   padding-top: 20px;
+}
+
+.container__contacto--redSocial{
+    @include text('Poppins', 60px, $colorTextN, normal, 400);
+    text-align: center;
+  display: flex;
+    gap: 15px;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px;
+  h4{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    margin: 0px;
+  }
+  div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+  }
+  &:hover {
+    color: $colorTextN;
+    text-decoration: none;
+    svg{
+      fill: $colorTextN;
+    }
+
+  }
+}
+.container__contacto--form{
+    @include containers(40%, auto, flex, 0px, 20px, column, center, flex-start); 
+    border-radius: 20px;
+    background: #FFF;
+    background: color(display-p3 1 1 1);
+    box-shadow: 0px 4px 54px 0px rgba(46, 0, 0, 0.10);
+    box-shadow: 0px 4px 54px 0px color(display-p3 0.1608 0 0 / 0.10);
+}
+
+input.form-control, select.form-select{
+    display: flex;
+    height: 52px !important; 
+    padding: 10px 20px !important;
+    align-items: center !important;
+    gap: 20px !important;
+    align-self: stretch !important;
+    border: none !important;
+    border-radius: 20px !important;
+    background: #FCECE7 !important;
+    background: color(display-p3 0.9793 0.9289 0.9073)!important;
+}
+textarea.form-control {
+    display: block !important;
+    width: 100% !important;
+    resize: vertical;
+    border: none !important;
+    border-radius: 20px !important;
+    background: #FCECE7 !important;
+    background: color(display-p3 0.9793 0.9289 0.9073)!important;
+    
+}
+.form-control::placeholder {
+    color: #343434;
+    color: color(display-p3 0.2039 0.2039 0.2039);
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.btn-submit {
+ @include button($colorSegundario,$colorTextN,10px 90px);
+ @include text(Montserrat,20px,normal,400,normal,$colorTextN);
+}
+
+.form-footer{
+    display: flex;
+    padding: 10px 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 50px;
+    border-radius: 0px 0px 50px 50px;
+    border: 1px solid $colorTextB;
+    border: 1px solid color(display-p3 1 1 1);
+    background: rgba(255, 255, 255, 0.50);
+    background: color(display-p3 1 1 1 / 0.50);
+}
+
+.container__footer{
+    @include containers(100%, auto, flex, 0px, 85px 60px, column, space-between, center); 
+}
+.container__footer--logo{
+    width: 134px;
 }

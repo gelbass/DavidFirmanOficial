@@ -39,11 +39,20 @@ html {
 }
 
 #videos{
+    background: linear-gradient(279deg, #FCF2E1 -21.31%, #FFFAF7 77.82%); 
+    background: linear-gradient(279deg, color(display-p3 0.9804 0.949 0.8902) -21.31%, color(display-p3 0.9961 0.9804 0.9686) 77.82%);
+    padding-bottom: 60px;
+   /*  @include container_img('../img/backVideos.webp');
+    background-size: cover;
+    background-position: center; */
+}
+
+#contacto{
     background: linear-gradient(279deg, #FCF2E1 -21.31%, #FFFAF7 77.82%);
     background: linear-gradient(279deg, color(display-p3 0.9804 0.949 0.8902) -21.31%, color(display-p3 0.9961 0.9804 0.9686) 77.82%);
 }
 
 #footer{
-background: var(--Linear, linear-gradient(149deg, #80000C 5.32%, #200000 72.38%));
-background: var(--Linear, linear-gradient(149deg, color(display-p3 0.4566 0.0564 0.0782) 5.32%, color(display-p3 0.1098 0 0) 72.38%));
+    background: var(--Linear, linear-gradient(149deg, #80000C 5.32%, #200000 72.38%));
+    background: var(--Linear, linear-gradient(149deg, color(display-p3 0.4566 0.0564 0.0782) 5.32%, color(display-p3 0.1098 0 0) 72.38%));
 }
