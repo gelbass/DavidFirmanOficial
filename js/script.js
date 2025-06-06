@@ -59,7 +59,10 @@ const cursosSwiper = new Swiper('.cursosSwiper', {
   direction: 'horizontal', // Dirección por defecto
   slidesPerView: 3,
   spaceBetween: 10,
+  grabCursor: true,
   loop: true,
+  centeredSlides: true, 
+  centeredSlidesBounds: true,
   navigation: {
     nextEl: '.cursos-next',
     prevEl: '.cursos-prev',
@@ -152,9 +155,13 @@ document.querySelectorAll('.btn-curso, .btn-invitaciones, .btn-servicios').forEa
   btn.addEventListener('click', function(e) {
     e.preventDefault();
     let motivo = '';
-    // Busca el h3 más cercano hacia arriba en la jerarquía
-    const h3 = this.closest('.container-servicios--card, .swiper-slide, .container__invitaciones--contenido, .card-curso')?.querySelector('h3');
-    if (h3) motivo = h3.textContent.trim();
+    if (this.classList.contains('btn-invitaciones')) {
+      motivo = 'Solicitar invitación';
+    } else {
+      // Busca el h3 más cercano hacia arriba en la jerarquía
+      const h3 = this.closest('.container-servicios--card, .swiper-slide, .container__invitaciones--contenido, .card-curso')?.querySelector('h3');
+      if (h3) motivo = h3.textContent.trim();
+    }
     document.getElementById('motivoModal').value = motivo;
     const modal = new bootstrap.Modal(document.getElementById('formModal'));
     modal.show();
@@ -172,13 +179,14 @@ document.getElementById('contactoModalForm').addEventListener('submit', function
 
 const videosSwiper = new Swiper('.videosSwiper', {
   direction: 'horizontal',
+  grabCursor: true,
   slidesPerView: 1,
   spaceBetween: 10,
   loop: true,
    speed: 800, 
   autoplay: {
     delay: 4000, // Tiempo en milisegundos entre slides (4 segundos)
-    disableOnInteraction: false // El autoplay no se detiene al interactuar
+    disableOnInteraction: true // El autoplay no se detiene al interactuar
   },
   pagination: {
     el: '.videos-pagination',

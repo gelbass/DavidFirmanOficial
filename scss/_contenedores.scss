@@ -57,7 +57,7 @@
     //padding-left: 10px
 }
 .container__home{
-    @include containers(100%, 100dvh, flex, 10px, 52px, column, center, flex-start);
+    @include containers(100%, 100dvh, flex, 10px, 52px, row, center, flex-start);
     margin: 0px
 }
 .container__home--text{
@@ -74,8 +74,9 @@
     z-index: 10;
 }
 .container__home--img{
+    display: flex;
     width: 50%;
-    position: absolute;
+    //position: absolute;
     bottom: 0px;
     right: 0px;
 }
@@ -87,7 +88,7 @@
     gap: 10px;
 }
 .container_sobreMi{
-    @include containers(100%, 100dvh, flex, 0px, 85px 60px, row, space-between, flex-start);
+    @include containers(100%, 100dvh, flex, 0px, 50px 60px, row, space-between, flex-start);
     backdrop-filter: blur(19.5px);
 }
 .container__sobreMi--img{
@@ -97,15 +98,18 @@
 }
 
 .container__sobreMi--text{
-    @include containers(50%, 100dvh, flex, 0px, 40px 60px, column, center, normal);
-    @include text('Poppins', 20px, $colorTextN, normal, 500);
+    @include containers(50%, 100dvh, flex, 0px, 0px, column, center, normal);
     //text-align: justify;
     h2{
-        @include text('Poppins', 60px, $colorTextN, normal, 600);
-        margin-bottom: 20px;
+        @include text('Poppins', 40px, $colorTextN, normal, 600);
+        //margin-bottom: 20px;
     }
     p{
+        @include text('Poppins', 20px, $colorTextN, normal, 300);
         margin: 0px;
+        strong{
+            font-weight: 500;
+        }
     }
 }
 
@@ -118,28 +122,27 @@
 }
 
 .container-servicios--cards{
-    @include containers(auto, auto, flex, 0px, 40px 60px, column, center, center);   
-    gap: 80px
-    
+    @include containers(auto, auto, flex, 60px, 40px 60px, column, center, center);   
+
 }
 .container-servicios--card{
-    @include containers(100%, 371px, flex, 0px, 40px 60px, row, space-between, center); 
+    @include containers(100%, 371px, flex, 50px, 40px 60px, row, space-between, center); 
     border-radius: 30px;
     background: $colorSegundario;
     background: color(display-p3 0.2581 0.0497 0.0497); 
 
     h3{
-        @include text('Poppins', 35px, $colorTextB, normal, 600);
+        @include text('Poppins', 30px, $colorTextB, normal, 600);
     }
     p{
-        @include text('Poppins', 25px, $colorTextB, normal, 300);
+        @include text('Poppins', 20px, $colorTextB, normal, 300);
         margin: 0px;
     }
 }
 .container-servicios--card-text{
     display: flex;
-    width: 70%;
-    gap: 30px;
+    //width: 70%;
+    gap: 20px;
     flex-direction: column;
 }
 .container-servicios--card-img{
@@ -148,9 +151,13 @@
     border-radius: 20px;
 
 }
+.card-contenido{
+    @include containers(100%, auto, flex, 50px, 0px, column, space-between, flex-start); 
+
+}
 .btn-servicios{
-    @include button(459px,auto, 50px, #AC0000, $colorTextB, $colorButtonHover);
-    padding: 20px 30px;
+    @include button(459px,50px, 50px, #AC0000, $colorTextB, $colorButtonHover);
+    padding: 13px !important;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -198,20 +205,22 @@
   justify-content: center;
   // Elimina cualquier ancho fijo aquí
 }
-.swiper-wrappe{
-    margin: 20px !important;
-    padding: 50px !important;
+.swiper-wrapper{
+    //margin: 20px !important;
+    padding-bottom: 50px !important;
+    gap:10px;
 }
 
 .card-curso{
-   @include containers(60%, auto, flex, 0px, 15px, column, flex-start, center); 
-   max-width: 400px; 
+   @include containers(328px, 550px, flex, 0px, 15px, column, space-between, flex-start); 
+   //@include containers(360px, 530px, flex, 0px, 15px, column, space-around, center); 
+   
+   //max-width: 400px; 
    border-radius: 20px;
     background: #FFF;
     background: color(display-p3 1 1 1);
     box-shadow: 0px 4px 54px 0px rgba(46, 0, 0, 0.20);
     box-shadow: 0px 4px 54px 0px color(display-p3 0.1608 0 0 / 0.20);
-    gap: 10px;
     h3{
         @include text('Poppins', 20px, $colorTextN, normal, 700);
     }
@@ -220,6 +229,7 @@
         margin: 0px;
     } 
     img{
+        filter: grayscale(100%);
         width: 100%;
         height: auto;
         border-radius: 10px;
@@ -227,9 +237,21 @@
         align-self: stretch;
     }
 }
+.swiper-slide-active{
+    img{
+        filter: grayscale(0) !important; /* Elimina el filtro al pasar el cursor */
+        transition: filter 0.3s ease !important; /* Añade una transición suave */
+    }
+}
+.card-curso--elementos{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
 .btn-curso{
-     @include button(auto,auto, 50px, #AC0000, $colorTextB, $colorButtonHoverOpcional,$colorTextB);
-    padding: 20px 30px;
+     @include button(100%,auto, 50px, #AC0000, $colorTextB, $colorButtonHoverOpcional,$colorTextB);
+    padding: 13px !important;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -257,8 +279,9 @@
     }
 }
 .btn-invitaciones{
-     @include button(459px,auto, 50px, #AC0000, $colorTextB, $colorButtonHover);
-    padding: 20px 30px;
+    @include button(100%,50px, 50px, #AC0000, $colorTextB, $colorButtonHoverOpcional,$colorTextB);
+    margin-top: 20px;
+    padding: 13px !important;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -438,6 +461,9 @@
     background: color(display-p3 1 1 1);
     box-shadow: 0px 4px 54px 0px rgba(46, 0, 0, 0.10);
     box-shadow: 0px 4px 54px 0px color(display-p3 0.1608 0 0 / 0.10);
+    form{
+        width: 100%;
+    }
 }
 
 input.form-control, select.form-select{
@@ -451,6 +477,10 @@ input.form-control, select.form-select{
     border-radius: 20px !important;
     background: #FCECE7 !important;
     background: color(display-p3 0.9793 0.9289 0.9073)!important;
+}
+select.form-select option:hover {
+  background: $colorPrincipal !important;   /* Color de fondo al pasar el mouse */
+  color: #fff !important;           /* Color de texto al pasar el mouse */
 }
 textarea.form-control {
     display: block !important;
@@ -491,7 +521,45 @@ textarea.form-control {
 }
 
 .container__footer{
-    @include containers(100%, auto, flex, 0px, 85px 60px, column, space-between, center); 
+    @include containers(100%, auto, flex, 40px, 85px 60px, column, space-between, center); 
+    p{
+        @include text('Poppins', 15px, $colorTextB, normal, 300);
+        margin: 0px;
+    }
+}
+.container__footer--social{
+    display: flex;
+}
+.container__footer--redSocial{
+    @include text('Poppins', 60px, $colorTextB, normal, 400);
+    text-align: center;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px;
+  h4{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    margin: 0px;
+    line-height: 100%; 
+  }
+  div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+  }
+  &:hover {
+    color: $colorTextB;
+    text-decoration: none;
+    svg{
+      fill: $colorTextB;
+    }
+
+  }
 }
 .container__footer--logo{
     width: 134px;
