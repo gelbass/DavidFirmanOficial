@@ -33,11 +33,12 @@
     line-height: $height;
     margin: 0px;
 }
-@mixin button($width: 100%, $height: 50px, $border-radius: 40px,$background: $colorButton, $color: $colorTextB, $hover-color-bg: $colorButtonHover,$hover-color-tx: $colorTextN) {
+@mixin button($width: 100%, $height: 50px, $border-radius: 40px,$background: $colorButton, $color: $colorTextB,$font-size:20px, $hover-color-bg: $colorButtonHover,$hover-color-tx: $colorTextN) {
     width: $width !important;
     height: $height !important;
     background-color: $background !important;
     color: $color !important;
+    font-size: $font-size !important;
     border-radius: $border-radius !important;
     border: none !important;
     cursor: pointer !important;

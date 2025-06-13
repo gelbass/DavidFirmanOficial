@@ -20,12 +20,12 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 40px;
+    gap: 30px;
     border-radius: 40px;
 }
 .container__menu--item{
     @include text('Poppins',18px,$colorTextB);
-    padding: 40px 0px;
+    padding: 5px 20px !important;
     border-radius: 50px;
     transition: background-color 0.3s, border-radius 0.3s;
     &:hover {
@@ -33,6 +33,7 @@
         background-color: $colorPrincipal !important;
         border-radius: 50px !important; 
         cursor: pointer !important;
+        padding: 10px 20px!important;
     }
 }
 .container__menu--item.active {
@@ -40,10 +41,12 @@
     border-bottom: 2px solid color(display-p3 0.6157 0 0);
     transition: background-color 0.3s, border-radius 0.3s;
     border-radius:0px
+    
 }
 .container__menu--btn{
-     @include button(179px,57px, 50px, $colorPrincipal, $colorTextB, $colorButtonHover);
-    padding: 20px 30px;
+    
+     @include button(179px,50px, 50px, $colorPrincipal, $colorTextB, 20px,$colorButtonHover,$colorTextN);
+    padding: 13px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,9 +80,9 @@
     display: flex;
     width: 50%;
 }
-.btn-home{
-    @include button(459px,auto, 50px, #AC0000, $colorTextB, $colorButtonHover);
-    padding: 20px 30px;
+.btn-home{   
+    @include button(459px,auto, 50px, #AC0000, $colorTextB, 20px,$colorButtonHover);
+    padding: 10px 30px !important;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -98,7 +101,7 @@
     @include containers(50%, 100dvh, flex, 0px, 0px, column, center, normal);
     //text-align: justify;
     h2{
-        @include text('Poppins', 40px, $colorTextN, normal, 600);
+        @include text('Poppins', 60px, $colorTextN, normal, 600);
         //margin-bottom: 20px;
     }
     p{
@@ -129,7 +132,7 @@
     background: color(display-p3 0.2581 0.0497 0.0497); 
 
     h3{
-        @include text('Poppins', 30px, $colorTextB, normal, 600);
+        @include text('Poppins', 40px, $colorTextB, normal, 600);
     }
     p{
         @include text('Poppins', 20px, $colorTextB, normal, 300);
@@ -153,7 +156,7 @@
 
 }
 .btn-servicios{
-    @include button(459px,50px, 50px, #AC0000, $colorTextB, $colorButtonHover);
+    @include button(459px,50px, 50px, #AC0000, $colorTextB, 20px,$colorButtonHover);
     padding: 13px !important;
     justify-content: center;
     align-items: center;
@@ -247,7 +250,7 @@
 
 }
 .btn-curso{
-     @include button(100%,auto, 50px, #AC0000, $colorTextB, $colorButtonHoverOpcional,$colorTextB);
+     @include button(100%,auto, 50px, #AC0000, $colorTextB, 20px,$colorButtonHoverOpcional,$colorTextB);
     padding: 13px !important;
     justify-content: center;
     align-items: center;
@@ -269,14 +272,14 @@
 }
 .container__invitaciones--text{
     @include containers(100%, auto, flex, 20px, 0px, column, flex-start, flex-start);
-    @include text('Poppins', 20px, $colorTextNAlternativo, normal, 300);
+    //@include text('Poppins', 20px, $colorTextNAlternativo, normal, 300);
     margin: 0px;
     p{
         @include text('Poppins', 20px, $colorTextNAlternativo, normal, 300);
     }
 }
 .btn-invitaciones{
-    @include button(100%,50px, 50px, #AC0000, $colorTextB, $colorButtonHoverOpcional,$colorTextB);
+    @include button(60%,auto, 50px, #AC0000, $colorTextB, 20px, $colorButtonHoverOpcional,$colorTextB);
     margin-top: 20px;
     padding: 13px !important;
     justify-content: center;
@@ -287,11 +290,11 @@
 .container__libros{
     @include containers(100%, auto, flex, 0px, 85px 60px, column, center, normal); 
     h2{
-        @include text('Poppins', 69px, $colorTextB, normal, 600);
+        @include text('Poppins', 60px, $colorTextB, normal, 600);
         margin-bottom: 20px;
     };
     p{
-        @include text('Poppins', 30px, $colorTextB, normal, 300);
+        @include text('Poppins', 20px, $colorTextB, normal, 300);
         margin: 0px;
     }
 }
@@ -320,7 +323,7 @@
 
 }
 .btn-card{
-    @include button(auto,auto, 50px, #AC0000, $colorTextB, $colorButtonHoverOpcional,$colorTextB);
+    @include button(auto,auto, 50px, #AC0000, $colorTextB, 15px,$colorButtonHoverOpcional,$colorTextB);
     padding: 20px 30px;
     justify-content: center;
     align-items: center;
@@ -362,7 +365,7 @@
     @include containers(100%, auto, flex, 0px, 0px, column, center, flex-start); 
     h2{
         @include text('Poppins', 60px, $colorTextN, normal, 600);
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     };
     p{
         @include text('Poppins', 20px, $colorTextNAlternativo, normal, 300);
@@ -378,6 +381,13 @@
         height: 400px;
         border-radius: 11.164px;
     }
+}
+.btn-videos{   
+    @include button(459px,auto, 50px, #AC0000, $colorTextB, 20px,$colorButtonHoverOpcional,$colorTextB);
+    padding: 10px 30px !important;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 .videosSwiper{
     width: 100%; 
@@ -499,8 +509,11 @@ textarea.form-control {
     line-height: normal;
 }
 .btn-submit {
- @include button($colorSegundario,$colorTextN,10px 90px);
- @include text(Montserrat,20px,normal,400,normal,$colorTextN);
+ @include button(120px,auto,50px,$colorButton,$colorTextB,20px,$colorButtonHoverOpcional,$colorTextB);
+     padding: 5px 30px !important;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .form-footer{
