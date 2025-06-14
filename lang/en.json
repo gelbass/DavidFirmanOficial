@@ -56,25 +56,29 @@
         "title": "The Psychology of God",
         "text": "This course explores how the mind, will, and emotions (soul) are part of God’s design for the whole being and what God’s purpose is for the human soul.",
         "button": "Sign up here",
-        "img": "./img/psicologia.webp"
+        "img": "./img/psicologia.webp",
+        "link": "https://psyson.org/es/la-psicologia-de-dios/" 
       },
       {
         "title": "Families Aligned with the Eternal",
         "text": "Discover God’s original design and intentions and learn how to incorporate them into your family.",
         "button": "Sign up here",
-        "img": "./img/familia.webp"
+        "img": "./img/familia.webp",
+        "link": "https://psyson.org/es/familias-alineadas-a-lo-eterno/" 
       },
       {
         "title": "How to Face Adversity",
         "text": "This course addresses a key topic: pain, tragedy, suffering, death, and grief, offering tools to face them.",
         "button": "Sign up here",
-        "img": "./img/adversidad.webp"
+        "img": "./img/adversidad.webp",
+        "link": "https://psyson.org/es/como-enfrentar-la-adversidad/" 
       },
       {
         "title": "How We Save the Family",
         "text": "One of the great questions of recent generations attacked by anti-design ideologies.",
         "button": "Sign up here",
-        "img": "./img/salvarFamilia.webp"
+        "img": "./img/salvarFamilia.webp",
+        "link": "https://psyson.org/es/como-salvamos-a-la-familia/" 
       }
     ]
   },
@@ -86,53 +90,54 @@
   "books": {
   "title": "Books",
   "intro": "As a service, we work to provide families and the Church with materials of deep edification—some available as free PDFs and others in printed form via Editorial Peniel & Editorial Rica.",
+  "msgBooks": "Free Material",
   "button": "Buy",
   "buy": [
       {
         "title": "The Psychology of God",
         "img": "./img/book-psicologia.webp",
-        "link": "#"
+        "link": "https://peniel.com/collections/david-firman/products/la-psicologia-de-dios"
       },
       {
         "title": "Families Aligned with the Eternal",
         "img": "./img/book-familia.webp",
-        "link": "#"
+        "link": "https://peniel.com/products/familias-alineadas-a-lo-eterno-como-expresar-y-multiplicar-la-vida-de-dios-en-las-generaciones?_pos=2&_sid=dee387de6&_ss=r"
       },
       {
         "title": "A psicologia de Deus",
-        "img": "./img/book-psicologia.webp",
-        "link": "#"
+        "img": "./img/book-psicologia-pt.webp",
+        "link": "https://loja.editorarica.com.br/produtos/a-psicologia-de-deus/"
       }
     ],
     "free": [
       {
         "title": "Families That Disciple Their Generations",
         "img": "./img/book-discipulado.webp",
-        "link": "#",
+        "link": "https://drive.google.com/file/d/18u3ZYHwjXM_c44qEE5SCjDXlFWRvXVya/view",
         "button": "Download"
       },
       {
         "title": "How to Face Death",
         "img": "./img/book-muerte.webp",
-        "link": "#",
+        "link": "https://drive.google.com/file/d/1KdALt6U9_M_M0Gl0yt9XmrjSRrnUiTUB/view",
         "button": "Download"
       },
       {
         "title": "Families with Purpose",
         "img": "./img/book-familiaProposito.webp",
-        "link": "#",
+        "link": "https://drive.google.com/file/d/1kTrFGZVQHMhD371zRwaXcyXvRtiYLGQ_/view",
         "button": "Download"
       },
       {
         "title": "Courtship Guided by God",
         "img": "./img/book-noviazgo.webp",
-        "link": "#",
+        "link": "https://drive.google.com/file/d/1CgdalSRh-eHUZ6-koZED5KqrA32P0gqS/view",
         "button": "Download"
       },
       {
         "title": "PDF of the Masterclass on The Psychology of God",
-        "img": "./img/book-psicologia.webp",
-        "link": "#",
+        "img": "./img/MASTERCLASS-PSICOLOGIA.webp",
+        "link": "https://drive.google.com/file/d/1jhvegae0_X0Tq2dqOzGkXn5gp3agufrd/view",
         "button": "Download"
       }
     ]

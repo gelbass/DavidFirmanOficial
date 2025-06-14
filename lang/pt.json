@@ -56,25 +56,29 @@
         "title": "A Psicologia de Deus",
         "text": "Neste curso é abordado como a mente, a vontade e as emoções (alma) fazem parte do desígnio de Deus para o ser integral e qual é o objetivo de Deus para a alma humana.",
         "button": "Inscreva-se aqui",
-        "img": "./img/psicologia.webp"
+        "img": "./img/psicologia.webp",
+        "link": "https://psyson.org/es/la-psicologia-de-dios/" 
       },
       {
         "title": "Famílias Alinhadas ao Eterno",
         "text": "Descubra o desígnio e as intenções originais de Deus e aprenda a incorporá-las à sua família.",
         "button": "Inscreva-se aqui",
-        "img": "./img/familia.webp"
+        "img": "./img/familia.webp",
+        "link": "https://psyson.org/es/familias-alineadas-a-lo-eterno/" 
       },
       {
         "title": "Como enfrentar a adversidade",
         "text": "Este curso aborda um tema-chave: dor, tragédia, sofrimento, morte e luto, oferecendo ferramentas para enfrentá-los.",
         "button": "Inscreva-se aqui",
-        "img": "./img/adversidad.webp"
+        "img": "./img/adversidad.webp",
+        "link": "https://psyson.org/es/como-enfrentar-la-adversidad/" 
       },
       {
         "title": "Como salvamos a família",
         "text": "Uma das grandes questões das últimas gerações, atacadas por ideologias anti-desígnio.",
         "button": "Inscreva-se aqui",
-        "img": "./img/salvarFamilia.webp"
+        "img": "./img/salvarFamilia.webp",
+        "link": "https://psyson.org/es/como-salvamos-a-la-familia/" 
       }
     ]
   },
@@ -86,53 +90,54 @@
   "books": {
     "title": "Livros",
     "intro": "Como serviço, trabalhamos para disponibilizar às famílias e à Igreja materiais de profunda edificação – alguns em versão PDF gratuita e outros disponíveis em versão impressa pela Editora Peniel e Editora Rica",
+      "msgBooks": "Material Gratuito",
     "button": "Comprar",
     "buy": [
       {
         "title": "A Psicologia de Deus",
         "img": "./img/book-psicologia.webp",
-        "link": "#"
+        "link": "https://www.amazon.com/-/es/psicolog%C3%ADa-Dios-dise%C3%B1o-original-Spanish/dp/9875576816/ref=sr_1_1?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3JW04WIYYBC4W&dib=eyJ2IjoiMSJ9.SE2MOmWhBiYc2f7VVX86UYDGiQVuyVWrN6NnlbBY7Dm1oUmBFlLAO0IKM4PAy7XdRXMT2uvN3RkisrEIrEys0snaRlNRfAVI5G7azyWi8lY.T_F5HeDtPl6_lTFI0L6t1P5ZTKnGNLR2EdASz4O7fac&dib_tag=se&keywords=David+Firman&qid=1749931518&s=books&sprefix=david+firman%2Cstripbooks-intl-ship%2C184&sr=1-1"
       },
       {
         "title": "Famílias Alinhadas ao Eterno",
         "img": "./img/book-familia.webp",
-        "link": "#"
+        "link": "https://peniel.com/products/familias-alineadas-a-lo-eterno-como-expresar-y-multiplicar-la-vida-de-dios-en-las-generaciones?_pos=2&_sid=dee387de6&_ss=r"
       },
       {
         "title": "A psicologia de Deus",
-        "img": "./img/book-psicologia.webp",
-        "link": "#"
+        "img": "./img/book-psicologia-pt.webp",
+        "link": "https://loja.editorarica.com.br/produtos/a-psicologia-de-deus/"
       }
     ],
     "free": [
       {
         "title": "Famílias que Discipulam Suas Gerações",
         "img": "./img/book-discipulado.webp",
-        "link": "#",
+        "link": "https://drive.google.com/file/d/18u3ZYHwjXM_c44qEE5SCjDXlFWRvXVya/view",
         "button": "Baixar"
       },
       {
         "title": "Como Enfrentar a Morte",
         "img": "./img/book-muerte.webp",
-        "link": "#",
+        "link": "https://drive.google.com/file/d/1KdALt6U9_M_M0Gl0yt9XmrjSRrnUiTUB/view",
         "button": "Baixar"
       },
       {
         "title": "Famílias com Propósito",
         "img": "./img/book-familiaProposito.webp",
-        "link": "#",
+        "link": "https://drive.google.com/file/d/1kTrFGZVQHMhD371zRwaXcyXvRtiYLGQ_/view",
         "button": "Baixar"
       },
       {
         "title": "Namoro de Mãos Dadas com Deus",
         "img": "./img/book-noviazgo.webp",
-        "link": "#",
+        "link": "https://drive.google.com/file/d/1CgdalSRh-eHUZ6-koZED5KqrA32P0gqS/view",
         "button": "Baixar"
       },
       {
         "title": "PDF da Masterclass sobre A Psicologia de Deus",
-        "img": "./img/book-psicologia.webp",
-        "link": "#",
+        "img": "./img/MASTERCLASS-PSICOLOGIA.webp",
+        "link": "https://drive.google.com/file/d/1jhvegae0_X0Tq2dqOzGkXn5gp3agufrd/view",
         "button": "Baixar"
       }
     ]

@@ -60,25 +60,25 @@
     //padding-left: 10px
 }
 .container__home{
-    @include containers(100%, 100dvh, flex, 10px, 0px, row, center,  flex-end);
+    @include containers(100%, 100dvh, flex, 10px, 0px, row, space-between,  flex-end);
     margin: 0px
 }
 .container__home--text{
-    @include containers(70%, 100dvh, flex, 10px, 52px 0px 0px 60px, column, center, flex-start);
-
+    @include containers(65%, 100dvh, flex, 10px, 52px 50px 0px 60px, column, center, flex-start);
+    //margin-left: 10px;
     //background: linear-gradient(180deg, rgba(172, 0, 0, 0.5) 0%, rgba(172, 0, 0, 0.5) 100%);
     @include text('Poppins', 20px, $colorTextB, normal, 300);
     h1{
-        @include text('Poppins', 70px, $colorTextB, normal, 700);
+        @include text('Poppins', 60px, $colorTextB, normal, 700);
         text-transform: uppercase;
         text-align: center;
-        margin-bottom: 20px;
+       // margin-bottom: 20px;
     }
-    z-index: 10;
 }
 .container__home--img{
-    display: flex;
-    width: 50%;
+    width: 38%;
+    position: absolute;
+    left: 60%;
 }
 .btn-home{   
     @include button(459px,auto, 50px, #AC0000, $colorTextB, 20px,$colorButtonHover);
@@ -297,6 +297,11 @@
         @include text('Poppins', 20px, $colorTextB, normal, 300);
         margin: 0px;
     }
+    h3{
+       @include text('Poppins', 49px, $colorTextB, normal, 600);
+        margin-bottom: 20px; 
+        text-align: center;
+    }
 }
 
 .container__libros--compra--cards{
@@ -359,23 +364,26 @@
 }
 
 .container__videos{
-    @include containers(100%, auto, flex, 0px, 85px 60px, row); 
+    @include containers(100%, auto, flex, 0px, 85px 60px, row,space-between); 
 }
 .container__videos--text{
     @include containers(100%, auto, flex, 0px, 0px, column, center, flex-start); 
     h2{
         @include text('Poppins', 60px, $colorTextN, normal, 600);
-        margin-bottom: 30px;
+        //margin-bottom: 30px;
     };
     p{
         @include text('Poppins', 20px, $colorTextNAlternativo, normal, 300);
-        padding-bottom: 10px;
-        margin: 0px;
+        margin-bottom: 30px;
+        //margin: 0px;
     }
 }
 .container__videos--principal{
     @include containers(100%, auto, flex, 0px, 40px 60px, row, center, center); 
-    gap: 40px;
+    background-image: url('../img/adornovideo.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     iframe{
         width: 100%;
         height: 400px;

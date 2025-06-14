@@ -32,7 +32,7 @@
         "title": "Consultas psicoterapéuticas",
         "text": "Con más de 28 años de experiencia clínica trabajo en resolución de conflictos o terapia breve considerando el ser integral: espíritu, alma y cuerpo.",
         "button": "Solicitar",
-        "img": "./img/ConsultasPsicoterapeuticas.webp"        
+        "img": "./img/ConsultasPsicoterapeuticas.webp"       
       },
       {
         "title": "Entrenamiento de profesionales de la Salud mental",
@@ -56,25 +56,29 @@
         "title": "La Psicología de Dios",
         "text": "En este curso se aborda cómo la mente, la voluntad y las emociones (alma) son parte del diseño de Dios del ser integral y cuál es el objetivo de Dios para el alma humana.",
         "button": "Inscríbete aquí",
-        "img": "./img/psicologia.webp"
+        "img": "./img/psicologia.webp",
+        "link": "https://psyson.org/es/la-psicologia-de-dios/" 
       },
       {
         "title": "Familias Alineadas a lo Eterno",
         "text": "Descubre el diseño y las intenciones originales de Dios y aprende a incorporarlas a tu familia.",
         "button": "Inscríbete aquí",
-        "img": "./img/familia.webp"
+        "img": "./img/familia.webp",
+        "link": "https://psyson.org/es/familias-alineadas-a-lo-eterno/" 
       },
       {
         "title": "Cómo enfrentar la adversidad",
         "text": "Este curso aborda un tema clave: el dolor, la tragedia, el sufrimiento, la muerte y el duelo, brindando herramientas para afrontarlos.",
         "button": "Inscríbete aquí",
-        "img": "./img/adversidad.webp"
+        "img": "./img/adversidad.webp",
+        "link": "https://psyson.org/es/como-enfrentar-la-adversidad/" 
       },
       {
         "title": "Cómo salvamos a la familia",
         "text": "Es uno de los grandes interrogantes de las últimas generaciones atacadas por ideologías anti-diseño.",
         "button": "Inscríbete aquí",
-        "img": "./img/salvarFamilia.webp"
+        "img": "./img/salvarFamilia.webp",
+        "link": "https://psyson.org/es/como-salvamos-a-la-familia/" 
       }
     ]
   },
@@ -86,52 +90,53 @@
   "books": {
   "title": "Libros",
   "intro": "Como servicio trabajamos en dejar a disposición de las familias y la Iglesia materiales de profunda edificación, algunos en versión PDF gratuitos y otros disponibles en versión impresa por Editorial Peniel y Editorial Rica.",
+  "msgBooks": "Material Gratuito",
   "button": "Comprar",
   "buy": [
       {
         "title": "La Psicología de Dios",
         "img": "./img/book-psicologia.webp",
-        "link": "#"
+        "link": "https://www.amazon.com/-/es/psicolog%C3%ADa-Dios-dise%C3%B1o-original-Spanish/dp/9875576816/ref=sr_1_1?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3JW04WIYYBC4W&dib=eyJ2IjoiMSJ9.SE2MOmWhBiYc2f7VVX86UYDGiQVuyVWrN6NnlbBY7Dm1oUmBFlLAO0IKM4PAy7XdRXMT2uvN3RkisrEIrEys0snaRlNRfAVI5G7azyWi8lY.T_F5HeDtPl6_lTFI0L6t1P5ZTKnGNLR2EdASz4O7fac&dib_tag=se&keywords=David+Firman&qid=1749931518&s=books&sprefix=david+firman%2Cstripbooks-intl-ship%2C184&sr=1-1"
       },
       {
         "title": "Familias Alineadas a lo Eterno",
         "img": "./img/book-familia.webp",
-        "link": "#"
+        "link": "https://peniel.com/products/familias-alineadas-a-lo-eterno-como-expresar-y-multiplicar-la-vida-de-dios-en-las-generaciones?_pos=2&_sid=dee387de6&_ss=r"
       },
       {
         "title": "A psicologia de Deus",
-        "img": "./img/book-psicologia.webp",
-        "link": "#"
+        "img": "./img/book-psicologia-pt.webp",
+        "link": "https://loja.editorarica.com.br/produtos/a-psicologia-de-deus/"
       }
     ],
     "free": [
       {
         "title": "Familias que discipulan a sus generaciones",
         "img": "./img/book-discipulado.webp",
-        "link": "#",
+        "link": "https://drive.google.com/file/d/18u3ZYHwjXM_c44qEE5SCjDXlFWRvXVya/view",
         "button": "Descargar"
       },
       {
         "title": "Cómo enfrentar la muerte",
         "img": "./img/book-muerte.webp",
-        "link": "#",
+        "link": "https://drive.google.com/file/d/1KdALt6U9_M_M0Gl0yt9XmrjSRrnUiTUB/view",
         "button": "Descargar"
       },
       {
         "title": "Familias con propósito",
         "img": "./img/book-familiaProposito.webp",
-        "link": "#",
+        "link": "https://drive.google.com/file/d/1kTrFGZVQHMhD371zRwaXcyXvRtiYLGQ_/view",
         "button": "Descargar"
       },
       {
         "title": "Noviazgo de la mano de Dios",
         "img": "./img/book-noviazgo.webp",
-        "link": "#",
+        "link": "https://drive.google.com/file/d/1jhvegae0_X0Tq2dqOzGkXn5gp3agufrd/view",
         "button": "Descargar"
       },
       {
         "title": "PDF Masterclass sobre La Psicología de Dios",
-        "img": "./img/book-psicologia.webp",
+        "img": "./img/MASTERCLASS-PSICOLOGIA.webp",
         "link": "#",
         "button": "Descargar"
       }
