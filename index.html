@@ -19,9 +19,9 @@
     content="">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Soltecs Software & Desing">
-  <link rel="canonical" href="https://www.Mi_Pagina.com/">
+  <link rel="canonical" href="https://www.davidfirmanoficial.com/">
 
-  <meta property="og:title" content="MI EMPRESA">
+  <meta property="og:title" content="David Firman Oficial">
   <meta property="og:description"
     content="">
   <meta property="og:type" content="website">
@@ -30,7 +30,7 @@
 
   <!-- Twitter Cards para Redes Sociales -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="MI EMPRESAs">
+  <meta name="twitter:title" content="David Firman Oficial">
   <meta name="twitter:description" content="DESCRIPCION.">
   <meta name="twitter:image" content="./img/DavidFirmaLogo.svg"> <!-- Replace with a relevant image URL -->
   
@@ -62,46 +62,66 @@
           <div class="collapse navbar-collapse container__menu--bar" id="navbarNav">
             <ul class="navbar-nav container__menu--items">
               <li class="nav-item">
-                <a class="nav-link container__menu--item" href="#sobreMi">Sobre mi</a>
+                <a class="nav-link container__menu--item" href="#sobreMi" data-i18n></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link container__menu--item" href="#servicios">Servicios</a>
+                <a class="nav-link container__menu--item" href="#servicios" data-i18n="menu.services"></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link container__menu--item" href="#cursos">Cursos</a>
+                <a class="nav-link container__menu--item" href="#cursos" data-i18n="menu.courses"></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link container__menu--item" href="#invitaciones">Invitaciones</a>
+                <a class="nav-link container__menu--item" href="#invitaciones" data-i18n="menu.invitations"></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link container__menu--item" href="#libros">Libros</a>
+                <a class="nav-link container__menu--item" href="#libros" data-i18n="menu.books"></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link container__menu--item" href="#videos">Videos</a>
+                <a class="nav-link container__menu--item" href="#videos" data-i18n="menu.videos"></a>
               </li>
 
             </ul>
-            <a class="nav-item container__menu--item container__menu--btn" href="#contacto">Contacto</a>
+            <!-- Selector de idioma personalizado -->
+            <div class="language-dropdown" id="languageDropdown">
+              <button class="language-selected" id="selectedLanguageBtn" type="button">
+                <span class="lang-flag"><img src="./img/es.svg" alt="Español" width="24"></span>
+                <span class="lang-label">ESP</span>
+                <span class="lang-arrow">&#9662;</span>
+              </button>
+              <ul class="language-options" id="languageOptions">
+                <li data-lang="es">
+                  <span class="lang-flag"><img src="./img/es.svg" alt="Español" width="24"></span>
+                  <span class="lang-label">ESP</span>
+                </li>
+                <li data-lang="en">
+                  <span class="lang-flag"><img src="./img/en.svg" alt="English" width="24"></span>
+                  <span class="lang-label">ENG</span>
+                </li>
+                <li data-lang="pt">
+                  <span class="lang-flag"><img src="./img/pt.svg" alt="Português" width="24"></span>
+                  <span class="lang-label">PT</span>
+                </li>
+              </ul>
+            </div>
+            <a class="nav-item container__menu--item container__menu--btn" href="#contacto" data-i18n="menu.contact"></a>
           </div>
         </div>
       </nav>
     </head>
     <!-- HOME INICIO-->
     <!-- AQUI VA EL MENU-->
-    <div></div>
     <section id="home">
       <div class="container__home">
         <div class="container__home--text">
           <h1>David Firman</h1>
-          <p>Trabajamos para comprender y vivir los diseños eternos del ser integral, el matrimonio y la familia, recuperados por la sabiduría de Dios en la cruz, donde el Nuevo Pacto nos permite reescribir nuestra historia y disfrutar a Cristo como vida real.</p>
-          <a href="#contacto" class="btn btn-home">Conectemos</a>
+          <p data-i18n="hero.text"></p>
+          <a href="#contacto" class="btn btn-home" data-i18n="hero.button"></a>
         </div>
         <div class="container__home--img">
           <img src="./img/DavidFirman.webp" alt="Imagen de David Firman" class="img-fluid">
         </div>
-
       </div>
-    </section> 
+    </section>
     <!-- HOME FIN-->
     <!--SECCIONES INICIO-->
     <!-- SOBRE MI INICIO -->
@@ -111,11 +131,8 @@
           <img src="./img/SobreMi.webp" alt="Familia David Firman" class="img-fluid">
         </div>
         <div class="container__sobreMi--text">
-          <h2>Sobre mí</h2>
-          <p><strong>Soy esposo</strong> de Denise Martínez desde 1999. <strong>Padre</strong> de Elías y Ana Paula.</p>
-          <p>De profesión <strong>Psicólogo clínico</strong> desde el año 1998 con especialidad en <strong>Terapia Familiar Sistémica</strong>.</p>
-          <p>Soy <strong>Bachiller en Teología</strong> y<strong>Pastor</strong>  en “Todo Nuevo en Cristo”.</p>
-          <p>Apasionado <strong>Escritor</strong> de libros sobre el ser integral, noviazgo, matrimonio y familia. Disfruto mucho brindar <strong>Conferencias</strong> a nivel internacional edificando a las familias y la Iglesia.</p>
+          <h2 data-i18n="about.title"></h2>
+          <p data-i18n="about.description"></p>
         </div>
       </div>
     </section>
@@ -124,39 +141,8 @@
     <!-- SERVICIOS INICIO -->
     <section id="servicios">
       <div class="container-servicios">
-        <h2>Acompañamiento profesional</h2>
-        <div class="container-servicios--cards">
-          <div class="container-servicios--card">
-            <div class="card-contenido">
-              <div class="container-servicios--card-text">
-                <h3>Consultas psicoterapeuticas</h3>
-                <p>Con más de 28 años de experiencia clínica trabajo en resolución de conflictos o terapia breve considerando el ser integral: espíritu, alma y cuerpo.</p>
-              </div>
-              <a href="#" class="btn btn-servicios">Solicitar</a>
-            </div>
-            <img class="container-servicios--card-img" src="./img/ConsultasPsicoterapeuticas.webp" alt="Consultas Psicoterapeuticas">
-          </div>
-          <div class="container-servicios--card">
-            <div class="card-contenido">
-              <div class="container-servicios--card-text">
-                <h3>Entrenamiento de profesionales de la Salud mental</h3>
-                <p>Trabajamos para salir del secuestro del humanismo entendiendo la sabiduría eterna de Dios para solucionar de fondo los problemas humanos. Material grabado y encuentros en vivo vía zoom.</p>
-              </div>
-              <a href="#" class="btn btn-servicios">Solicitar</a>
-            </div>
-            <img class="container-servicios--card-img" src="./img/EntrenamientoDeprofesionalesDeLaSaludMental.webp" alt="Entrenamiento de profesionales de la Salud mental">
-          </div>
-          <div class="container-servicios--card">
-            <div class="card-contenido">
-              <div class="container-servicios--card-text">
-                <h3>Supervisión de casos clínicos</h3>
-                <p>En encuentros en vivo vía zoom poniendo a disposición mi experiencia para colaborar orientando en los casos de profesionales que lo soliciten.</p>
-              </div>
-              <a href="#" class="btn btn-servicios">Solicitar</a>
-            </div>
-            <img class="container-servicios--card-img" src="./img/SupervisiónDeCasosClínicos.webp" alt="Supervisión de casos clínicos">
-          </div>
-        </div>
+        <h2 data-i18n="services.title"></h2>
+        <div id="services-list" class="container-servicios--cards"></div>
       </div>
     </section>
     <!-- SERVICIOS FIN -->
@@ -164,60 +150,10 @@
     <!-- CURSOS INICIO -->
     <section id="cursos">
       <div class="container-cursos">
-        <h2>Cursos</h2>
-        <p>Cursos dirigidos a pastores, líderes, profesionales de la salud mental y a toda persona con el anhelo de conocer y vivir los diseños eternos de Dios.</p>
+        <h2 data-i18n="courses.title"></h2>
+        <p data-i18n="courses.intro"></p>
         <div class="swiper cursosSwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="card-curso">
-                <div class="card-curso--elementos">
-                  <img src="./img/psicologia.webp" alt="La Psicología de Dios">
-                  <div class="card-curso--texts">
-                    <h3>La Psicología de Dios</h3>
-                    <p>En este curso se aborda cómo la mente, la voluntad y las emociones (alma) son parte del diseño de Dios del ser integral y cuál es el objetivo de Dios para el alma humana.</p>
-                  </div>
-                </div>
-                <a href="#" class="btn btn-curso">Inscríbete aquí</a>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card-curso">
-                <div class="card-curso--elementos">
-                  <img src="./img/familia.webp" alt="Familias Alineadas a lo Eterno">
-                  <div class="card-curso--texts">
-                    <h3>Familias Alineadas a lo Eterno</h3>
-                    <p>Descubre el diseño y las intenciones originales de Dios y aprende a incorporarlas a tu familia.</p>
-                  </div>
-                </div>
-                <a href="#" class="btn btn-curso">Inscríbete aquí</a>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card-curso">
-                <div class="card-curso--elementos">
-                  <img src="./img/adversidad.webp" alt="Cómo enfrentar la adversidad">
-                  <div class="card-curso--texts">
-                    <h3>Cómo enfrentar la adversidad</h3>
-                    <p>Este curso aborda un tema clave: el dolor, la tragedia, el sufrimiento, la muerte y el duelo, brindando herramientas para afrontarlos.</p>
-                  </div>
-                </div>
-                <a href="#" class="btn btn-curso">Inscríbete aquí</a>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card-curso">
-                <div class="card-curso--elementos">
-                  <img src="./img/salvarFamilia.webp" alt="Cómo salvamos a la familia">
-                  <div class="card-curso--texts">
-                    <h3>Cómo salvamos a la familia</h3>
-                    <p>Es uno de los grandes interrogantes de las últimas generaciones atacadas por ideologías anti-diseño.</p>
-                  </div>
-                </div>
-                <a href="#" class="btn btn-curso">Inscríbete aquí</a>
-              </div>
-            </div>
-          </div>
-          <!-- Paginación opcional -->
+          <div class="swiper-wrapper" id="courses-list"></div>
           <div class="swiper-pagination"></div>
         </div>
       </div>
@@ -228,85 +164,32 @@
     <!-- INVITACIONES INICIO -->
     <section id="invitaciones">
       <div class="container__invitaciones">
-        <h2>Sobreedificador de la Iglesia</h2>
+        <h2 data-i18n="church.title"></h2>
         <div class="container__invitaciones--contenido">
           <div class="container__invitaciones--text">
-          <p>Entendemos que el Evangelio no es una enseñanza estática, definiciones o conceptos a ser aprendidos, sino una naturaleza divina que nos fue impartida en Cristo por el nuevo nacimiento, no para actuar como Cristo sino para que Él actúe en nosotros. Por esto, trabajamos en mesas que sirven el Pan de Vida que es Cristo para el entrenamiento de esa naturaleza en hombres y mujeres que, respondiendo al interés, a la causa de Dios, activen esa vida de propósito. Eso producirá que avancen como herramientas en las manos de Dios con el fin de redimir su generación para Su Gloria para producir el aumento de Cristo en la tierra.</p>
-          <a href="#" class="btn btn-invitaciones">Solicitar invitación</a>
+            <p data-i18n="church.text"></p>
+            <a href="#" class="btn btn-invitaciones" data-i18n="church.button"></a>
+          </div>
+          <div class="container__invitaciones--img">
+            <img src="./img/mundoCruzz.webp" alt="Sobreedificador de la Iglesia" class="img-fluid">
+          </div>
         </div>
-        <div class="container__invitaciones--img">
-          <img src="./img/mundoCruzz.webp" alt="Sobreedificador de la Iglesia" class="img-fluid">
       </div>
-        </div>
     </section>
     <!-- INVITACIONES FIN -->
 
     <!-- LIBROS INICIO -->
     <section id="libros">
-      <div class="container__libros ">
-        <h2>Libros</h2>
-        <p>Como servicio trabajamos en dejar a disposición de las familias y la Iglesia materiales de profunda edificación, algunos en versión PDF gratuitos y otros disponibles en versión impresa por Editorial Peniel.</p>
+      <div class="container__libros">
+        <h2 data-i18n="books.title"></h2>
+        <p data-i18n="books.intro"></p>
         <!-- Libros compra -->
-        <div class="container__libros--compra--cards">
-          <div class="container__libros--card">
-            <div>
-              <img src="./img/book-psicologia.webp" alt="La Psicología de Dios" class="img-fluid">
-            </div>  
-              <h3>AQUI VA OTRO LIBRO</h3>
-              <a href="#" class="btn btn-card">Comprar</a>
-          </div>
-          <div class="container__libros--card">
-            <div>
-              <img src="./img/book-psicologia.webp" alt="La Psicología de Dios" class="img-fluid">
-            </div>  
-              <h3>La Psicología de Dios</h3>
-              <a href="#" class="btn btn-card">Comprar</a>
-          </div>
-            <div class="container__libros--card">
-             <div>
-               <img src="./img/book-familia.webp" alt="Familias Alineadas a lo Eterno" class="img-fluid">
-             </div>
-              <h3>Familias Alineadas a lo Eterno</h3>
-              <a href="#" class="btn btn-card">Comprar</a>
-            </div>
-        </div>
-        <!-- Libros gratuitos -->
+        <div id="books-list" class="container__libros--compra--cards"></div>
+        <!-- Libros gratuitos (carrusel) -->
         <div class="swiper librosDescargaSwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide container__libros--card">
-              <img src="./img/book-discipulado.webp" alt="Familias que discipulan a sus generaciones" class="img-fluid">
-              <h3>Familias que discipulan a sus generaciones</h3>
-              <a href="#" class="btn btn-card">Descargar</a>
-            </div>
-            <div class="swiper-slide container__libros--card">
-              <img src="./img/book-muerte.webp" alt="Cómo enfrentar la muerte" class="img-fluid">
-              <h3>Cómo enfrentar la muerte</h3>
-              <a href="#" class="btn btn-card">Descargar</a>
-            </div>
-            <div class="swiper-slide container__libros--card">
-              <img src="./img/book-familiaProposito.webp" alt="Familias con propósito" class="img-fluid">
-              <h3>Familias con propósito</h3>
-              <a href="#" class="btn btn-card">Descargar</a>
-            </div>
-            <div class="swiper-slide container__libros--card">
-              <img src="./img/book-Matrimonio.webp" alt="Construyendo un matrimonio que funciona" class="img-fluid">
-              <h3>Construyendo un matrimonio que funciona</h3>
-              <a href="#" class="btn btn-card">Descargar</a>
-            </div>
-            <div class="swiper-slide container__libros--card">
-              <img src="./img/book-noviazgo.webp" alt="Noviazgo de la mano de Dios" class="img-fluid">
-              <h3>Noviazgo de la mano de Dios</h3>
-              <a href="#" class="btn btn-card">Descargar</a>
-            </div>
-            <div class="swiper-slide container__libros--card">
-              <img src="./img/book-noviazgo.webp" alt="Noviazgo de la mano de Dios" class="img-fluid">
-              <h3>AQUI TAMBIEN VA OTRO</h3>
-              <a href="#" class="btn btn-card">Descargar</a>
-            </div>
-          </div>
+          <div class="swiper-wrapper" id="books-free-list"></div>
           <div class="swiper-pagination librosDescarga-pagination"></div>
         </div>
-        
       </div>
     </section>
     <!-- LIBROS FIN -->
@@ -315,107 +198,90 @@
     <section id="videos">
       <div class="container__videos">
         <div class="container__videos--text">
-          <h2>Videos Recomendados</h2>
-          <p>Aquí tienes videos recomendados que encontrarás en mi canal en YouTube</p>
-          <a href="https://www.youtube.com/@DavidFirmanOficial" class="btn btn-videos" target="_blank">Ir al canal</a>
+          <h2 data-i18n="videos.title"></h2>
+          <p data-i18n="videos.intro"></p>
+          <a href="https://www.youtube.com/@DavidFirmanOficial" class="btn btn-videos" target="_blank" data-i18n="videos.button"></a>
         </div>
-        <div class="container__videos--principal">
-            <iframe src="https://www.youtube.com/embed/XNbfDSbAdK8" title="Master Class Psicología De Dios de David Firman" frameborder="0" allowfullscreen></iframe>
-        </div>
+        <div class="container__videos--principal" id="video-principal"></div>
       </div>
-       <div class="swiper videosSwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide container__videos--card">
-              <iframe src="https://www.youtube.com/embed/duns_ft1PTI" title="Entrevista sobre Psicología De Dios de David Firman" frameborder="0" allowfullscreen></iframe>
-              <h3>Entrevista sobre Psicología De Dios de David Firman</h3>
-            </div>
-            <div class="swiper-slide container__videos--card">
-              <iframe src="https://www.youtube.com/embed/oQg8RwW3LLU" title="El Espíritu Santo en la consulta..." frameborder="0" allowfullscreen></iframe>
-              <h3>El Espíritu Santo en la consulta...</h3>
-            </div>
-            <div class="swiper-slide container__videos--card">
-              <iframe src="https://www.youtube.com/embed/6z1EJrR65D0" title="¿Podemos confiar en nuestra mente y emociones? Parte 1" frameborder="0" allowfullscreen></iframe>
-              <h3>¿Podemos confiar en nuestra mente y emociones? Parte 1</h3>
-            </div>
-            <div class="swiper-slide container__videos--card">
-              <iframe src="https://www.youtube.com/embed/7zJ1NOWcV4w" title="¿Podemos confiar en nuestra mente y emociones? Parte 2" frameborder="0" allowfullscreen></iframe>
-              <h3>¿Podemos confiar en nuestra mente y emociones? Parte 2</h3>
-            </div>
-          </div>
-          <div class="swiper-pagination videos-pagination"></div>
-        </div>
-      
+      <div class="swiper videosSwiper">
+        <div class="swiper-wrapper" id="videos-list"></div>
+        <div class="swiper-pagination videos-pagination"></div>
+      </div>
     </section>
     <!-- VIDEOS FIN -->
     <!-- CONTACTO INICIO -->
     <section id="contacto">
       <div class="container__contacto">
         <div class="container__contacto--text">
-          <h2>Conectemos</h2>
-          <p>Queremos acompañarte a vivir la plenitud de Dios. Deja tu mensaje y te responderemos la brevedad</p>   
+          <h2 data-i18n="contact.title"></h2>
+          <p data-i18n="contact.text"></p>
           <div class="container__contacto--redesSociales">
             <a href="#" class="container__contacto--redSocial" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-              <path d="M18 12.7575C15.0975 12.7575 12.7575 15.12 12.7575 18C12.7575 20.88 15.12 23.2425 18 23.2425C20.88 23.2425 23.2425 20.88 23.2425 18C23.2425 15.12 20.88 12.7575 18 12.7575ZM33.75 18C33.75 15.8175 33.75 13.68 33.6375 11.4975C33.525 8.9775 32.94 6.7275 31.095 4.905C29.25 3.06 27.0225 2.475 24.5025 2.3625C22.32 2.25 20.1825 2.25 18 2.25C15.8175 2.25 13.68 2.25 11.4975 2.3625C8.9775 2.475 6.7275 3.06 4.905 4.905C3.06 6.75 2.475 8.9775 2.3625 11.4975C2.25 13.68 2.25 15.8175 2.25 18C2.25 20.1825 2.25 22.32 2.3625 24.5025C2.475 27.0225 3.06 29.2725 4.905 31.095C6.75 32.94 8.9775 33.525 11.4975 33.6375C13.68 33.75 15.8175 33.75 18 33.75C20.1825 33.75 22.32 33.75 24.5025 33.6375C27.0225 33.525 29.2725 32.94 31.095 31.095C32.94 29.25 33.525 27.0225 33.6375 24.5025C33.7725 22.3425 33.75 20.1825 33.75 18ZM18 26.0775C13.5225 26.0775 9.9225 22.4775 9.9225 18C9.9225 13.5225 13.5225 9.9225 18 9.9225C22.4775 9.9225 26.0775 13.5225 26.0775 18C26.0775 22.4775 22.4775 26.0775 18 26.0775ZM26.415 11.475C25.38 11.475 24.525 10.6425 24.525 9.585C24.525 8.5275 25.3575 7.695 26.415 7.695C27.4725 7.695 28.305 8.5275 28.305 9.585C28.3107 9.83146 28.2657 10.0765 28.1728 10.3048C28.0799 10.5332 27.9411 10.74 27.765 10.9125C27.5925 11.0886 27.3857 11.2274 27.1573 11.3203C26.929 11.4132 26.684 11.4582 26.4375 11.4525L26.415 11.475Z" fill="#9D0000" style="fill:#9D0000;fill:color(display-p3 0.6157 0.0000 0.0000);fill-opacity:1;"/>
-            </svg>
-            <h4>davidfirmanoficial</h4>
-          </a>
-          <a href="#" class="container__contacto--redSocial" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-              <path d="M33 18C33 9.72 26.28 3 18 3C9.72 3 3 9.72 3 18C3 25.26 8.16 31.305 15 32.7V22.5H12V18H15V14.25C15 11.355 17.355 9 20.25 9H24V13.5H21C20.175 13.5 19.5 14.175 19.5 15V18H24V22.5H19.5V32.925C27.075 32.175 33 25.785 33 18Z" fill="#9D0000" style="fill:#9D0000;fill:color(display-p3 0.6157 0.0000 0.0000);fill-opacity:1;"/>
-            </svg>
-            <h4>davidfirmanoficial</h4>
-          </a>
-          <a href="#" class="container__contacto--redSocial" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-              <path d="M15 22.5L22.785 18L15 13.5V22.5ZM32.34 10.755C32.535 11.46 32.67 12.405 32.76 13.605C32.865 14.805 32.91 15.84 32.91 16.74L33 18C33 21.285 32.76 23.7 32.34 25.245C31.965 26.595 31.095 27.465 29.745 27.84C29.04 28.035 27.75 28.17 25.77 28.26C23.82 28.365 22.035 28.41 20.385 28.41L18 28.5C11.715 28.5 7.8 28.26 6.255 27.84C4.905 27.465 4.035 26.595 3.66 25.245C3.465 24.54 3.33 23.595 3.24 22.395C3.135 21.195 3.09 20.16 3.09 19.26L3 18C3 14.715 3.24 12.3 3.66 10.755C4.035 9.405 4.905 8.535 6.255 8.16C6.96 7.965 8.25 7.83 10.23 7.74C12.18 7.635 13.965 7.59 15.615 7.59L18 7.5C24.285 7.5 28.2 7.74 29.745 8.16C31.095 8.535 31.965 9.405 32.34 10.755Z" fill="#9D0000" style="fill:#9D0000;fill:color(display-p3 0.6157 0.0000 0.0000);fill-opacity:1;"/>
-            </svg>
-            <h4>davidfirmanoficial</h4>
-          </a>
-          <div class="container__contacto--redSocial" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M6 6.375C4.90598 6.375 3.85677 6.8096 3.08318 7.58318C2.3096 8.35677 1.875 9.40598 1.875 10.5V25.5C1.875 26.594 2.3096 27.6432 3.08318 28.4168C3.85677 29.1904 4.90598 29.625 6 29.625H30C31.094 29.625 32.1432 29.1904 32.9168 28.4168C33.6904 27.6432 34.125 26.594 34.125 25.5V10.5C34.125 9.40598 33.6904 8.35677 32.9168 7.58318C32.1432 6.8096 31.094 6.375 30 6.375H6ZM11.145 12.579C10.9005 12.4194 10.6035 12.3612 10.3168 12.4166C10.0301 12.472 9.7762 12.6366 9.6087 12.8758C9.44121 13.115 9.37326 13.4099 9.41922 13.6982C9.46518 13.9866 9.62145 14.2458 9.855 14.421L17.355 19.671C17.5441 19.8033 17.7692 19.8743 18 19.8743C18.2308 19.8743 18.4559 19.8033 18.645 19.671L26.145 14.421C26.2713 14.3386 26.3798 14.2316 26.4639 14.1064C26.5481 13.9812 26.6062 13.8403 26.6348 13.6922C26.6634 13.5441 26.6619 13.3918 26.6305 13.2443C26.599 13.0968 26.5382 12.9571 26.4517 12.8335C26.3652 12.71 26.2547 12.6051 26.1268 12.5251C25.9989 12.4451 25.8562 12.3916 25.7073 12.3679C25.5583 12.3441 25.4061 12.3506 25.2597 12.3869C25.1133 12.4231 24.9757 12.4885 24.855 12.579L18 17.3775L11.145 12.579Z" fill="#9D0000" style="fill:#9D0000;fill:color(display-p3 0.6157 0.0000 0.0000);fill-opacity:1;"/>
-            </svg>
-            <h4>davidfirmanpsicologo@gmail.com</h4>
-          </div>
+              <!-- SVG Instagram -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                <path d="M18 12.7575C15.0975 12.7575 12.7575 15.12 12.7575 18C12.7575 20.88 15.12 23.2425 18 23.2425C20.88 23.2425 23.2425 20.88 23.2425 18C23.2425 15.12 20.88 12.7575 18 12.7575ZM33.75 18C33.75 15.8175 33.75 13.68 33.6375 11.4975C33.525 8.9775 32.94 6.7275 31.095 4.905C29.25 3.06 27.0225 2.475 24.5025 2.3625C22.32 2.25 20.1825 2.25 18 2.25C15.8175 2.25 13.68 2.25 11.4975 2.3625C8.9775 2.475 6.7275 3.06 4.905 4.905C3.06 6.75 2.475 8.9775 2.3625 11.4975C2.25 13.68 2.25 15.8175 2.25 18C2.25 20.1825 2.25 22.32 2.3625 24.5025C2.475 27.0225 3.06 29.2725 4.905 31.095C6.75 32.94 8.9775 33.525 11.4975 33.6375C13.68 33.75 15.8175 33.75 18 33.75C20.1825 33.75 22.32 33.75 24.5025 33.6375C27.0225 33.525 29.2725 32.94 31.095 31.095C32.94 29.25 33.525 27.0225 33.6375 24.5025C33.7725 22.3425 33.75 20.1825 33.75 18ZM18 26.0775C13.5225 26.0775 9.9225 22.4775 9.9225 18C9.9225 13.5225 13.5225 9.9225 18 9.9225C22.4775 9.9225 26.0775 13.5225 26.0775 18C26.0775 22.4775 22.4775 26.0775 18 26.0775ZM26.415 11.475C25.38 11.475 24.525 10.6425 24.525 9.585C24.525 8.5275 25.3575 7.695 26.415 7.695C27.4725 7.695 28.305 8.5275 28.305 9.585C28.3107 9.83146 28.2657 10.0765 28.1728 10.3048C28.0799 10.5332 27.9411 10.74 27.765 10.9125C27.5925 11.0886 27.3857 11.2274 27.1573 11.3203C26.929 11.4132 26.684 11.4582 26.4375 11.4525L26.415 11.475Z" fill="#9D0000"/>
+              </svg>
+              <h4>davidfirmanoficial</h4>
+            </a>
+            <a href="#" class="container__contacto--redSocial" target="_blank">
+              <!-- SVG Facebook -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                <path d="M33 18C33 9.72 26.28 3 18 3C9.72 3 3 9.72 3 18C3 25.26 8.16 31.305 15 32.7V22.5H12V18H15V14.25C15 11.355 17.355 9 20.25 9H24V13.5H21C20.175 13.5 19.5 14.175 19.5 15V18H24V22.5H19.5V32.925C27.075 32.175 33 25.785 33 18Z" fill="#9D0000"/>
+              </svg>
+              <h4>davidfirmanoficial</h4>
+            </a>
+            <a href="#" class="container__contacto--redSocial" target="_blank">
+              <!-- SVG YouTube -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                <path d="M15 22.5L22.785 18L15 13.5V22.5ZM32.34 10.755C32.535 11.46 32.67 12.405 32.76 13.605C32.865 14.805 32.91 15.84 32.91 16.74L33 18C33 21.285 32.76 23.7 32.34 25.245C31.965 26.595 31.095 27.465 29.745 27.84C29.04 28.035 27.75 28.17 25.77 28.26C23.82 28.365 22.035 28.41 20.385 28.41L18 28.5C11.715 28.5 7.8 28.26 6.255 27.84C4.905 27.465 4.035 26.595 3.66 25.245C3.465 24.54 3.33 23.595 3.24 22.395C3.135 21.195 3.09 20.16 3.09 19.26L3 18C3 14.715 3.24 12.3 3.66 10.755C4.035 9.405 4.905 8.535 6.255 8.16C6.96 7.965 8.25 7.83 10.23 7.74C12.18 7.635 13.965 7.59 15.615 7.59L18 7.5C24.285 7.5 28.2 7.74 29.745 8.16C31.095 8.535 31.965 9.405 32.34 10.755Z" fill="#9D0000"/>
+              </svg>
+              <h4>davidfirmanoficial</h4>
+            </a>
+            <div class="container__contacto--redSocial" target="_blank">
+              <!-- SVG Email -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6 6.375C4.90598 6.375 3.85677 6.8096 3.08318 7.58318C2.3096 8.35677 1.875 9.40598 1.875 10.5V25.5C1.875 26.594 2.3096 27.6432 3.08318 28.4168C3.85677 29.1904 4.90598 29.625 6 29.625H30C31.094 29.625 32.1432 29.1904 32.9168 28.4168C33.6904 27.6432 34.125 26.594 34.125 25.5V10.5C34.125 9.40598 33.6904 8.35677 32.9168 7.58318C32.1432 6.8096 31.094 6.375 30 6.375H6ZM11.145 12.579C10.9005 12.4194 10.6035 12.3612 10.3168 12.4166C10.0301 12.472 9.7762 12.6366 9.6087 12.8758C9.44121 13.115 9.37326 13.4099 9.41922 13.6982C9.46518 13.9866 9.62145 14.2458 9.855 14.421L17.355 19.671C17.5441 19.8033 17.7692 19.8743 18 19.8743C18.2308 19.8743 18.4559 19.8033 18.645 19.671L26.145 14.421C26.2713 14.3386 26.3798 14.2316 26.4639 14.1064C26.5481 13.9812 26.6062 13.8403 26.6348 13.6922C26.6634 13.5441 26.6619 13.3918 26.6305 13.2443C26.599 13.0968 26.5382 12.9571 26.4517 12.8335C26.3652 12.71 26.2547 12.6051 26.1268 12.5251C25.9989 12.4451 25.8562 12.3916 25.7073 12.3679C25.5583 12.3441 25.4061 12.3506 25.2597 12.3869C25.1133 12.4231 24.9757 12.4885 24.855 12.579L18 17.3775L11.145 12.579Z" fill="#9D0000"/>
+              </svg>
+              <h4>davidfirmanpsicologo@gmail.com</h4>
+            </div>
           </div>
         </div>
         <div class="container__contacto--form">
           <form id="contactoForm">
             <div class="row mb-3 row_form">
-            <div class="col">
-              <label for="nombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="nombre" name="nombre" required>
-            </div>
               <div class="col">
-                <label for="nombre" class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                <label for="nombre" class="form-label" data-i18n="contact.form.name"></label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required placeholder="">
+              </div>
+              <div class="col">
+                <label for="apellido" class="form-label" data-i18n="contact.form.lastname"></label>
+                <input type="text" class="form-control" id="apellido" name="apellido" required placeholder="">
               </div>
             </div>
             <div class="mb-3">
-              <label for="email" class="form-label">Correo electrónico</label>
-              <input type="email" class="form-control" id="email" name="email" required>
+              <label for="email" class="form-label" data-i18n="contact.form.email"></label>
+              <input type="email" class="form-control" id="email" name="email" required placeholder="">
             </div>
             <div class="mb-3">
-              <label for="motivo" class="form-label">Motivo</label>
+              <label for="motivo" class="form-label" data-i18n="contact.form.subject"></label>
               <select class="form-select" id="motivo" name="motivo" required>
-                <option value="" disabled selected>Selecciona un motivo</option>
-                <option value="Consulta Psicoterapéutica">Consulta Psicoterapéutica</option>
-                <option value="Entrenamiento Profesional">Entrenamiento Profesional</option>
-                <option value="Supervisión de Casos Clínicos">Supervisión de Casos Clínicos</option>
-                <option value="Invitación a Conferencia">Invitación a Conferencia</option>
-                <option value="Otro">Otro</option>
+                <option value="" disabled selected data-i18n="contact.form.subject"></option>
+                <option value="Consulta Psicoterapéutica" data-i18n="contact.form.nameOption1"></option>
+                <option value="Entrenamiento Profesional" data-i18n="contact.form.nameOption2"></option>
+                <option value="Supervisión de Casos Clínicos" data-i18n="contact.form.nameOption3"></option>
+                <option value="Invitación a Conferencia" data-i18n="contact.form.nameOption4"></option>
+                <option value="Otro" data-i18n="contact.form.nameOption5"></option>
               </select>
             </div>
             <div class="mb-3">
-              <label for="mensaje" class="form-label">Mensaje</label>
-              <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required></textarea>
+              <label for="mensaje" class="form-label" data-i18n="contact.form.message"></label>
+              <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required placeholder=""></textarea>
             </div>
             <div class="form-footer">
-              <button type="submit" class="btn btn-submit">Enviar</button>
+              <button type="submit" class="btn btn-submit" data-i18n="contact.form.send"></button>
             </div>
           </form>
-
         </div>
       </div>
     </section>
@@ -454,47 +320,45 @@
               <h4>davidfirmanpsicologo@gmail.com</h4>
             </div>
         </div>
-        <p>© 2025 David Firman. Todos los derechos reservados.</p>
+        <p data-i18n="footer.copyright"></p>
       </div>
     </footer>
     <!-- FOOTER FIN-->
 
   </main>
-  <!-- Modal de contacto -->
-    <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <form id="contactoModalForm">
-            <div class="modal-header">
-              <h5 class="modal-title" id="formModalLabel">Formulario de contacto</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+  <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="contactoModalForm">
+          <div class="modal-header">
+            <h5 class="modal-title" id="formModalLabel" data-i18n="contact.title"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="nombreModal" class="form-label" data-i18n="contact.form.name"></label>
+              <input type="text" class="form-control" id="nombreModal" name="nombre" required placeholder="">
             </div>
-            <div class="modal-body">
-              <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombreModal" name="nombre" required>
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" id="emailModal" name="email" required>
-              </div>
-              <div class="mb-3">
-                <label for="motivo" class="form-label">Motivo</label>
-                <input type="text" class="form-control" id="motivoModal" name="motivo" readonly>
-              </div>
-              <div class="mb-3">
-                <label for="mensaje" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="mensajeModal" name="mensaje" rows="3" required></textarea>
-              </div>
+            <div class="mb-3">
+              <label for="emailModal" class="form-label" data-i18n="contact.form.email"></label>
+              <input type="email" class="form-control" id="emailModal" name="email" required placeholder="">
             </div>
-            <div class="modal-footer">
-              <button type="submit" class="btn btn-submit">Enviar</button>
+            <div class="mb-3">
+              <label for="motivoModal" class="form-label" data-i18n="contact.form.subject"></label>
+              <input type="text" class="form-control" id="motivoModal" name="motivo" readonly placeholder="">
             </div>
-          </form>
-        </div>
+            <div class="mb-3">
+              <label for="mensajeModal" class="form-label" data-i18n="contact.form.message"></label>
+              <textarea class="form-control" id="mensajeModal" name="mensaje" rows="3" required placeholder=""></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-submit" data-i18n="contact.form.send"></button>
+          </div>
+        </form>
       </div>
     </div>
-
+  </div>
   <!-- SCRIPT EVIO MAIL-->
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>

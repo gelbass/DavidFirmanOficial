@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "David Firman - Psicólogo, Pastor e Escritor",
+    "description": "Trabalhamos para compreender e viver os desígnios eternos do ser integral (espírito, alma e corpo), do casamento e da família, recuperados pela sabedoria de Deus na cruz, onde a Nova Aliança nos permite reescrever nossa história e desfrutar de Cristo como vida real."
+  },
+  "menu": {
+    "about": "Sobre mim",
+    "courses": "Cursos",
+    "services": "Serviços",
+    "invitations": "Convites",
+    "books": "Livros",
+    "videos": "Vídeos",
+    "contact": "Contato"
+  },
+  "hero": {
+    "text": "Trabalhamos para compreender e viver os desígnios eternos do ser integral (espírito, alma e corpo), do casamento e da família, recuperados pela sabedoria de Deus na cruz, onde a Nova Aliança nos permite reescrever nossa história e desfrutar de Cristo como vida real.",
+    "button": "Vamos nos conectar"
+  },
+  "about": {
+    "title": "Sobre mim",
+    "description": [
+      "<strong>Sou esposo</strong> da Denise Martínez desde 1999. <strong>Pai</strong> do Elías e da Ana Paula.",
+      "Psicólogo clínico desde 1998, com especialização em <strong>Terapia Familiar Sistêmica</strong>.",
+      "Sou <strong>Bacharel em Teologia</strong> e <strong>Pastor</strong> na “Tudo Novo em Cristo”.",
+      "Sou um apaixonado <strong>escritor</strong> de livros sobre o ser integral, namoro, casamento e família. Desfruto muito em servir ministrando <strong>conferências</strong> edificando famílias e a Igreja a nível internacional."
+    ]
+  },
+  "services": {
+    "title": "Acompanhamento profissional",
+    "items": [
+      {
+        "title": "Consultas psicoterapêuticas",
+        "text": "Com mais de 28 anos de experiência clínica, trabalho com resolução de conflitos ou terapia breve, considerando o ser integral: espírito, alma e corpo.",
+        "button": "Solicitar",
+        "img": "./img/ConsultasPsicoterapeuticas.webp"
+      },
+      {
+        "title": "Treinamento de profissionais da saúde mental",
+        "text": "Trabalhamos para sair do sequestro do humanismo, compreendendo a sabedoria eterna de Deus para resolver de forma profunda os problemas humanos. Material gravado e encontros ao vivo via Zoom.",
+        "button": "Solicitar",
+        "img": "./img/EntrenamientoDeprofesionalesDeLaSaludMental.webp"
+      },
+      {
+        "title": "Supervisão de casos clínicos",
+        "text": "Encontros ao vivo via Zoom nos quais coloco minha experiência à disposição para orientar os profissionais que solicitarem.",
+        "button": "Solicitar",
+        "img": "./img/SupervisiónDeCasosClínicos.webp"
+      }
+    ]
+  },
+  "courses": {
+    "title": "Cursos",
+    "intro": "Cursos direcionados a pastores, líderes, profissionais da saúde mental e a todas as pessoas com o desejo de conhecer e viver os desígnios eternos de Deus.",
+    "items": [
+      {
+        "title": "A Psicologia de Deus",
+        "text": "Neste curso é abordado como a mente, a vontade e as emoções (alma) fazem parte do desígnio de Deus para o ser integral e qual é o objetivo de Deus para a alma humana.",
+        "button": "Inscreva-se aqui",
+        "img": "./img/psicologia.webp"
+      },
+      {
+        "title": "Famílias Alinhadas ao Eterno",
+        "text": "Descubra o desígnio e as intenções originais de Deus e aprenda a incorporá-las à sua família.",
+        "button": "Inscreva-se aqui",
+        "img": "./img/familia.webp"
+      },
+      {
+        "title": "Como enfrentar a adversidade",
+        "text": "Este curso aborda um tema-chave: dor, tragédia, sofrimento, morte e luto, oferecendo ferramentas para enfrentá-los.",
+        "button": "Inscreva-se aqui",
+        "img": "./img/adversidad.webp"
+      },
+      {
+        "title": "Como salvamos a família",
+        "text": "Uma das grandes questões das últimas gerações, atacadas por ideologias anti-desígnio.",
+        "button": "Inscreva-se aqui",
+        "img": "./img/salvarFamilia.webp"
+      }
+    ]
+  },
+  "church": {
+    "title": "Superedificador da Igreja",
+    "text": "Entendemos que o Evangelho não é um ensinamento estático, definições ou conceitos a serem aprendidos, mas uma natureza divina que nos foi impartida em Cristo pelo novo nascimento – não para agirmos como Cristo, mas para que Ele aja em nós. Por isso, trabalhamos em mesas que servem o Pão da Vida, que é Cristo, para o treinamento dessa natureza em homens e mulheres que, respondendo ao interesse e à causa de Deus, ativem essa vida de propósito. Isto fará com que avancem, como ferramentas nas mãos de Deus, com o fim de redimir sua geração para Sua Glória, produzindo o crescimento de Cristo na terra.",
+    "button": "Solicitar convite"
+  },
+  "books": {
+    "title": "Livros",
+    "intro": "Como serviço, trabalhamos para disponibilizar às famílias e à Igreja materiais de profunda edificação – alguns em versão PDF gratuita e outros disponíveis em versão impressa pela Editora Peniel e Editora Rica",
+    "button": "Comprar",
+    "buy": [
+      {
+        "title": "A Psicologia de Deus",
+        "img": "./img/book-psicologia.webp",
+        "link": "#"
+      },
+      {
+        "title": "Famílias Alinhadas ao Eterno",
+        "img": "./img/book-familia.webp",
+        "link": "#"
+      },
+      {
+        "title": "A psicologia de Deus",
+        "img": "./img/book-psicologia.webp",
+        "link": "#"
+      }
+    ],
+    "free": [
+      {
+        "title": "Famílias que Discipulam Suas Gerações",
+        "img": "./img/book-discipulado.webp",
+        "link": "#",
+        "button": "Baixar"
+      },
+      {
+        "title": "Como Enfrentar a Morte",
+        "img": "./img/book-muerte.webp",
+        "link": "#",
+        "button": "Baixar"
+      },
+      {
+        "title": "Famílias com Propósito",
+        "img": "./img/book-familiaProposito.webp",
+        "link": "#",
+        "button": "Baixar"
+      },
+      {
+        "title": "Namoro de Mãos Dadas com Deus",
+        "img": "./img/book-noviazgo.webp",
+        "link": "#",
+        "button": "Baixar"
+      },
+      {
+        "title": "PDF da Masterclass sobre A Psicologia de Deus",
+        "img": "./img/book-psicologia.webp",
+        "link": "#",
+        "button": "Baixar"
+      }
+    ]
+  },
+  "videos": {
+    "title": "Vídeos Recomendados",
+    "intro": "Aqui estão vídeos recomendados que você encontrará no meu canal no YouTube",
+    "button": "Ir para o canal",
+    "list": [
+      {
+        "title": "Entrevista sobre A Psicologia de Deus com David Firman",
+        "id": "duns_ft1PTI"
+      },
+      {
+        "title": "O Espírito Santo na consulta...",
+        "id": "oQg8RwW3LLU"
+      },
+      {
+        "title": "Podemos confiar em nossa mente e emoções? Parte 1",
+        "id": "6z1EJrR65D0"
+      },
+      {
+        "title": "Podemos confiar em nossa mente e emoções? Parte 2",
+        "id": "7zJ1NOWcV4w"
+      }
+    ],
+    "main": {
+      "id": "XNbfDSbAdK8",
+      "title": "Master Class Psicologia De Deus de David Firman"
+    }
+  },
+  "contact": {
+    "title": "Vamos nos conectar",
+    "text": "Queremos acompanhá-lo na experiência da plenitude de Deus. Deixe sua mensagem e responderemos o mais breve possível.",
+    "form": {
+      "name": "Nome",
+      "lastname": "Sobrenome",
+      "email": "E-mail",
+      "subject": "Motivo",
+      "message": "Mensagem",
+      "write": "Escrever",
+      "send": "Enviar",
+      "nameOption1": "Consulta Psicoterapêutica",
+      "nameOption2": "Treinamento Profissional",
+      "nameOption3": "Supervisão de Casos Clínicos",
+      "nameOption4": "Convite para Conferência",
+      "nameOption5": "Outro"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 David Firman. Todos os direitos reservados."
+  }
+}

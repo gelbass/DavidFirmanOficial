@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "David Firman - Psychologist, Pastor & Author",
+    "description": "Discover books, courses and services by David Firman focused on the whole being, family and God's purpose."
+  },
+  "menu": {
+    "about": "About Me",
+    "courses": "Courses",
+    "services": "Services",
+    "invitations": "Invitations",
+    "books": "Books",
+    "videos": "Videos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "text": "We work to understand and live out the eternal designs of the whole being (spirit, soul and body), marriage, and family—recovered by God’s wisdom on the cross, where the New Covenant allows us to rewrite our story and enjoy Christ as real life.",
+    "button": "Let’s Connect"
+  },
+  "about": {
+    "title": "About Me",
+    "description": [
+      "<strong>I’ve been married</strong> to Denise Martínez since 1999. <strong>Father</strong> to Elías and Ana Paula.",
+      "<strong>A clinical psychologist</strong> since 1998, specialized in <strong>Systemic Family Therapy</strong>.",
+      "I hold a <strong>Bachelor’s Degree in Theology</strong> and serve as <strong>Pastor</strong> at “Todo Nuevo en Cristo.”",
+      "I’m a passionate <strong>author</strong> of books about the whole being, courtship, marriage, and family. I greatly enjoy giving <strong>international conferences</strong> that build up families and the Church."
+    ]  
+  },
+  "services": {
+    "title": "Professional Support",
+    "items": [
+      {
+        "title": "Psychotherapeutic Consultations",
+        "text": "With over 28 years of clinical experience, I work on conflict resolution or brief therapy, considering the whole being: spirit, soul, and body.",
+        "button": "Request",
+        "img": "./img/ConsultasPsicoterapeuticas.webp"
+      },
+      {
+        "title": "Mental Health Professional Training",
+        "text": "We work to break free from the kidnapping of humanism by understanding God's eternal wisdom to truly address human problems. Recorded material and live Zoom sessions.",
+        "button": "Request",
+        "img": "./img/EntrenamientoDeprofesionalesDeLaSaludMental.webp"
+      },
+      {
+        "title": "Clinical Case Supervision",
+        "text": "Live Zoom sessions where I offer my experience to support and guide professionals with their cases.",
+        "button": "Request",
+      "img": "./img/SupervisiónDeCasosClínicos.webp"
+      }
+    ]
+  },
+  "courses": {
+    "title": "Courses",
+    "intro": "Courses aimed at pastors, leaders, mental health professionals, and anyone desiring to know and live God’s eternal designs.",
+    "items": [
+      {
+        "title": "The Psychology of God",
+        "text": "This course explores how the mind, will, and emotions (soul) are part of God’s design for the whole being and what God’s purpose is for the human soul.",
+        "button": "Sign up here",
+        "img": "./img/psicologia.webp"
+      },
+      {
+        "title": "Families Aligned with the Eternal",
+        "text": "Discover God’s original design and intentions and learn how to incorporate them into your family.",
+        "button": "Sign up here",
+        "img": "./img/familia.webp"
+      },
+      {
+        "title": "How to Face Adversity",
+        "text": "This course addresses a key topic: pain, tragedy, suffering, death, and grief, offering tools to face them.",
+        "button": "Sign up here",
+        "img": "./img/adversidad.webp"
+      },
+      {
+        "title": "How We Save the Family",
+        "text": "One of the great questions of recent generations attacked by anti-design ideologies.",
+        "button": "Sign up here",
+        "img": "./img/salvarFamilia.webp"
+      }
+    ]
+  },
+  "church": {
+    "title": "Church Master Builder",
+    "text": "We understand the Gospel is not static teaching, definitions, or concepts to be learned, but a divine nature imparted to us in Christ through the new birth—not so we act like Christ, but so that He acts in us. That’s why we work in gatherings that serve the Bread of Life, who is Christ, for the training of that nature in men and women who, responding to God's interest and cause, activate that purposeful life. This will lead them to become tools in God’s hands to redeem their generation for His glory, producing the increase of Christ on the earth.",
+    "button": "Request invitation"
+  },
+  "books": {
+  "title": "Books",
+  "intro": "As a service, we work to provide families and the Church with materials of deep edification—some available as free PDFs and others in printed form via Editorial Peniel & Editorial Rica.",
+  "button": "Buy",
+  "buy": [
+      {
+        "title": "The Psychology of God",
+        "img": "./img/book-psicologia.webp",
+        "link": "#"
+      },
+      {
+        "title": "Families Aligned with the Eternal",
+        "img": "./img/book-familia.webp",
+        "link": "#"
+      },
+      {
+        "title": "A psicologia de Deus",
+        "img": "./img/book-psicologia.webp",
+        "link": "#"
+      }
+    ],
+    "free": [
+      {
+        "title": "Families That Disciple Their Generations",
+        "img": "./img/book-discipulado.webp",
+        "link": "#",
+        "button": "Download"
+      },
+      {
+        "title": "How to Face Death",
+        "img": "./img/book-muerte.webp",
+        "link": "#",
+        "button": "Download"
+      },
+      {
+        "title": "Families with Purpose",
+        "img": "./img/book-familiaProposito.webp",
+        "link": "#",
+        "button": "Download"
+      },
+      {
+        "title": "Courtship Guided by God",
+        "img": "./img/book-noviazgo.webp",
+        "link": "#",
+        "button": "Download"
+      },
+      {
+        "title": "PDF of the Masterclass on The Psychology of God",
+        "img": "./img/book-psicologia.webp",
+        "link": "#",
+        "button": "Download"
+      }
+    ]
+  },
+  "videos": {
+    "title": "Recommended Videos",
+    "intro": "Here are recommended videos you’ll find on my YouTube channel",
+    "button": "Visit the channel",
+    "list": [
+      {
+        "title": "Interview on The Psychology of God by David Firman",
+        "id": "duns_ft1PTI"
+      },
+      {
+        "title": "The Holy Spirit in the consultation...",
+        "id": "oQg8RwW3LLU"
+      },
+      {
+        "title": "Can we trust our mind and emotions? Part 1",
+        "id": "6z1EJrR65D0"
+      },
+      {
+        "title": "Can we trust our mind and emotions? Part 2",
+        "id": "7zJ1NOWcV4w"
+      }
+    ],
+    "main": {
+      "id": "XNbfDSbAdK8",
+      "title": "Master Class The Psychology of God by David Firman"
+    }
+  },
+  "contact": {
+    "title": "Let's Connect",
+    "text": "We want to help you live in the fullness of God. Leave your message and we will reply as soon as possible.",
+    "form": {
+      "name": "First Name",
+      "lastname": "Last Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "write": "Write your message",
+      "send": "Send",
+      "nameOption1": "Psychotherapeutic Consultation",
+      "nameOption2": "Professional Training",
+      "nameOption3": "Clinical Case Supervision",
+      "nameOption4": "Conference Invitation",
+      "nameOption5": "Other"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 David Firman. All rights reserved."
+  }
+}

@@ -1,4 +1,4 @@
- @use "_variables" as *;
+@use "_variables" as *;
 @use "_mixing" as *;
 
 .container__menu{
@@ -573,4 +573,79 @@ textarea.form-control {
 }
 .container__footer--logo{
     width: 134px;
+}
+
+// === Estilos para el selector de idioma personalizado ===
+.language-dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 100;
+}
+
+.language-selected {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  color: #fff;
+  border: 2px solid #aaa;
+  border-radius: 30px;
+  padding: 8px 24px;
+  font-size: 1.2em;
+  cursor: pointer;
+  min-width: 120px;
+  transition: border 0.2s, background 0.2s;
+  .lang-arrow {
+    margin-left: 10px;
+    font-size: 1.1em;
+  }
+}
+
+.language-options {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: $colorTextNAlternativo;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 10px 0;
+  min-width: 140px;
+  z-index: 200;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 24px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.1em;
+    border-bottom: 1px solid #4442;
+    background: transparent;
+    transition: background 0.2s, color 0.2s;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &.active,
+    &:hover {
+      background: none;
+      text-decoration: underline;
+      text-decoration-color: $colorPrincipal;
+    }
+  }
+}
+
+.language-dropdown.open .language-options {
+  display: block;
+}
+
+.language-dropdown .lang-flag img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 1px 4px #0002;
 }
