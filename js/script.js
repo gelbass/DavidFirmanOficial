@@ -22,13 +22,20 @@ function setLanguage(lang) {
       });
 
       // 2. Menú dinámico (si tienes arrays en el JSON para el menú)
-      if (data.menu && Array.isArray(data.menu.items)) {
-        const nav = document.querySelector('nav ul');
-        if (nav) {
-          nav.innerHTML = '';
-          data.menu.items.forEach(item => {
-            nav.innerHTML += `<li><a class="nav-link container__menu--item" href="${item.href}" data-i18n="">${item.text}</a></li>`;
-          });
+      if (data.menu) {
+        // Selecciona todos los enlaces del menú principal en el orden correcto
+        const menuLinks = document.querySelectorAll('.container__menu--items .container__menu--item:not(.container__menu--btn)');
+        const menuKeys = ['about', 'services', 'courses', 'invitations', 'books', 'videos'];
+        menuLinks.forEach((link, idx) => {
+          const key = menuKeys[idx];
+          if (data.menu[key]) {
+            link.textContent = data.menu[key];
+          }
+        });
+        // Botón de contacto
+        const contactBtn = document.querySelector('.container__menu--btn');
+        if (contactBtn && data.menu.contact) {
+          contactBtn.textContent = data.menu.contact;
         }
       }
 
