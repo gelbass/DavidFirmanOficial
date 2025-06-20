@@ -657,6 +657,11 @@ main{
     flex-direction: column;
   }
 }
+.container__videos--contenido{
+    @include respond-between("phone-small", "tablet-large") {
+    flex-direction: column;
+  }
+}
 .container__videos--text {
   @include respond-between("phone-small", "phone-medium") {}
   @include respond-between("phone-medium", "phone-large") {}

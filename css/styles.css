@@ -705,9 +705,15 @@
   gap: 0px;
   padding: 85px 60px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+.container__videos--contenido {
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .container__videos--text {
@@ -1679,6 +1685,12 @@ html {
 @media (min-width: 600px) and (max-width: 991.98px) {
   .container__videos {
     padding: 25% 30px 10px 30px !important;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 991.98px) {
+  .container__videos--contenido {
     flex-direction: column;
   }
 }

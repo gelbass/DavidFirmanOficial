@@ -381,7 +381,12 @@
 }
 
 .container__videos{
-    @include containers(100%, auto, flex, 0px, 85px 60px, row,space-between); 
+    @include containers(100%, auto, flex, 0px, 85px 60px, column,space-between); 
+}
+.container__videos--contenido{
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 .container__videos--text{
     @include containers(100%, auto, flex, 0px, 0px, column, center, flex-start); 
