@@ -41,13 +41,21 @@ function setLanguage(lang) {
 
       // 3. SOBRE MI: párrafos con negrita
       if (data.about && Array.isArray(data.about.description)) {
+        const sobreMiContainer = document.querySelector('.container_sobreMi');
         const descContainer = document.querySelector('.container__sobreMi--text');
+        // Eliminar cualquier h2 previo en toda la sección para evitar duplicados
+        if (sobreMiContainer) {
+          sobreMiContainer.querySelectorAll('h2[data-i18n="about.title"]').forEach(h2 => h2.remove());
+        }
         if (descContainer) {
-          descContainer.innerHTML = `<h2>${data.about.title}</h2>`;
+          // Crear solo un h2 en el contenedor de texto
+          descContainer.innerHTML = `<h2 class="container__sobreMi--text-h2" data-i18n="about.title">${data.about.title}</h2>`;
           data.about.description.forEach(parrafo => {
             descContainer.innerHTML += `<p>${parrafo}</p>`;
           });
         }
+        // Llamar a la función de movimiento del h2 tras renderizar
+        if (window.moveSobreMiTitle) window.moveSobreMiTitle();
       }
 
       // 4. SERVICIOS dinámicos
@@ -69,6 +77,31 @@ function setLanguage(lang) {
               </div>
             `;
           });
+          // --- INICIO: Orden dinámico de imagen en cards de servicios ---
+          function moveServiceCardImg() {
+            document.querySelectorAll('.container-servicios--card').forEach(card => {
+              const contenido = card.querySelector('.card-contenido');
+              const img = card.querySelector('.container-servicios--card-img');
+              const btn = card.querySelector('.btn-servicios');
+              if (window.innerWidth <= 885) {
+                // Si la imagen no está ya dentro de .card-contenido, la movemos
+                if (contenido && img && img.parentElement !== contenido) {
+                  contenido.insertBefore(img, btn); // Inserta la imagen antes del botón
+                }
+              } else {
+                // Si la imagen está dentro de .card-contenido, la devolvemos a su lugar original
+                if (contenido && img && img.parentElement === contenido) {
+                  card.appendChild(img);
+                }
+              }
+            });
+          }
+          moveServiceCardImg();
+          if (!window._serviciosCardResizeListener) {
+            window.addEventListener('resize', moveServiceCardImg);
+            window._serviciosCardResizeListener = true;
+          }
+          // --- FIN: Orden dinámico de imagen en cards de servicios ---
         }
       }
 
@@ -102,28 +135,30 @@ function setLanguage(lang) {
         // Crea el swiper nuevamente
         cursosSwiperInstance = new Swiper('.cursosSwiper', {
           direction: 'horizontal',
-          slidesPerView: 3,
+          slidesPerView: 1,
           spaceBetween: 10,
           grabCursor: true,
           loop: true,
+          //loopedSlides: 4, // igual o mayor al máximo slidesPerView
+          slidesPerGroup: 1,
+          simulateTouch: true, // (este es el valor por defecto)
           centeredSlides: true,
           centeredSlidesBounds: true,
-          navigation: {
-            nextEl: '.cursos-next',
-            prevEl: '.cursos-prev',
-          },
           pagination: {
             el: '.swiper-pagination',
             clickable: true,
           },
           breakpoints: {
-            768: {
-              slidesPerView: 1,
-            },
-            1200: {
-              slidesPerView: 3,
-            }
+           0: {
+            slidesPerView: 1
+          },
+          880: {
+            slidesPerView: 2
+          },
+          991: {
+            slidesPerView: 3
           }
+        }
         });
       }
     }
@@ -163,33 +198,62 @@ function setLanguage(lang) {
             `;
           });
 
-          // Reinicializa el Swiper para libros gratuitos
-          if (window.librosDescargaSwiperInstance) {
+          // Destruye el Swiper anterior si existe y es válido
+          if (window.librosDescargaSwiperInstance && window.librosDescargaSwiperInstance.destroy) {
             window.librosDescargaSwiperInstance.destroy(true, true);
+            window.librosDescargaSwiperInstance = null;
           }
-          window.librosDescargaSwiperInstance = new Swiper('.librosDescargaSwiper', {
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 3,
-            loop: true,
-            spaceBetween: 10,
-            coverflowEffect: {
-              rotate: 30,
-              stretch: 0,
-              depth: 100,
-              modifier: 1,
-              slideShadows: true,
-            },
-            pagination: {
-              el: '.librosDescarga-pagination',
-              clickable: true,
-            },
-            breakpoints: {
-              768: { slidesPerView: 1 },
-              1200: { slidesPerView: 3 }
-            }
-          });
+
+          // Inicializa el Swiper SOLO si hay slides y el contenedor existe
+          // Esperar al siguiente ciclo de render para asegurar que el DOM está actualizado
+            setTimeout(() => {
+              const swiperContainer = document.querySelector('.librosDescargaSwiper');
+              const slides = booksFreeList.querySelectorAll('.swiper-slide');
+
+              if (swiperContainer && slides.length > 0) {
+                // Destruir instancia anterior si existe
+                if (window.librosDescargaSwiperInstance && typeof window.librosDescargaSwiperInstance.destroy === 'function') {
+                  window.librosDescargaSwiperInstance.destroy(true, true);
+                }
+
+                // Forzar un repaint para asegurar que los nuevos slides están visibles
+                swiperContainer.offsetHeight;
+
+                window.librosDescargaSwiperInstance = new Swiper('.librosDescargaSwiper', {
+                  //direction: window.innerWidth < 991 ? 'vertical' : 'horizontal',
+                  effect: 'coverflow',
+                  grabCursor: true,
+                  centeredSlides: true,
+                  slidesPerView: 3,
+                  loop: true,
+                  spaceBetween: 10,
+                  slidesPerGroup: 1,
+                  simulateTouch: true,
+                  coverflowEffect: {
+                    rotate: 30,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+                  },
+                  pagination: {
+                    el: '.librosDescarga-pagination',
+                    clickable: true,
+                  },
+                  breakpoints: {
+                    768: { slidesPerView: 2 },
+                    1200: { slidesPerView: 3 }
+                  }
+                });
+
+                // Reajusta la posición
+                window.librosDescargaSwiperInstance.update();
+                window.librosDescargaSwiperInstance.slideToLoop(0, 0, false);
+              } else {
+                console.warn('Swiper NO inicializado: contenedor o slides faltantes');
+              }
+            }, 100); // Espera 100ms para asegurar que el DOM ya se actualizó
+
         }
       }
 
@@ -232,10 +296,12 @@ function setLanguage(lang) {
               slidesPerView: 1,
               spaceBetween: 10,
               loop: true,
-              speed: 800,
-              autoplay: {
-                delay: 4000,
-                disableOnInteraction: true
+              simulateTouch: true, // (este es el valor por defecto)
+              centeredSlides: true,
+              centeredSlidesBounds: false,
+              navigation: {
+                nextEl: '.videos-next',
+                prevEl: '.videos-prev',
               },
               pagination: {
                 el: '.videos-pagination',
@@ -243,12 +309,13 @@ function setLanguage(lang) {
               },
               breakpoints: {
                 768: {
-                  slidesPerView: 2,
+                  slidesPerView: 1,
                 },
                 1200: {
                   slidesPerView: 3,
                 }
               }
+              
             });
           }
         }
@@ -337,7 +404,60 @@ document.addEventListener('DOMContentLoaded', function() {
     langSelect.value = lang;
   }
   setLanguage(lang);
+
+  // Cerrar menú responsive al hacer clic en un enlace
+  document.querySelectorAll('.container__menu--item').forEach(link => {
+    link.addEventListener('click', function() {
+      const navbarCollapse = document.getElementById('navbarNav');
+      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+        const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+        bsCollapse.hide();
+      }
+    });
+  });
 });
+
+// --- INICIO: Orden dinámico del botón de videos ---
+(function() {
+  let btnOriginalParent = null;
+  let btnOriginalNext = null;
+
+  function moveVideosButton() {
+    const btn = document.querySelector('.btn-videos');
+    const swiper = document.querySelector('.videosSwiper');
+    if (!btn || !swiper) return;
+
+    // Guardar referencia al padre y siguiente hermano original solo la primera vez
+    if (!btnOriginalParent) {
+      btnOriginalParent = btn.parentElement;
+      btnOriginalNext = btn.nextElementSibling;
+    }
+
+    if (window.innerWidth <= 990) {
+      // En móvil: mover el botón después del swiper
+      if (btn.parentElement !== swiper.parentElement || btn.previousElementSibling !== swiper) {
+        swiper.parentElement.insertBefore(btn, swiper.nextSibling);
+      }
+    } else {
+      // En desktop: devolver el botón a su contenedor original
+      if (btn.parentElement !== btnOriginalParent) {
+        if (btnOriginalNext) {
+          btnOriginalParent.insertBefore(btn, btnOriginalNext);
+        } else {
+          btnOriginalParent.appendChild(btn);
+        }
+      }
+    }
+  }
+
+  moveVideosButton();
+  if (!window._videosBtnResizeListener) {
+    window.addEventListener('resize', moveVideosButton);
+    window._videosBtnResizeListener = true;
+  }
+})();
+// --- FIN: Orden dinámico del botón de videos ---
+
 
 //********************* */
 /*
@@ -424,4 +544,42 @@ document.getElementById('contactoModalForm').addEventListener('submit', function
   const modal = bootstrap.Modal.getInstance(document.getElementById('formModal'));
   modal.hide();
   this.reset();
-}); 
+});
+
+// --- INICIO: Orden dinámico del h2 de sobreMi ---
+(function() {
+  let originalParent = null;
+  let h2Moved = false;
+
+  function moveSobreMiTitle() {
+    const sobreMi = document.querySelector('.container_sobreMi');
+    const imgDiv = sobreMi?.querySelector('.container__sobreMi--img');
+    const textDiv = sobreMi?.querySelector('.container__sobreMi--text');
+    // Buscar el h2 tanto en el textDiv como en sobreMi (por si ya fue movido)
+    const h2 = textDiv?.querySelector('h2[data-i18n="about.title"]') || sobreMi?.querySelector('h2[data-i18n="about.title"]');
+    if (!sobreMi || !imgDiv || !textDiv || !h2) return;
+
+    // Guardar el padre original solo la primera vez
+    if (!originalParent) originalParent = textDiv;
+
+    if (window.innerWidth <= 885) {
+      // Mover h2 arriba de la imagen, solo si no está ya ahí
+      if (h2.parentElement !== sobreMi) {
+        sobreMi.insertBefore(h2, imgDiv);
+        h2Moved = true;
+      }
+    } else {
+      // Devolver h2 a su lugar original, solo si fue movido
+      if (h2Moved && h2.parentElement !== originalParent) {
+        originalParent.insertBefore(h2, originalParent.firstChild);
+        h2Moved = false;
+      }
+    }
+  }
+
+  // Ejecutar al cargar y en resize
+  window.moveSobreMiTitle = moveSobreMiTitle; // Exponer para uso externo tras cambio de idioma
+  moveSobreMiTitle();
+  window.addEventListener('resize', moveSobreMiTitle);
+})();
+// --- FIN: Orden dinámico del h2 de sobreMi ---

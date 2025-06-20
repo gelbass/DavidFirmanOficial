@@ -2,7 +2,7 @@
 @use "_mixing" as *;
 
 .container__menu{
-    @include containers(auto, 100px, flex, 0px, 40px 60px !important, row, space-between, center);
+    @include containers(auto, 100px, flex !important, 0px, 40px 60px !important, row !important, space-between, center);
 
     background: rgba(25, 0, 0, 0.50);
     background: color(display-p3 0.0846 0 0 / 0.50);
@@ -61,7 +61,8 @@
 }
 .container__home{
     @include containers(100%, 100dvh, flex, 10px, 0px, row, space-between,  flex-end);
-    margin: 0px
+    margin: 0px;
+
 }
 .container__home--text{
     @include containers(65%, 100dvh, flex, 10px, 52px 50px 0px 60px, column, center, flex-start);
@@ -86,6 +87,9 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    position: absolute;
+    top: 80%;
+    left: 5%;
 }
 .container_sobreMi{
     @include containers(100%, 100dvh, flex, 0px, 50px 60px, row, space-between, flex-start);
@@ -100,10 +104,7 @@
 .container__sobreMi--text{
     @include containers(50%, 100dvh, flex, 0px, 0px, column, center, normal);
     //text-align: justify;
-    h2{
-        @include text('Poppins', 60px, $colorTextN, normal, 600);
-        //margin-bottom: 20px;
-    }
+   
     p{
         @include text('Poppins', 20px, $colorTextN, normal, 300);
         margin: 0px;
@@ -112,7 +113,10 @@
         }
     }
 }
-
+ .container__sobreMi--text-h2{
+        @include text('Poppins', 60px, $colorTextN, normal, 600);
+        //margin-bottom: 20px;
+    }
 .container-servicios{
     @include containers(100%, '', flex, 0px, 85px 60px, column, center, center); 
     h2{
@@ -122,11 +126,11 @@
 }
 
 .container-servicios--cards{
-    @include containers(auto, auto, flex, 60px, 40px 60px, column, center, center);   
+    @include containers(auto, auto, flex, 60px, 10px, column, center, center);   
 
 }
 .container-servicios--card{
-    @include containers(100%, 371px, flex, 50px, 40px 60px, row, space-between, center); 
+    @include containers(100%, 371px, flex, 50px, 40px, row, space-between, center); 
     border-radius: 30px;
     background: $colorSegundario;
     background: color(display-p3 0.2581 0.0497 0.0497); 
@@ -147,16 +151,17 @@
 }
 .container-servicios--card-img{
     width: 35%;
-    height: 100%;
+    aspect-ratio: 490 / 380;
     border-radius: 20px;
-
+    padding: 20px
 }
 .card-contenido{
-    @include containers(100%, auto, flex, 50px, 0px, column, space-between, flex-start); 
+    @include containers(100%, auto, flex, 50px, 0px, column,center,flex-start); 
+    flex: 1;
 
 }
 .btn-servicios{
-    @include button(459px,50px, 50px, #AC0000, $colorTextB, 20px,$colorButtonHover);
+    @include button(70%,50px, 50px, #AC0000, $colorTextB, 20px,$colorButtonHover);
     padding: 13px !important;
     justify-content: center;
     align-items: center;
@@ -177,10 +182,11 @@
 }
 .cursosSwiper {
   width: 100%;
+  overflow: hidden;
   // Puedes ajustar la altura si lo necesitas
 }
 .swiper{
-    padding: 50px !important;
+    padding: 10px !important;
     
 }
 // Cambia el color de los puntos inactivos
@@ -201,11 +207,14 @@
   margin: 0 6px !important; // Espaciado opcional
 }
 .swiper-slide {
+    //width: auto !important; // o lo puedes omitir y dejar que Swiper lo maneje
+  flex-shrink: 0; // importante para que no se reduzca
   display: flex !important;
   justify-content: center;
   // Elimina cualquier ancho fijo aquí
 }
 .swiper-wrapper{
+    display: flex;
     //margin: 20px !important;
     padding-bottom: 50px !important;
     gap:10px;
@@ -238,6 +247,7 @@
     }
 }
 .swiper-slide-active{
+    
     img{
         filter: grayscale(0) !important; /* Elimina el filtro al pasar el cursor */
         transition: filter 0.3s ease !important; /* Añade una transición suave */
@@ -278,6 +288,10 @@
         @include text('Poppins', 20px, $colorTextNAlternativo, normal, 300);
     }
 }
+.container__invitaciones--img{
+    max-width: 50%;
+    height: auto;
+}
 .btn-invitaciones{
     @include button(60%,auto, 50px, #AC0000, $colorTextB, 20px, $colorButtonHoverOpcional,$colorTextB);
     margin-top: 20px;
@@ -313,7 +327,8 @@
     gap: 40px;
 }
 .container__libros--card{
-    @include containers(400px, auto, flex, 20px, 40px 60px, column !important, space-between, center); 
+    @include containers(100%, auto, flex, 20px, 40px 60px, column !important, space-between, center); 
+     max-width: 350px;
     border-radius: 30px;
     h3{
         @include text('Poppins', 15px, $colorTextB, normal, 600);
@@ -336,6 +351,8 @@
     
 }
 .swiper-slide {
+    flex-shrink: 0;
+  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -384,6 +401,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    margin: 20px;
     iframe{
         width: 100%;
         height: 400px;
@@ -591,6 +609,7 @@ textarea.form-control {
 }
 
 .language-selected {
+  @include text('Poppins', 18px, $colorTextB, normal, 400);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -598,8 +617,7 @@ textarea.form-control {
   color: #fff;
   border: 2px solid #aaa;
   border-radius: 30px;
-  padding: 8px 24px;
-  font-size: 1.2em;
+  padding: 6px 24px;
   cursor: pointer;
   min-width: 120px;
   transition: border 0.2s, background 0.2s;
@@ -610,6 +628,7 @@ textarea.form-control {
 }
 
 .language-options {
+    @include text('Poppins', 18px, $colorTextB, normal, 400);
   display: none;
   position: absolute;
   top: 110%;
@@ -618,7 +637,7 @@ textarea.form-control {
   border-radius: 20px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   padding: 10px 0;
-  min-width: 140px;
+  min-width: 120px;
   z-index: 200;
 
   li {
@@ -628,7 +647,7 @@ textarea.form-control {
     padding: 10px 24px;
     cursor: pointer;
     color: #fff;
-    font-size: 1.1em;
+    
     border-bottom: 1px solid #4442;
     background: transparent;
     transition: background 0.2s, color 0.2s;
