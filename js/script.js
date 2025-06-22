@@ -343,6 +343,13 @@ function setLanguage(lang) {
       }
       // Llamar a la función para re-asignar eventos a los botones de modal
       attachModalTriggers();
+
+      // Cerrar menú responsive si está abierto al cambiar idioma
+      const navbarCollapse = document.getElementById('navbarNav');
+      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+        const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+        bsCollapse.hide();
+      }
     });
   localStorage.setItem('lang', lang);
 }
