@@ -927,11 +927,9 @@ textarea.form-control {
   @include respond-between("tablet-large", "laptop-small") {}
 }
 .btn-submit {
-  @include respond-between("phone-small", "phone-medium") {}
-  @include respond-between("phone-medium", "phone-large") {}
-  @include respond-between("phone-large", "tablet-small") {}
-  @include respond-between("tablet-small", "tablet-medium") {}
-  @include respond-between("tablet-medium", "tablet-large") {}
+  @include respond-between("phone-small", "tablet-large") {
+    width: 100% !important;
+  }
   @include respond-between("tablet-large", "laptop-small") {}
 }
 .form-footer {
