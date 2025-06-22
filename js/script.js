@@ -320,6 +320,8 @@ function setLanguage(lang) {
         // Placeholders
         document.getElementById('nombre').placeholder = data.contact.form.name || '';
         document.getElementById('apellido').placeholder = data.contact.form.lastname || '';
+        document.getElementById('pais').placeholder = data.contact.form.pais || '';
+        document.getElementById('ciudad').placeholder = data.contact.form.ciudad || '';
         document.getElementById('email').placeholder = data.contact.form.email || '';
         document.getElementById('mensaje').placeholder = data.contact.form.write || '';
 
@@ -338,6 +340,8 @@ function setLanguage(lang) {
       if (data.contact && data.contact.form) {
         document.getElementById('nombreModal').placeholder = data.contact.form.name || '';
         document.getElementById('emailModal').placeholder = data.contact.form.email || '';
+        document.getElementById('paisModal').placeholder = data.contact.form.pais || '';
+        document.getElementById('ciudadModal').placeholder = data.contact.form.ciudad || '';
         document.getElementById('motivoModal').placeholder = data.contact.form.subject || '';
         document.getElementById('mensajeModal').placeholder = data.contact.form.write || '';
       }
@@ -639,13 +643,13 @@ document.addEventListener('DOMContentLoaded', function() {
   setupFormValidation(
     '#contactoForm',
     '.btn-submit',
-    ['#nombre', '#apellido', '#email', '#motivo', '#mensaje']
+    ['#nombre', '#apellido', '#pais' ,'#ciudad','#email', '#motivo', '#mensaje']
   );
   // Formulario modal
   setupFormValidation(
     '#contactoModalForm',
     '.btn-submit',
-    ['#nombreModal', '#emailModal', '#motivoModal', '#mensajeModal']
+    ['#nombreModal', '#emailModal', '#paisModal' ,'#ciudadModal', '#motivoModal', '#mensajeModal']
   );
 });
 // --- FIN: Activación visual de botón submit en formularios ---

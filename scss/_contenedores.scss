@@ -295,7 +295,7 @@
     //@include text('Poppins', 20px, $colorTextNAlternativo, normal, 300);
     margin: 0px;
     p{
-        @include text('Poppins', 20px, $colorTextNAlternativo, normal, 300);
+        @include text('Poppins', 20px, $colorTextN, normal, 300);
     }
 }
 .container__invitaciones--img{

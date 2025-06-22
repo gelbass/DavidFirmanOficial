@@ -529,7 +529,7 @@
 .container__invitaciones--text p {
   font-family: "Poppins";
   font-size: 20px !important;
-  color: #7e7d7d !important;
+  color: #1E1E1E !important;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -1282,8 +1282,7 @@ html {
     align-items: center;
     justify-content: flex-end;
     padding: 35% 30px 80px 30px !important;
-    text-align: center;
-    align-items: center;
+    gap: 40px !important;
   }
 }
 @media (min-width: 414px) and (max-width: 599.98px) {
@@ -1294,8 +1293,7 @@ html {
     align-items: center;
     justify-content: flex-end;
     padding: 35% 30px 80px 30px !important;
-    text-align: center;
-    align-items: center;
+    gap: 40px !important;
   }
 }
 @media (min-width: 600px) and (max-width: 884.98px) {
@@ -1306,14 +1304,12 @@ html {
     align-items: center;
     justify-content: flex-end;
     padding: 20% 40px 80px 40px !important;
-    text-align: center;
-    align-items: center;
+    gap: 40px !important;
   }
 }
 @media (min-width: 600px) and (max-width: 884.98px) and (min-width: 885px) and (max-width: 991.98px) {
   .container__home {
-    text-align: center;
-    align-items: center;
+    gap: 40px !important;
   }
 }
 
@@ -1323,7 +1319,7 @@ html {
     width: 100%;
     padding: 10px !important;
     height: auto;
-    align-items: center;
+    padding-left: 0px;
   }
 }
 @media (min-width: 375px) and (max-width: 884.98px) {
@@ -1331,12 +1327,27 @@ html {
     width: 100%;
     padding-top: 80px;
     height: auto;
-    align-items: center;
+    padding-left: 0px;
   }
 }
-@media (min-width: 885px) and (max-width: 991.98px) {
-  .container__home--text {
-    align-items: center;
+@media (min-width: 320px) and (max-width: 374.98px) {
+  .container__home--text h1 {
+    font-size: 28px !important;
+  }
+}
+@media (min-width: 375px) and (max-width: 413.98px) {
+  .container__home--text h1 {
+    font-size: 28px !important;
+  }
+}
+@media (min-width: 414px) and (max-width: 599.98px) {
+  .container__home--text h1 {
+    font-size: 33px !important;
+  }
+}
+@media (min-width: 600px) and (max-width: 884.98px) {
+  .container__home--text h1 {
+    font-size: 55px !important;
   }
 }
 @media (min-width: 320px) and (max-width: 374.98px) {

@@ -274,9 +274,15 @@
               <label for="email" class="form-label" data-i18n="contact.form.email"></label>
               <input type="email" class="form-control" id="email" name="email" required placeholder="">
             </div>
-            <div class="mb-3">
-              <label for="direccion" class="form-label" data-i18n="contact.form.direccion"></label>
-              <input type="text" class="form-control" id="direccion" name="direccion" required placeholder="">
+            <div class="row mb-3 row_form">
+              <div class="col">
+                <label for="pais" class="form-label" data-i18n="contact.form.pais"></label>
+                <input type="text" class="form-control" id="pais" name="pais" required placeholder="">
+              </div>
+              <div class="col">
+                <label for="ciudad" class="form-label" data-i18n="contact.form.ciudad"></label>
+                <input type="text" class="form-control" id="ciudad" name="ciudad" required placeholder="">
+              </div>
             </div>
             <div class="mb-3">
               <label for="motivo" class="form-label" data-i18n="contact.form.subject"></label>
@@ -352,23 +358,29 @@
           <div class="modal-body">
             <div class="mb-3">
               <label for="nombreModal" class="form-label" data-i18n="contact.form.name"></label>
-              <input type="text" class="form-control" id="nombreModal" name="name" required placeholder="">
+              <input type="text" class="form-control" id="nombreModal" name="nombreModal" required placeholder="">
             </div>
             <div class="mb-3">
               <label for="emailModal" class="form-label" data-i18n="contact.form.email"></label>
-              <input type="email" class="form-control" id="emailModal" name="email" required placeholder="">
+              <input type="email" class="form-control" id="emailModal" name="emailModal" required placeholder="">
             </div>
-            <div class="mb-3">
-              <label for="direccion" class="form-label" data-i18n="contact.form.direccion"></label>
-              <input type="text" class="form-control" id="direccionModal" name="direccion" required placeholder="">
+            <div class="row mb-3 row_form">
+              <div class="col">
+                <label for="pais" class="form-label" data-i18n="contact.form.pais"></label>
+                <input type="text" class="form-control" id="pais" name="pais" required placeholder="">
+              </div>
+              <div class="col">
+                <label for="ciudad" class="form-label" data-i18n="contact.form.ciudad"></label>
+                <input type="text" class="form-control" id="ciudadModal" name="ciudadModal" required placeholder="">
+              </div>
             </div>
             <div class="mb-3">
               <label for="motivoModal" class="form-label" data-i18n="contact.form.subject"></label>
-              <input type="text" class="form-control" id="motivoModal" name="motivo" readonly placeholder="">
+              <input type="text" class="form-control" id="motivoModal" name="motivoModal" readonly placeholder="">
             </div>
             <div class="mb-3">
               <label for="mensajeModal" class="form-label" data-i18n="contact.form.message"></label>
-              <textarea class="form-control" id="mensajeModal" name="mensaje" rows="3" required placeholder=""></textarea>
+              <textarea class="form-control" id="mensajeModal" name="mensajeModal" rows="3" required placeholder=""></textarea>
             </div>
           </div>
           <div class="modal-footer">
