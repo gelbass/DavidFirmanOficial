@@ -172,6 +172,7 @@
       "lastname": "Last Name",
       "email": "Email",
       "subject": "Subject",
+      "direccion": "Address",
       "message": "Message",
       "write": "Write your message",
       "send": "Send",

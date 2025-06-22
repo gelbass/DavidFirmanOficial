@@ -171,6 +171,7 @@
       "name": "Nome",
       "lastname": "Sobrenome",
       "email": "E-mail",
+      "direccion": "Endereço",
       "subject": "Motivo",
       "message": "Mensagem",
       "write": "Escrever",

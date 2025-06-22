@@ -80,6 +80,8 @@ main{
     align-items: center;
     justify-content: flex-end;
     padding: 35% 30px 80px 30px !important;
+    text-align: center;
+    align-items: center;
   }
   @include respond-between("phone-large", "tablet-small") {
     flex-direction: column;
@@ -88,6 +90,8 @@ main{
     align-items: center;
     justify-content: flex-end;
     padding: 35% 30px 80px 30px !important;
+    text-align: center;
+    align-items: center;
   }
   @include respond-between("tablet-small", "tablet-medium") {
     flex-direction: column;
@@ -96,7 +100,12 @@ main{
     align-items: center;
     justify-content: flex-end;
     padding: 20% 40px 80px 40px !important;
-    
+    text-align: center;
+    align-items: center;
+    @include respond-between("tablet-medium", "tablet-large") {
+        text-align: center;
+        align-items: center;
+    }
   }
 }
 .container__home--text {
@@ -105,12 +114,17 @@ main{
         width: 100%;
         padding: 10px !important;
         height: auto;
+        align-items: center
     }
   @include respond-between("phone-medium", "tablet-medium") {
     width: 100%;
     padding-top: 80px;
     height: auto;
+    align-items: center
   }
+   @include respond-between("tablet-medium", "tablet-large") {
+        align-items: center
+    }
   @include respond-between("tablet-medium", "tablet-large") {}
   @include respond-between("tablet-large", "laptop-small") {}
   h1 {
@@ -267,20 +281,20 @@ main{
         font-size: 35px !important;
     }
     @include respond-between("tablet-medium", "tablet-large") {
-        font-size: 40px !important;
+        font-size: 27px !important;
     }
     @include respond-between("tablet-large", "laptop-small") {}
   }
   p {
     @include respond-between("phone-small", "phone-medium") {
-        font-size: 15px !important;
+        font-size: 13px !important;
      }
     @include respond-between("phone-medium", "phone-medium") {
         font-size: 18px !important;
     }
     @include respond-between("tablet-small", "tablet-medium") {}
     @include respond-between("tablet-medium", "tablet-large") {
-        //font-size: 18px !important;
+        font-size: 18px !important;
     }
     @include respond-between("tablet-large", "laptop-small") {}
   }
@@ -299,7 +313,7 @@ main{
     order: 2;
  
      align-self: center;
-     margin: 20px 0;
+     padding: 5px;
   }
 }
 .card-contenido {
@@ -404,8 +418,14 @@ main{
   @include respond-between("tablet-large", "laptop-small") {}
 }
 .card-curso {
-  @include respond-between("phone-small", "phone-medium") {}
-  @include respond-between("phone-medium", "phone-large") {}
+  @include respond-between("phone-small", "phone-medium") {
+    width: 190px; 
+    height: 445px;
+  }
+  @include respond-between("phone-medium", "phone-large") {
+    width: 280px; 
+    height: 545px;
+  }
   @include respond-between("phone-large", "tablet-small") {}
   @include respond-between("tablet-small", "tablet-medium") {}
   @include respond-between("tablet-medium", "tablet-large") {}
@@ -414,8 +434,12 @@ main{
     @include respond-between("tablet-medium", "tablet-large") {
       font-size: 28px;
     }
-    @include respond-between("phone-small", "phone-medium") {}
-    @include respond-between("phone-medium", "phone-large") {}
+    @include respond-between("phone-small", "phone-medium") {
+        font-size: 15px !important;
+    }
+    @include respond-between("phone-medium", "phone-large") {
+         font-size: 15px !important;
+    }
     @include respond-between("phone-large", "tablet-small") {}
     @include respond-between("tablet-small", "tablet-medium") {}
     @include respond-between("tablet-medium", "tablet-large") {}
@@ -423,7 +447,7 @@ main{
   }
   p {
     @include respond-between("phone-small", "phone-medium") {
-        font-size: 15px !important;
+        font-size: 12px !important;
     }
   }
   img {
@@ -454,7 +478,9 @@ main{
   @include respond-between("tablet-large", "laptop-small") {}
 }
 .btn-curso {
-  @include respond-between("phone-small", "phone-medium") {}
+  @include respond-between("phone-small", "phone-medium") {
+    font-size: 15px !important;
+  }
   @include respond-between("phone-medium", "phone-large") {}
   @include respond-between("phone-large", "tablet-small") {}
   @include respond-between("tablet-small", "tablet-medium") {}
@@ -496,6 +522,7 @@ main{
   @include respond-between("tablet-large", "laptop-small") {}
 
 }
+
 .container__invitaciones--text {
   @include respond-between("phone-small", "phone-medium") {}
   @include respond-between("phone-medium", "phone-large") {}
@@ -527,6 +554,11 @@ main{
   @include respond-between("tablet-small", "laptop-small") {
     padding: 20% 30px 10px 30px !important;
   }
+    .swiper{
+        @include respond-between("phone-small", "tablet-large") {
+            width: 100% !important;        }
+    }
+  
   h2 {
     @include respond-between("phone-small", "phone-medium") {
         font-size: 28px !important;
@@ -557,6 +589,12 @@ main{
     @include respond-between("tablet-medium", "tablet-large") {}
     @include respond-between("tablet-large", "laptop-small") {}
   }
+  .swiper-wrapper {
+  @include respond-between("phone-small", "phone-medium") {
+    width: 85% !important;
+  }
+
+}
 }
 .container__libros--compra--cards {
   @include respond-between("phone-small", "laptop-small") {
@@ -574,6 +612,8 @@ main{
 .container__libros--card {
   @include respond-between("phone-small", "phone-large") {
     padding: 0px !important;
+    width: 230px;
+    height: 530px;
   }
   @include respond-between("phone-large", "tablet-medium") {
     padding: 20px !important
@@ -691,15 +731,21 @@ main{
 }
 .container__videos--principal {
   @include respond-between("phone-small", "tablet-small") {
-    padding: 40px 22px;
+    padding: 0px;
   }
   @include respond-between("tablet-small", "tablet-medium") {}
   @include respond-between("tablet-medium", "tablet-large") {}
   @include respond-between("tablet-large", "laptop-small") {}
   iframe {
-    @include respond-between("phone-small", "phone-medium") {}
-    @include respond-between("phone-medium", "phone-large") {}
-    @include respond-between("phone-large", "tablet-small") {}
+    @include respond-between("phone-small", "phone-medium") {
+        height: 144px;
+    }
+    @include respond-between("phone-medium", "phone-large") {
+        height: 182px;
+    }
+    @include respond-between("phone-large", "tablet-small") {
+        height: 286px;
+    }
     @include respond-between("tablet-small", "tablet-medium") {}
     @include respond-between("tablet-medium", "tablet-large") {}
     @include respond-between("tablet-large", "laptop-small") {}
@@ -725,9 +771,15 @@ main{
   @include respond-between("tablet-large", "laptop-small") {}
 }
 .container__videos--card {
-  @include respond-between("phone-small", "phone-medium") {}
-  @include respond-between("phone-medium", "phone-large") {}
-  @include respond-between("phone-large", "tablet-small") {}
+  @include respond-between("phone-small", "phone-medium") {
+    width: 180px ;
+  }
+  @include respond-between("phone-medium", "phone-large") {
+    width: 280px ;
+  }
+  @include respond-between("phone-large", "tablet-small") {
+    width: 300px ;
+  }
   @include respond-between("tablet-small", "tablet-medium") {}
   @include respond-between("tablet-medium", "tablet-large") {}
   @include respond-between("tablet-large", "laptop-small") {}

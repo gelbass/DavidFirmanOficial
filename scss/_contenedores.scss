@@ -14,6 +14,11 @@
     z-index: 1;
 }
 
+.navbar-toggler{
+    border: none !important;
+    padding: 0px !important;
+    color: none !important;
+}
 .container__menu--items{
     display: flex;
     padding: 10px 20px;
@@ -169,25 +174,29 @@
 }
 
 .container-cursos{
-    @include containers(100%, '', flex, 0px, 85px 60px, column, center, normal); 
+    @include containers(100%, auto, flex, 0px, 85px 60px, column, center, normal); 
     h2{
         @include text('Poppins', 60px, $colorTextN, normal, 600);
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     };
     p{
         @include text('Poppins', 20px, $colorTextNAlternativo, normal, 300);
-        margin: 0px;
+        margin-bottom: 30px;
         //text-align: center;
     }
+    .swiper {
+        width: 100%;
+        min-height: 380px ; // Ajusta según el tamaño de tus cards
+        max-height: 600px; // Ajusta según el tamaño de tus cards
+    }
 }
+
+
+
 .cursosSwiper {
   width: 100%;
   overflow: hidden;
   // Puedes ajustar la altura si lo necesitas
-}
-.swiper{
-    padding: 10px !important;
-    
 }
 // Cambia el color de los puntos inactivos
 .swiper-pagination-bullet {
@@ -195,7 +204,7 @@
   opacity: 0.5;
   width: 18px !important;   // Tamaño más grande
   height: 18px !important;  // Tamaño más grande
-  margin: 0 6px !important; // Espaciado opcional
+  margin: 6px !important; // Espaciado opcional
 }
 
 // Cambia el color del punto activo
@@ -204,7 +213,7 @@
   opacity: 1;
   width: 18px !important;   // Tamaño más grande
   height: 18px !important;  // Tamaño más grande
-  margin: 0 6px !important; // Espaciado opcional
+  margin: 6px  !important; // Espaciado opcional
 }
 .swiper-slide {
     //width: auto !important; // o lo puedes omitir y dejar que Swiper lo maneje
@@ -214,10 +223,11 @@
   // Elimina cualquier ancho fijo aquí
 }
 .swiper-wrapper{
-    display: flex;
+    display: flex !important;
     //margin: 20px !important;
     padding-bottom: 50px !important;
     gap:10px;
+    align-items: center;
 }
 
 .card-curso{
@@ -289,7 +299,7 @@
     }
 }
 .container__invitaciones--img{
-    max-width: 50%;
+    width: 100%;
     height: auto;
 }
 .btn-invitaciones{
@@ -316,6 +326,10 @@
         margin-bottom: 20px; 
         text-align: center;
     }
+     .swiper {
+        width: 75%;
+        max-height: 680px; // Ajusta según el tamaño de tus cards
+    }
 }
 
 .container__libros--compra--cards{
@@ -327,14 +341,15 @@
     gap: 40px;
 }
 .container__libros--card{
-    @include containers(100%, auto, flex, 20px, 40px 60px, column !important, space-between, center); 
-     max-width: 350px;
+    @include containers(100%, auto, flex, 20px, 40px 60px, column !important, center, center); 
+    max-width: 350px;
     border-radius: 30px;
+    flex-wrap: wrap;
     h3{
         @include text('Poppins', 15px, $colorTextB, normal, 600);
     }
     img    {
-        width: 100%;
+        width: 99%;
         height: auto;
         border-radius: 20px;
         //height: 364px;
@@ -350,24 +365,15 @@
     gap: 10px;
     
 }
-.swiper-slide {
-    flex-shrink: 0;
-  width: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto; // O un valor fijo si lo prefieres
-}
+
 .librosDescargaSwiper {
-  width: 90%;
-  min-height: 350px; // Ajusta según el tamaño de tus cards
 
     .swiper-pagination-bullet {
         background: $colorTextB !important; // Cambia este color por el que desees
         opacity: 0.5;
         width: 18px !important;   // Tamaño más grande
         height: 18px !important;  // Tamaño más grande
-        margin: 0 6px !important; // Espaciado opcional
+        margin: 6px !important; // Espaciado opcional
     }
 
     // Cambia el color del punto activo
@@ -376,12 +382,18 @@
         opacity: 1;
         width: 18px !important;   // Tamaño más grande
         height: 18px !important;  // Tamaño más grande
-        margin: 0 6px !important; // Espaciado opcional
+        margin: 6px !important; // Espaciado opcional
     }
+
 }
 
 .container__videos{
     @include containers(100%, auto, flex, 0px, 85px 60px, column,space-between); 
+     .swiper {
+        width: 100%;
+        max-height: 380px; // Ajusta según el tamaño de tus cards
+    }
+    
 }
 .container__videos--contenido{
     display: flex;
@@ -409,7 +421,7 @@
     margin: 20px;
     iframe{
         width: 100%;
-        height: 400px;
+        height: 380px;
         border-radius: 11.164px;
     }
 }
@@ -421,10 +433,15 @@
     gap: 10px;
 }
 .videosSwiper{
-    width: 100%; 
+    margin: 20px;
+     width: 100%;
+    overflow: hidden;
+    padding: 20px;
+    
+    
 }
 .container__videos--card{
-    @include containers(460px !important, 310px !important, flex, 0px, 20px, column !important, space-between, flex-start); 
+    @include containers(460px , 310px, flex, 0px, 20px, column !important, space-between, flex-start); 
     border-radius: 30px;
     background: #FFF;
     background: color(display-p3 1 1 1);
@@ -435,11 +452,12 @@
     }
     iframe{
         width: 100%;
-        height: 220px !important;
+        height: 240px ;
         border-radius: 10px;
         //height: 364px;
         align-self: stretch;
     }
+
 }
 
 .container__contacto{
@@ -540,7 +558,14 @@ textarea.form-control {
     line-height: normal;
 }
 .btn-submit {
- @include button(120px,auto,50px,$colorButton,$colorTextB,20px,$colorButtonHoverOpcional,$colorTextB);
+ @include button(120px,auto,50px,$colorInabilitado,$colorTextN,20px,$colorInabilitado,$colorTextN);
+     padding: 5px 30px !important;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.btn-active{
+     @include button(120px,auto,50px,$colorButton,$colorTextB,20px,$colorButtonHoverOpcional,$colorTextB);
      padding: 5px 30px !important;
     justify-content: center;
     align-items: center;

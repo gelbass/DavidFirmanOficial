@@ -134,28 +134,24 @@ function setLanguage(lang) {
         }
         // Crea el swiper nuevamente
         cursosSwiperInstance = new Swiper('.cursosSwiper', {
-          direction: 'horizontal',
-          slidesPerView: 1,
-          spaceBetween: 10,
+          direction:'horizontal',
+          slidesPerView: 3,
           grabCursor: true,
           loop: true,
-          //loopedSlides: 4, // igual o mayor al máximo slidesPerView
           slidesPerGroup: 1,
-          simulateTouch: true, // (este es el valor por defecto)
-          centeredSlides: true,
-          centeredSlidesBounds: true,
+          simulateTouch: true,
+          grabCursor: true,
           pagination: {
             el: '.swiper-pagination',
             clickable: true,
           },
           breakpoints: {
-           0: {
+           320: {
+            direction: "vertical",
             slidesPerView: 1
           },
-          880: {
-            slidesPerView: 2
-          },
           991: {
+            direction: "horizontal",
             slidesPerView: 3
           }
         }
@@ -172,9 +168,7 @@ function setLanguage(lang) {
           data.books.buy.forEach(item => {
             booksList.innerHTML += `
               <div class="container__libros--card">
-                <div>
-                  <img src="${item.img}" alt="${item.title}" class="img-fluid">
-                </div>
+                <img src="${item.img}" alt="${item.title}" class="img-fluid">
                 <h3>${item.title}</h3>
                 <a href="${item.link || '#'}" class="btn btn-card" target="_blank">${data.books.button}</a>
               </div>
@@ -220,15 +214,16 @@ function setLanguage(lang) {
                 swiperContainer.offsetHeight;
 
                 window.librosDescargaSwiperInstance = new Swiper('.librosDescargaSwiper', {
-                  //direction: window.innerWidth < 991 ? 'vertical' : 'horizontal',
                   effect: 'coverflow',
                   grabCursor: true,
                   centeredSlides: true,
-                  slidesPerView: 3,
+                  slidesPerView: 1,
                   loop: true,
-                  spaceBetween: 10,
-                  slidesPerGroup: 1,
                   simulateTouch: true,
+                  pagination: {
+                    el: '.librosDescarga-pagination',
+                    clickable: true,
+                  },
                   coverflowEffect: {
                     rotate: 30,
                     stretch: 0,
@@ -236,13 +231,15 @@ function setLanguage(lang) {
                     modifier: 1,
                     slideShadows: true,
                   },
-                  pagination: {
-                    el: '.librosDescarga-pagination',
-                    clickable: true,
-                  },
                   breakpoints: {
-                    768: { slidesPerView: 2 },
-                    1200: { slidesPerView: 3 }
+                    320: {
+                      direction: "vertical",
+                      slidesPerView: 1
+                    },
+                    991: {
+                      direction: "horizontal",
+                      slidesPerView: 3
+                    }
                   }
                 });
 
@@ -291,31 +288,28 @@ function setLanguage(lang) {
               window.videosSwiperInstance.destroy(true, true);
             }
             window.videosSwiperInstance = new Swiper('.videosSwiper', {
-              direction: 'horizontal',
+              direction:'horizontal',
+              slidesPerView: 3,
               grabCursor: true,
-              slidesPerView: 1,
-              spaceBetween: 10,
               loop: true,
-              simulateTouch: true, // (este es el valor por defecto)
-              centeredSlides: true,
-              centeredSlidesBounds: false,
-              navigation: {
-                nextEl: '.videos-next',
-                prevEl: '.videos-prev',
-              },
+              slidesPerGroup: 1,
+              simulateTouch: true,
+              grabCursor: true,
               pagination: {
                 el: '.videos-pagination',
                 clickable: true,
               },
               breakpoints: {
-                768: {
-                  slidesPerView: 1,
+                320: {
+                  slidesPerView: 1
                 },
-                1200: {
-                  slidesPerView: 3,
+                600: {
+                  slidesPerView: 2
+                },
+                991: {
+                  slidesPerView: 3
                 }
               }
-              
             });
           }
         }
@@ -460,38 +454,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //********************* */
-/*
+
 const btn = document.getElementById("sendEmail");
 
-document.getElementById("formContact").addEventListener("submit", function(event) {
+document.getElementById("contactoForm").addEventListener("submit", function(event) {
   event.preventDefault();
 
-  const serviceID = "service_0k4vjla"; //Remplazar 
-  const templateID = "template_5sj22co"; //Remplazar 
+  const serviceID = "service_lkym65i"; //Remplazar 
+  const templateID = "template_nld0hwd"; //Remplazar 
 
   emailjs.sendForm(serviceID, templateID, this).then(
     () => {
       Swal.fire(
-        'Message sent succesfully',
-        'Our team will contact you shortly',
-        'success'
+        'Mensaje enviado',
+        'Se ha enviado tu solicitud correctamente',
+        'susccess'
       )
     },
     err => {
       Swal.fire(
-        'Message not sent',
-        'Try again later.',
+        'No se pudo enviar el mensaje',
+        'Intente mas.',
         'error'
       )
     }
   );
   document.getElementById("name").value ="";
-  document.getElementById("lastName").value ="";
+  document.getElementById("apellido").value ="";
   document.getElementById("email").value ="";
- // document.getElementById("asunto").value ="";
+  document.getElementById("motivo").value ="";
+  document.getElementById("direccion").value ="";
   document.getElementById("message").value ="";
 });
-*/
+
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll(".container__menu--item:not(.container__menu--btn)");
@@ -539,11 +534,29 @@ function attachModalTriggers() {
 
 document.getElementById('contactoModalForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  // Aquí tu lógica de envío (EmailJS, fetch, etc.)
-  alert('¡Mensaje enviado!');
-  const modal = bootstrap.Modal.getInstance(document.getElementById('formModal'));
-  modal.hide();
-  this.reset();
+  const serviceID = "service_lkym65i"; //Remplazar 
+  const templateID = "template_m4grd99"; //Remplazar 
+  const form = this;
+  emailjs.sendForm(serviceID, templateID, form).then(
+    () => {
+      Swal.fire(
+        'Mensaje enviado',
+        'Se ha enviado tu solicitud correctamente',
+        'success'
+      ).then(() => {
+        const modal = bootstrap.Modal.getInstance(document.getElementById('formModal'));
+        modal.hide();
+        form.reset();
+      });
+    },
+    err => {
+      Swal.fire(
+        'No se pudo enviar el mensaje',
+        'Intente más tarde.',
+        'error'
+      );
+    }
+  );
 });
 
 // --- INICIO: Orden dinámico del h2 de sobreMi ---
@@ -583,3 +596,49 @@ document.getElementById('contactoModalForm').addEventListener('submit', function
   window.addEventListener('resize', moveSobreMiTitle);
 })();
 // --- FIN: Orden dinámico del h2 de sobreMi ---
+
+// --- INICIO: Activación visual de botón submit en formularios ---
+function setupFormValidation(formSelector, btnSelector, fields) {
+  const form = document.querySelector(formSelector);
+  if (!form) return;
+  const btn = form.querySelector(btnSelector);
+  if (!btn) return;
+
+  function checkFields() {
+    const allFilled = fields.every(sel => {
+      const el = form.querySelector(sel);
+      if (!el) return false;
+      if (el.tagName === 'SELECT') {
+        return el.value && !el.options[el.selectedIndex].disabled;
+      }
+      return el.value && el.value.trim().length > 0;
+    });
+    btn.classList.toggle('btn-active', allFilled);
+  }
+
+  fields.forEach(sel => {
+    const el = form.querySelector(sel);
+    if (el) {
+      el.addEventListener('input', checkFields);
+      el.addEventListener('change', checkFields);
+    }
+  });
+  // Validar al cargar
+  checkFields();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Formulario principal
+  setupFormValidation(
+    '#contactoForm',
+    '.btn-submit',
+    ['#nombre', '#apellido', '#email', '#motivo', '#mensaje']
+  );
+  // Formulario modal
+  setupFormValidation(
+    '#contactoModalForm',
+    '.btn-submit',
+    ['#nombreModal', '#emailModal', '#motivoModal', '#mensajeModal']
+  );
+});
+// --- FIN: Activación visual de botón submit en formularios ---

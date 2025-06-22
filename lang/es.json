@@ -171,6 +171,7 @@
       "name": "Nombre",
       "lastname": "Apellido",
       "email": "Correo Electrónico",
+      "direccion": "Dirección",
       "subject": "Motivo",
       "message": "Mensaje",
       "write": "Escribir",
