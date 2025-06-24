@@ -1395,6 +1395,14 @@ html {
   }
 }
 
+.container__home--img {
+  /*  @include respond-between("tablet-small", "tablet-medium") {
+     position: static;
+     width: 80% !important;
+     order: 1;
+
+   } */
+}
 @media (min-width: 320px) and (max-width: 374.98px) {
   .container__home--img {
     position: static;
@@ -1402,17 +1410,10 @@ html {
     order: 1;
   }
 }
-@media (min-width: 375px) and (max-width: 599.98px) {
+@media (min-width: 375px) and (max-width: 884.98px) {
   .container__home--img {
     position: static;
     width: 90% !important;
-    order: 1;
-  }
-}
-@media (min-width: 600px) and (max-width: 884.98px) {
-  .container__home--img {
-    position: static;
-    width: 80% !important;
     order: 1;
   }
 }

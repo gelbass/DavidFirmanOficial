@@ -188,18 +188,18 @@ main{
       width: 100% !important;
       order: 1;
     }
-    @include respond-between("phone-medium", "tablet-small") {
+    @include respond-between("phone-medium", "tablet-medium") {
     position: static;
     width: 90% !important;
     order: 1;
 
   }
-  @include respond-between("tablet-small", "tablet-medium") {
+ /*  @include respond-between("tablet-small", "tablet-medium") {
     position: static;
     width: 80% !important;
     order: 1;
 
-  }
+  } */
   @include respond-between("tablet-medium", "tablet-large") {}
   @include respond-between("tablet-large", "laptop-small") {}
 }
