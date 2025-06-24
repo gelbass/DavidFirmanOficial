@@ -9,19 +9,31 @@ main{
 .container__menu {
   @include respond-between("phone-small", "tablet-large") {
     flex-direction: column !important;
-    height: 130px !important;
+    height: 90px !important;
+    align-content: space-between;
   }
 }
 .container__menu--icon{
-  @include respond-between("phone-small", "tablet-large") {
-    justify-content: flex-end !important;
-    width: 60px;
-    height: 60px;
+  @include respond-between("phone-small", "phone-large") {
+    justify-content: space-around !important;
+    width: 100% !important;
+  }
+  @include respond-between("phone-large", "tablet-481") {
+    justify-content: space-around !important;
+    width: 65% !important;
+  }
+  @include respond-between("tablet-481", "tablet-683") {
+    justify-content: space-around !important;
+    width: 60% !important;
+  }
+  @include respond-between("tablet-683", "tablet-large") {
+    justify-content: space-around !important;
+    width: 40% !important;
   }
 }
 .container__menu--bar {
   @include respond-between("phone-small", "tablet-large") {
-    width: 50%!important;
+    //width: 50%!important;
     background: color(display-p3 0.2581 0.0497 0.0497);
     display: flex;
     gap: 20px;
@@ -29,11 +41,17 @@ main{
     justify-content: center !important;
     padding: 20px;
     z-index: 1;
+    margin-top: 20px;
     //align-items: flex-end !important;
+    border-radius: 0px 0px 50px 50px;
   }
 }
 .container__menu--items {
-  @include respond-between("phone-small", "phone-medium") {}
+  @include respond-between("phone-small", "tablet-large") {
+    flex-direction: column;
+    width: 100%;
+    padding: 0px;
+  }
   @include respond-between("phone-medium", "phone-large") {}
   @include respond-between("phone-large", "tablet-small") {}
   @include respond-between("tablet-small", "tablet-medium") {}
@@ -71,6 +89,11 @@ main{
   @include respond-between("tablet-small", "tablet-medium") {}
   @include respond-between("tablet-medium", "tablet-large") {}
   @include respond-between("tablet-large", "laptop-small") {}
+}
+.language-selected{
+  @include respond-between("phone-small", "tablet-large") {
+    margin-right: 15px;
+  }
 }
 .container__home {
      @include respond-between("phone-small", "phone-large") {
@@ -111,6 +134,7 @@ main{
     }
   }
 }
+
 .container__home--text {
     @include respond-between("phone-small", "phone-medium") {
         font-size: 18px !important;
@@ -118,12 +142,15 @@ main{
         padding: 10px !important;
         height: auto;
         padding-left: 0px;
+        order: 2;
     }
   @include respond-between("phone-medium", "tablet-medium") {
     width: 100%;
-    padding-top: 80px;
+    padding-top: 10px;
     height: auto;
     padding-left: 0px;
+    order: 2;
+
   }
    @include respond-between("tablet-medium", "tablet-large") {
 
@@ -159,6 +186,8 @@ main{
   @include respond-between("phone-small", "tablet-medium") {
     position: static;
     width: 70% !important;
+    order: 1;
+
   }
   @include respond-between("tablet-medium", "tablet-large") {}
   @include respond-between("tablet-large", "laptop-small") {}
@@ -167,6 +196,7 @@ main{
   @include respond-between("phone-small", "tablet-medium") {
     position: static;
     width: 100% !important;
+    order: 3;
   }
   @include respond-between("tablet-medium", "tablet-large") {}
   @include respond-between("tablet-large", "laptop-small") {}
@@ -995,5 +1025,16 @@ textarea.form-control {
   @include respond-between("tablet-small", "tablet-medium") {}
   @include respond-between("tablet-medium", "tablet-large") {}
   @include respond-between("tablet-large", "laptop-small") {}
+}
+.language-dropdown {
+  @include respond-between("phone-small", "tablet-large") {
+    .language-selected{
+      min-width: 80px;
+      padding: 6px 14px;
+    }
+    .lang-label {
+      display: none !important;
+    }
+  }
 }
 

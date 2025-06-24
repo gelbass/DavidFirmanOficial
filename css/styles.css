@@ -4,7 +4,7 @@
   height: 100px;
   display: flex !important;
   gap: 0px;
-  padding: 40px 60px !important;
+  padding: 20px 40px !important;
   display: flex !important;
   background: rgba(25, 0, 0, 0.5);
   background: color(display-p3 0.0846 0 0 / 0.5);
@@ -12,8 +12,7 @@
 }
 
 .container__menu--bar {
-  justify-content: space-between;
-  padding: 20px;
+  padding: 20px !important;
   z-index: 1;
 }
 
@@ -1105,6 +1104,7 @@ textarea.form-control {
   line-height: normal;
   margin: 0px;
   display: flex;
+  margin-right: 15px;
   align-items: center;
   gap: 10px;
   background: none;
@@ -1249,21 +1249,38 @@ html {
 @media (min-width: 320px) and (max-width: 991.98px) {
   .container__menu {
     flex-direction: column !important;
-    height: 130px !important;
+    height: 90px !important;
+    align-content: space-between;
   }
 }
 
-@media (min-width: 320px) and (max-width: 991.98px) {
+@media (min-width: 320px) and (max-width: 413.98px) {
   .container__menu--icon {
-    justify-content: flex-end !important;
-    width: 60px;
-    height: 60px;
+    justify-content: space-around !important;
+    width: 100% !important;
+  }
+}
+@media (min-width: 414px) and (max-width: 481.98px) {
+  .container__menu--icon {
+    justify-content: space-around !important;
+    width: 65% !important;
+  }
+}
+@media (min-width: 482px) and (max-width: 682.98px) {
+  .container__menu--icon {
+    justify-content: space-around !important;
+    width: 60% !important;
+  }
+}
+@media (min-width: 683px) and (max-width: 991.98px) {
+  .container__menu--icon {
+    justify-content: space-around !important;
+    width: 40% !important;
   }
 }
 
 @media (min-width: 320px) and (max-width: 991.98px) {
   .container__menu--bar {
-    width: 50% !important;
     background: color(display-p3 0.2581 0.0497 0.0497);
     display: flex;
     gap: 20px;
@@ -1271,6 +1288,21 @@ html {
     justify-content: center !important;
     padding: 20px;
     z-index: 1;
+    margin-top: 20px;
+    border-radius: 0px 0px 50px 50px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 991.98px) {
+  .container__menu--items {
+    flex-direction: column;
+    width: 100%;
+    padding: 0px;
+  }
+}
+@media (min-width: 320px) and (max-width: 991.98px) {
+  .language-selected {
+    margin-right: 15px;
   }
 }
 
@@ -1320,14 +1352,16 @@ html {
     padding: 10px !important;
     height: auto;
     padding-left: 0px;
+    order: 2;
   }
 }
 @media (min-width: 375px) and (max-width: 884.98px) {
   .container__home--text {
     width: 100%;
-    padding-top: 80px;
+    padding-top: 10px;
     height: auto;
     padding-left: 0px;
+    order: 2;
   }
 }
 @media (min-width: 320px) and (max-width: 374.98px) {
@@ -1365,12 +1399,14 @@ html {
   .container__home--img {
     position: static;
     width: 70% !important;
+    order: 1;
   }
 }
 @media (min-width: 320px) and (max-width: 884.98px) {
   .btn-home {
     position: static;
     width: 100% !important;
+    order: 3;
   }
 }
 @media (min-width: 320px) and (max-width: 413.98px) {
@@ -1935,6 +1971,16 @@ html {
   .container__footer--social {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 991.98px) {
+  .language-dropdown .language-selected {
+    min-width: 80px;
+    padding: 6px 14px;
+  }
+  .language-dropdown .lang-label {
+    display: none !important;
   }
 }
 

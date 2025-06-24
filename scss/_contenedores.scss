@@ -2,15 +2,15 @@
 @use "_mixing" as *;
 
 .container__menu{
-    @include containers(auto, 100px, flex !important, 0px, 40px 60px !important, row !important, space-between, center);
+    @include containers(auto, 100px, flex !important, 0px, 20px 40px !important, row !important, space-around, center);
 
     background: rgba(25, 0, 0, 0.50);
     background: color(display-p3 0.0846 0 0 / 0.50);
     backdrop-filter: blur(19.5px);
 }
 .container__menu--bar{
-    justify-content: space-between;
-    padding: 20px;
+    //justify-content: space-between !important;
+    padding: 20px !important;
     z-index: 1;
 }
 
@@ -20,6 +20,7 @@
     color: none !important;
 }
 .container__menu--items{
+    
     display: flex;
     padding: 10px 20px;
     justify-content: center;
@@ -641,6 +642,7 @@ textarea.form-control {
 .language-selected {
   @include text('Poppins', 18px, $colorTextB, normal, 400);
   display: flex;
+  margin-right: 15px;
   align-items: center;
   gap: 10px;
   background: none;

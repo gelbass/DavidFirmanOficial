@@ -63,20 +63,21 @@ function setLanguage(lang) {
         const services = document.getElementById('services-list');
         if (services) {
           services.innerHTML = '';
-          data.services.items.forEach(item => {
-            services.innerHTML += `
-              <div class="container-servicios--card">
-                <div class="card-contenido">
-                  <div class="container-servicios--card-text">
-                    <h3>${item.title}</h3>
-                    <p>${item.text}</p>
-                  </div>
-                  <a href="#" class="btn btn-servicios">${item.button}</a>
+          data.services.items.forEach((item, idx) => {
+          const aos = idx % 2 === 0 ? 'flip-left' : 'flip-right';
+          services.innerHTML += `
+            <div class="container-servicios--card"  data-aos="${aos}">
+              <div class="card-contenido">
+                <div class="container-servicios--card-text">
+                  <h3>${item.title}</h3>
+                  <p>${item.text}</p>
                 </div>
-                <img class="container-servicios--card-img" src="${item.img}" alt="${item.title}">
+                <a href="#" class="btn btn-servicios">${item.button}</a>
               </div>
-            `;
-          });
+              <img class="container-servicios--card-img" src="${item.img}" alt="${item.title}">
+            </div>
+          `;
+        });
           // --- INICIO: Orden dinámico de imagen en cards de servicios ---
           function moveServiceCardImg() {
             document.querySelectorAll('.container-servicios--card').forEach(card => {
@@ -653,3 +654,56 @@ document.addEventListener('DOMContentLoaded', function() {
   );
 });
 // --- FIN: Activación visual de botón submit en formularios ---
+
+// --- INICIO: Movimiento dinámico del menú responsive ---
+(function () {
+  const languageDropdown = document.getElementById('languageDropdown');
+  const menuBtn = document.querySelector('.container__menu--btn');
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  const navbarNav = document.getElementById('navbarNav');
+  const menuIcon = document.querySelector('.container__menu--icon');
+  const menuParent = menuIcon.parentElement; // el <nav>
+
+  function moveMenuElements() {
+    if (!languageDropdown || !menuBtn || !navbarToggler || !navbarNav || !menuIcon) return;
+
+    if (window.innerWidth < 992) {
+      // Responsive: languageDropdown dentro de container__menu--icon, antes del botón hamburguesa
+      if (navbarToggler.previousElementSibling !== languageDropdown) {
+        menuIcon.insertBefore(languageDropdown, navbarToggler);
+      }
+      // menuBtn dentro del menú colapsable al final
+      if (navbarNav.lastElementChild !== menuBtn) {
+        navbarNav.appendChild(menuBtn);
+      }
+    } else {
+      // Desktop: ambos afuera, después de container__menu--icon (al lado derecho)
+
+      // Mover languageDropdown justo después de container__menu--icon
+      if (languageDropdown.parentElement !== menuParent || languageDropdown.previousElementSibling !== menuIcon) {
+        languageDropdown.remove();
+        if (menuIcon.nextElementSibling) {
+          menuParent.insertBefore(languageDropdown, menuIcon.nextElementSibling);
+        } else {
+          menuParent.appendChild(languageDropdown);
+        }
+      }
+
+      // Mover menuBtn justo después de languageDropdown
+      if (menuBtn.parentElement !== menuParent || menuBtn.previousElementSibling !== languageDropdown) {
+        menuBtn.remove();
+        if (languageDropdown.nextElementSibling) {
+          menuParent.insertBefore(menuBtn, languageDropdown.nextElementSibling);
+        } else {
+          menuParent.appendChild(menuBtn);
+        }
+      }
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', moveMenuElements);
+  window.addEventListener('resize', moveMenuElements);
+})();
+
+
+// --- FIN: Movimiento dinámico del menú responsive ---
