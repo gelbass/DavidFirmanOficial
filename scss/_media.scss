@@ -1032,9 +1032,15 @@ textarea.form-control {
       min-width: 80px;
       padding: 6px 14px;
     }
+
+  }
+}
+
+.language-selected {
+  @include respond-between("phone-small", "tablet-large") {
+
     .lang-label {
       display: none !important;
     }
   }
 }
-

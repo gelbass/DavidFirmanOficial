@@ -1979,7 +1979,10 @@ html {
     min-width: 80px;
     padding: 6px 14px;
   }
-  .language-dropdown .lang-label {
+}
+
+@media (min-width: 320px) and (max-width: 991.98px) {
+  .language-selected .lang-label {
     display: none !important;
   }
 }
