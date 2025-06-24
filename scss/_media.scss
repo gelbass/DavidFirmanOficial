@@ -183,9 +183,14 @@ main{
   }
 }
 .container__home--img {
-  @include respond-between("phone-small", "tablet-medium") {
+  @include respond-between("phone-small", "phone-medium") {
+         position: static;
+      width: 100% !important;
+      order: 1;
+    }
+  @include respond-between("phone-medium", "tablet-medium") {
     position: static;
-    width: 70% !important;
+    width: 80% !important;
     order: 1;
 
   }
