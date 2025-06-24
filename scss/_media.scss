@@ -188,13 +188,13 @@ main{
       width: 100% !important;
       order: 1;
     }
-    @include respond-between("phone-medium", "phone-large") {
+    @include respond-between("phone-medium", "tablet-small") {
     position: static;
     width: 90% !important;
     order: 1;
 
   }
-  @include respond-between("phone-large", "tablet-medium") {
+  @include respond-between("tablet-small", "tablet-medium") {
     position: static;
     width: 80% !important;
     order: 1;
