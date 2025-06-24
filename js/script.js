@@ -1,3 +1,30 @@
+// --- INICIO: Detección automática de idioma por país (solo si no hay preferencia guardada) ---
+document.addEventListener('DOMContentLoaded', function () {
+  if (localStorage.getItem('lang')) return;
+  fetch('https://ipapi.co/json/')
+    .then(res => res.json())
+    .then(data => {
+      const country = data.country || '';
+      // Países hispanohablantes
+      const ES = ['AR','BO','CL','CO','CR','CU','DO','EC','SV','GQ','GT','HN','MX','NI','PA','PY','PE','PR','ES','UY','VE'];
+      // Países lusófonos
+      const PT = ['BR','PT','AO','MZ','GW','CV','ST','TL'];
+      // Países angloparlantes principales
+      const EN = ['US','GB','IE','CA','AU','NZ','JM','BZ','TT','BB','BS','AG','KN','LC','VC','GD','DM','ZW','NG','GH','KE','UG','ZA','BW','ZM','MW','NA','SL','LR','GM','SZ','CM','PK','IN','PH','SG','MY','HK','FJ','PG','SB','TO','WS','NR','TV'];
+      let lang = 'es';
+      if (PT.includes(country)) lang = 'pt';
+      else if (EN.includes(country)) lang = 'en';
+      else if (ES.includes(country)) lang = 'es';
+      localStorage.setItem('lang', lang);
+      setLanguage(lang);
+      // Si tienes un selector visual, actualízalo aquí si es necesario
+    })
+    .catch(() => {
+      // Si falla la geolocalización, no hacer nada
+    });
+});
+// --- FIN: Detección automática de idioma por país ---
+
 //CAMBIO DE IDIOMA
 let cursosSwiperInstance = null;
 function setLanguage(lang) {
