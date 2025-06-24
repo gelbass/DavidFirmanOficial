@@ -152,12 +152,12 @@
     <section id="cursos">
       <div class="container-cursos">
         <h2 data-i18n="courses.title" data-aos="fade-up"
-     data-aos-duration="3000"></h2>
+     data-aos-duration="2000"></h2>
         <p data-i18n="courses.intro" data-aos="fade-up"
-     data-aos-duration="3000"></p>
+     data-aos-duration="2000"></p>
         <div class="swiper cursosSwiper" data-aos="fade-down"
      data-aos-easing="linear"
-     data-aos-duration="1500">
+     data-aos-duration="1000">
           <div class="swiper-wrapper" id="courses-list"></div>
           <div class="swiper-pagination"></div>
         </div>
@@ -187,14 +187,19 @@
     <section id="libros">
       <div class="container__libros">
         <h2 data-i18n="books.title" data-aos="fade-up"
-     data-aos-duration="3000"></h2>
+     data-aos-duration="2000"></h2>
         <p data-i18n="books.intro" data-aos="fade-up"
-     data-aos-duration="3000"></p>
+     data-aos-duration="2000"></p>
         <!-- Libros compra -->
-        <div id="books-list" class="container__libros--compra--cards" data-aos="flip-left"></div>
+        <div id="books-list" class="container__libros--compra--cards" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000"></div>
         <!-- Libros gratuitos (carrusel) -->
-         <h3 data-i18n="books.msgBooks" data-aos="flip-up"></h3>
-        <div class="swiper librosDescargaSwiper" data-aos="flip-left">
+         <h3 data-i18n="books.msgBooks" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom"></h3>
+        <div class="swiper librosDescargaSwiper" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
           <div class="swiper-wrapper" id="books-free-list"></div>
           <div class="swiper-pagination librosDescarga-pagination"></div>
         </div>
@@ -207,7 +212,7 @@
       <div class="container__videos">
         <div class="container__videos--contenido">
            <div class="container__videos--text" data-aos="fade-up"
-     data-aos-duration="3000">
+     data-aos-duration="2000">
               <svg xmlns="http://www.w3.org/2000/svg" width="95" height="64" viewBox="0 0 95 64" fill="none">
                 <path d="M14.8462 0C10.9088 0 7.13257 1.58035 4.34836 4.3934C1.56415 7.20644 0 11.0218 0 15V49C0 52.9782 1.56415 56.7936 4.34836 59.6066C7.13257 62.4197 10.9088 64 14.8462 64H52.4567C56.3941 64 60.1703 62.4197 62.9545 59.6066C65.7387 56.7936 67.3029 52.9782 67.3029 49V46.988L84.1365 58.732C88.729 61.936 95 58.612 95 52.972V11.012C95 5.372 88.729 2.044 84.1365 5.252L67.3029 16.996V15C67.3029 11.0218 65.7387 7.20644 62.9545 4.3934C60.1703 1.58035 56.3941 0 52.4567 0H14.8462ZM67.3029 24.284L87.5096 10.188C87.6582 10.0844 87.832 10.0238 88.0123 10.0128C88.1926 10.0019 88.3723 10.0409 88.5322 10.1258C88.692 10.2107 88.8259 10.3381 88.9192 10.4943C89.0125 10.6505 89.0617 10.8296 89.0615 11.012V52.972C89.0617 53.1544 89.0125 53.3335 88.9192 53.4897C88.8259 53.6459 88.692 53.7733 88.5322 53.8582C88.3723 53.9431 88.1926 53.9821 88.0123 53.9712C87.832 53.9602 87.6582 53.8996 87.5096 53.796L67.3029 39.692V24.284ZM5.93849 15C5.93849 12.6131 6.87698 10.3239 8.54751 8.63604C10.218 6.94821 12.4837 6 14.8462 6H52.4567C54.8191 6 57.0849 6.94821 58.7554 8.63604C60.4259 10.3239 61.3644 12.6131 61.3644 15V49C61.3644 51.3869 60.4259 53.6761 58.7554 55.364C57.0849 57.0518 54.8191 58 52.4567 58H14.8462C12.4837 58 10.218 57.0518 8.54751 55.364C6.87698 53.6761 5.93849 51.3869 5.93849 49V15Z" fill="url(#paint0_linear_426_180)"/>
                 <defs>
@@ -221,10 +226,9 @@
               <p data-i18n="videos.intro"></p>
               <a href="https://www.youtube.com/@DavidFirmanOficial" class="btn btn-videos" target="_blank" data-i18n="videos.button"></a>
             </div>
-            <div class="container__videos--principal" id="video-principal" data-aos="fade-down"
-     data-aos-duration="3000"></div>
+            <div class="container__videos--principal" id="video-principal" data-aos="zoom-in-down"></div>
         </div>
-        <div class="swiper videosSwiper" data-aos="zoom-in-down">
+        <div class="swiper videosSwiper" >
           <div class="swiper-wrapper" id="videos-list"></div>
           <div class="swiper-pagination videos-pagination"></div>
         </div>
@@ -234,7 +238,7 @@
     <!-- CONTACTO INICIO -->
     <section id="contacto">
       <div class="container__contacto">
-        <div class="container__contacto--text">
+        <div class="container__contacto--text" data-aos="zoom-in-up">
           <h2 data-i18n="contact.title"></h2>
           <p data-i18n="contact.text"></p>
           <div class="container__contacto--redesSociales">
@@ -268,7 +272,7 @@
             </div>
           </div>
         </div>
-        <div class="container__contacto--form">
+        <div class="container__contacto--form" data-aos="zoom-in-up">
           <form id="contactoForm">
             <div class="row mb-3 row_form">
               <div class="col">
