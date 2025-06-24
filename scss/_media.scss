@@ -11,23 +11,24 @@ main{
     flex-direction: column !important;
     height: 90px !important;
     align-content: space-between;
+    padding: 20px !important;
   }
 }
 .container__menu--icon{
   @include respond-between("phone-small", "phone-large") {
-    justify-content: space-around !important;
-    width: 100% !important;
+    justify-content: flex-end !important;
+    width: 90% !important;
   }
   @include respond-between("phone-large", "tablet-481") {
-    justify-content: space-around !important;
+    justify-content: flex-end !important;
     width: 65% !important;
   }
   @include respond-between("tablet-481", "tablet-683") {
-    justify-content: space-around !important;
+    justify-content: flex-end !important;
     width: 60% !important;
   }
   @include respond-between("tablet-683", "tablet-large") {
-    justify-content: space-around !important;
+    justify-content: flex-end !important;
     width: 40% !important;
   }
 }

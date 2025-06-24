@@ -1251,30 +1251,31 @@ html {
     flex-direction: column !important;
     height: 90px !important;
     align-content: space-between;
+    padding: 20px !important;
   }
 }
 
 @media (min-width: 320px) and (max-width: 413.98px) {
   .container__menu--icon {
-    justify-content: space-around !important;
-    width: 100% !important;
+    justify-content: flex-end !important;
+    width: 90% !important;
   }
 }
 @media (min-width: 414px) and (max-width: 481.98px) {
   .container__menu--icon {
-    justify-content: space-around !important;
+    justify-content: flex-end !important;
     width: 65% !important;
   }
 }
 @media (min-width: 482px) and (max-width: 682.98px) {
   .container__menu--icon {
-    justify-content: space-around !important;
+    justify-content: flex-end !important;
     width: 60% !important;
   }
 }
 @media (min-width: 683px) and (max-width: 991.98px) {
   .container__menu--icon {
-    justify-content: space-around !important;
+    justify-content: flex-end !important;
     width: 40% !important;
   }
 }
