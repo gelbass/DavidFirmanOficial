@@ -266,7 +266,7 @@ function setLanguage(lang) {
         const videoPrincipal = document.getElementById('video-principal');
         if (videoPrincipal && data.videos.main) {
           videoPrincipal.innerHTML = `
-            <iframe src="https://www.youtube.com/embed/${data.videos.main.id}" title="${data.videos.main.title}" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/${data.videos.main.id}" title="${data.videos.main.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           `;
         }
 
@@ -278,7 +278,7 @@ function setLanguage(lang) {
             data.videos.list.forEach(video => {
               videosList.innerHTML += `
                 <div class="swiper-slide container__videos--card">
-                  <iframe src="https://www.youtube.com/embed/${video.id}" title="${video.title}" frameborder="0" allowfullscreen></iframe>
+                  <iframe src="https://www.youtube.com/embed/${video.id}" title="${video.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   <h3>${video.title}</h3>
                 </div>
               `;
