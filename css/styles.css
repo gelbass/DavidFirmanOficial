@@ -453,6 +453,10 @@
   filter: grayscale(0) !important; /* Elimina el filtro al pasar el cursor */
   transition: filter 0.3s ease !important; /* Añade una transición suave */
 }
+.swiper-slide-active iframe {
+  filter: grayscale(0) !important; /* Elimina el filtro al pasar el cursor */
+  transition: filter 0.3s ease !important; /* Añade una transición suave */
+}
 
 .card-curso--elementos {
   display: flex;
@@ -828,6 +832,7 @@
   height: 240px;
   border-radius: 10px;
   align-self: stretch;
+  filter: grayscale(100%);
 }
 
 .container__contacto {

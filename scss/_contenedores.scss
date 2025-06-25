@@ -263,6 +263,10 @@
         filter: grayscale(0) !important; /* Elimina el filtro al pasar el cursor */
         transition: filter 0.3s ease !important; /* Añade una transición suave */
     }
+    iframe{
+        filter: grayscale(0) !important; /* Elimina el filtro al pasar el cursor */
+        transition: filter 0.3s ease !important; /* Añade una transición suave */
+    }
 }
 .card-curso--elementos{
     display: flex;
@@ -457,6 +461,7 @@
         border-radius: 10px;
         //height: 364px;
         align-self: stretch;
+        filter: grayscale(100%);
     }
 
 }

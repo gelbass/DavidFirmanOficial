@@ -141,6 +141,7 @@ function setLanguage(lang) {
           loop: true,
           slidesPerGroup: 1,
           simulateTouch: true,
+          centeredSlides: true,
           grabCursor: true,
           pagination: {
             el: '.swiper-pagination',
@@ -296,6 +297,7 @@ function setLanguage(lang) {
               slidesPerGroup: 1,
               simulateTouch: true,
               grabCursor: true,
+              centeredSlides: true,
               pagination: {
                 el: '.videos-pagination',
                 clickable: true,
