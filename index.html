@@ -313,6 +313,7 @@
               <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required placeholder=""></textarea>
             </div>
             <div class="form-footer">
+              <span id="sendingMsg" class="sending-msg">Enviando...</span>
               <button type="submit" class="btn btn-submit" data-i18n="contact.form.send"></button>
             </div>
           </form>
@@ -380,7 +381,7 @@
             <div class="row mb-3 row_form">
               <div class="col">
                 <label for="pais" class="form-label" data-i18n="contact.form.pais"></label>
-                <input type="text" class="form-control" id="paisModal" name="pais" required placeholder="">
+                <input type="text" class="form-control" id="paisModal" name="paisModal" required placeholder="">
               </div>
               <div class="col">
                 <label for="ciudad" class="form-label" data-i18n="contact.form.ciudad"></label>
@@ -397,6 +398,7 @@
             </div>
           </div>
           <div class="modal-footer">
+            <span id="sendingMsgModal" class="sending-msg" data-i18n="contact.form.enviando"></span>
             <button type="submit" class="btn btn-submit" data-i18n="contact.form.send"></button>
           </div>
         </form>

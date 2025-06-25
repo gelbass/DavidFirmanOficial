@@ -467,36 +467,49 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //********************* */
 
-const btn = document.getElementById("sendEmail");
-
 document.getElementById("contactoForm").addEventListener("submit", function(event) {
   event.preventDefault();
+
+  // Mostrar mensaje de "Enviando..."
+  var sendingMsg = document.getElementById("sendingMsg");
+  if (sendingMsg) sendingMsg.style.display = "inline-block";
 
   const serviceID = "service_lkym65i"; //Remplazar 
   const templateID = "template_nld0hwd"; //Remplazar 
 
   emailjs.sendForm(serviceID, templateID, this).then(
     () => {
+      if (sendingMsg) sendingMsg.style.display = "none";
       Swal.fire(
         'Mensaje enviado',
         'Se ha enviado tu solicitud correctamente',
-        'susccess'
+        'success'
       )
+       document.getElementById("nombre").value ="";
+      document.getElementById("apellido").value ="";
+      document.getElementById("email").value ="";
+      document.getElementById("pais").value ="";
+      document.getElementById("ciudad").value ="";
+      document.getElementById("motivo").value ="";
+      document.getElementById("mensaje").value ="";
     },
     err => {
+      if (sendingMsg) sendingMsg.style.display = "none";
       Swal.fire(
         'No se pudo enviar el mensaje',
         'Intente mas.',
         'error'
       )
+       document.getElementById("nombre").value ="";
+        document.getElementById("apellido").value ="";
+        document.getElementById("email").value ="";
+        document.getElementById("pais").value ="";
+        document.getElementById("ciudad").value ="";
+        document.getElementById("motivo").value ="";
+        document.getElementById("mensaje").value ="";
     }
   );
-  document.getElementById("name").value ="";
-  document.getElementById("apellido").value ="";
-  document.getElementById("email").value ="";
-  document.getElementById("motivo").value ="";
-  document.getElementById("direccion").value ="";
-  document.getElementById("message").value ="";
+ 
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -548,27 +561,39 @@ document.getElementById('contactoModalForm').addEventListener('submit', function
   e.preventDefault();
   const serviceID = "service_lkym65i"; //Remplazar 
   const templateID = "template_m4grd99"; //Remplazar 
-  const form = this;
-  emailjs.sendForm(serviceID, templateID, form).then(
+   var sendingMsg = document.getElementById("sendingMsgModal");
+  if (sendingMsg) sendingMsg.style.display = "inline-block";
+  emailjs.sendForm(serviceID, templateID, this).then(
     () => {
+      if (sendingMsg) sendingMsg.style.display = "none";
       Swal.fire(
         'Mensaje enviado',
         'Se ha enviado tu solicitud correctamente',
         'success'
-      ).then(() => {
-        const modal = bootstrap.Modal.getInstance(document.getElementById('formModal'));
-        modal.hide();
-        form.reset();
-      });
+      )
+      document.getElementById("nombreModal").value ="";
+  document.getElementById("emailModal").value ="";
+  document.getElementById("paisModal").value ="";
+  document.getElementById("ciudadModal").value ="";
+  document.getElementById("motivoModal").value ="";
+  document.getElementById("mensajeModal").value ="";
     },
     err => {
+      if (sendingMsg) sendingMsg.style.display = "none";
       Swal.fire(
         'No se pudo enviar el mensaje',
-        'Intente más tarde.',
+        'Intente mas tarde',
         'error'
-      );
+      )
+      document.getElementById("nombreModal").value ="";
+  document.getElementById("emailModal").value ="";
+  document.getElementById("paisModal").value ="";
+  document.getElementById("ciudadModal").value ="";
+  document.getElementById("motivoModal").value ="";
+  document.getElementById("mensajeModal").value ="";
     }
   );
+    
 });
 
 // --- INICIO: Orden dinámico del h2 de sobreMi ---

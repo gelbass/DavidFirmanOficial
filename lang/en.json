@@ -139,6 +139,11 @@
         "img": "./img/MASTERCLASS-PSICOLOGIA.webp",
         "link": "https://drive.google.com/file/d/1jhvegae0_X0Tq2dqOzGkXn5gp3agufrd/view",
         "button": "Download"
+      },{
+        "title": "Building a Marriage that Works",
+        "img": "./img/book-Matrimonio.webp",
+        "link": "https://drive.google.com/file/d/1wmg_ciWBBU3j0eGvJ_S03HComu3NPPGA/view",
+        "button": "Download"
       }
     ]
   },
@@ -182,6 +187,7 @@
       "message": "Message",
       "write": "Write your message",
       "send": "Send",
+      "enviando": "Sending...",
       "nameOption1": "Psychotherapeutic Consultation",
       "nameOption2": "Professional Training",
       "nameOption3": "Clinical Case Supervision",

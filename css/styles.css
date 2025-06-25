@@ -1012,9 +1012,9 @@ textarea.form-control {
 .form-footer {
   display: flex;
   padding: 10px 30px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
   gap: 50px;
   border-radius: 0px 0px 50px 50px;
   border: 1px solid #FFFAF7;
@@ -1042,6 +1042,18 @@ textarea.form-control {
   font-weight: 300;
   line-height: normal;
   margin: 0px;
+  margin: 0px;
+}
+
+.sending-msg {
+  display: none;
+  margin-left: 10px;
+  font-family: "Poppins";
+  font-size: 20px !important;
+  color: #1E1E1E !important;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   margin: 0px;
 }
 

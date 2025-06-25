@@ -576,9 +576,9 @@ textarea.form-control {
 .form-footer{
     display: flex;
     padding: 10px 30px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
     gap: 50px;
     border-radius: 0px 0px 50px 50px;
     border: 1px solid $colorTextB;
@@ -593,6 +593,11 @@ textarea.form-control {
         @include text('Poppins', 15px, $colorTextB, normal, 300);
         margin: 0px;
     }
+}
+.sending-msg{
+    display:none;
+    margin-left:10px;
+     @include text('Poppins', 20px, $colorTextN, normal, 400);
 }
 .container__footer--social{
     display: flex;

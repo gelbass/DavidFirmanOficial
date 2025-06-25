@@ -137,7 +137,12 @@
       {
         "title": "PDF Masterclass sobre La Psicología de Dios",
         "img": "./img/MASTERCLASS-PSICOLOGIA.webp",
-        "link": "#",
+        "link": "https://drive.google.com/file/d/1jhvegae0_X0Tq2dqOzGkXn5gp3agufrd/view",
+        "button": "Descargar"
+      },{
+        "title": "Construyendo un matrimonio que funciona",
+        "img": "./img/book-Matrimonio.webp",
+        "link": "https://drive.google.com/file/d/1wmg_ciWBBU3j0eGvJ_S03HComu3NPPGA/view",
         "button": "Descargar"
       }
     ]
@@ -182,6 +187,7 @@
       "message": "Mensaje",
       "write": "Escribir",
       "send": "Enviar",
+      "enviando": "Enviando...",
       "nameOption1": "Consulta Psicoterapéutica",
       "nameOption2": "Entrenamiento Profesional",
       "nameOption3": "Supervisión de Casos Clínicos",
