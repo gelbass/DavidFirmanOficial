@@ -32,19 +32,22 @@
         "title": "Consultas psicoterapéuticas",
         "text": "Con más de 28 años de experiencia clínica trabajo en resolución de conflictos o terapia breve considerando el ser integral: espíritu, alma y cuerpo.",
         "button": "Solicitar",
-        "img": "./img/ConsultasPsicoterapeuticas.webp"       
+        "img": "./img/ConsultasPsicoterapeuticas.webp" ,
+        "link":"https://mentoria.davidfirmanoficial.com/"     
       },
       {
         "title": "Entrenamiento de profesionales de la Salud mental",
         "text": "Trabajamos para salir del secuestro del humanismo entendiendo la sabiduría eterna de Dios para solucionar de fondo los problemas humanos. Material grabado y encuentros en vivo vía zoom.",
         "button": "Solicitar",
-        "img": "./img/EntrenamientoDeprofesionalesDeLaSaludMental.webp"
+        "img": "./img/EntrenamientoDeprofesionalesDeLaSaludMental.webp",
+        "link":""
       },
       {
         "title": "Supervisión de casos clínicos",
         "text": "En encuentros en vivo vía zoom poniendo a disposición mi experiencia para colaborar orientando en los casos de profesionales que lo soliciten.",
         "button": "Solicitar",
-        "img": "./img/SupervisiónDeCasosClínicos.webp"
+        "img": "./img/SupervisiónDeCasosClínicos.webp",
+        "link":""
       }
     ]
   },
@@ -117,32 +120,9 @@
         "button": "Descargar"
       },
       {
-        "title": "Cómo enfrentar la muerte",
-        "img": "./img/book-muerte.webp",
-        "link": "https://drive.google.com/file/d/1KdALt6U9_M_M0Gl0yt9XmrjSRrnUiTUB/view",
-        "button": "Descargar"
-      },
-      {
-        "title": "Familias con propósito",
-        "img": "./img/book-familiaProposito.webp",
-        "link": "https://drive.google.com/file/d/1kTrFGZVQHMhD371zRwaXcyXvRtiYLGQ_/view",
-        "button": "Descargar"
-      },
-      {
-        "title": "Noviazgo de la mano de Dios",
-        "img": "./img/book-noviazgo.webp",
-        "link": "https://drive.google.com/file/d/1CgdalSRh-eHUZ6-koZED5KqrA32P0gqS/view",
-        "button": "Descargar"
-      },
-      {
         "title": "PDF Masterclass sobre La Psicología de Dios",
         "img": "./img/MASTERCLASS-PSICOLOGIA.webp",
         "link": "https://drive.google.com/file/d/1jhvegae0_X0Tq2dqOzGkXn5gp3agufrd/view",
-        "button": "Descargar"
-      },{
-        "title": "Construyendo un matrimonio que funciona",
-        "img": "./img/book-Matrimonio.webp",
-        "link": "https://drive.google.com/file/d/1wmg_ciWBBU3j0eGvJ_S03HComu3NPPGA/view",
         "button": "Descargar"
       }
     ]

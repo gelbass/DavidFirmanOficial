@@ -32,19 +32,22 @@
         "title": "Psychotherapeutic Consultations",
         "text": "With over 28 years of clinical experience, I work on conflict resolution or brief therapy, considering the whole being: spirit, soul, and body.",
         "button": "Request",
-        "img": "./img/ConsultasPsicoterapeuticas.webp"
+        "img": "./img/ConsultasPsicoterapeuticas.webp",
+        "link":"https://mentoria.davidfirmanoficial.com/"
       },
       {
         "title": "Mental Health Professional Training",
         "text": "We work to break free from the kidnapping of humanism by understanding God's eternal wisdom to truly address human problems. Recorded material and live Zoom sessions.",
         "button": "Request",
-        "img": "./img/EntrenamientoDeprofesionalesDeLaSaludMental.webp"
+        "img": "./img/EntrenamientoDeprofesionalesDeLaSaludMental.webp",
+        "link":""
       },
       {
         "title": "Clinical Case Supervision",
         "text": "Live Zoom sessions where I offer my experience to support and guide professionals with their cases.",
         "button": "Request",
-      "img": "./img/SupervisiónDeCasosClínicos.webp"
+      "img": "./img/SupervisiónDeCasosClínicos.webp",
+      "link":""
       }
     ]
   },
@@ -117,32 +120,9 @@
         "button": "Download"
       },
       {
-        "title": "How to Face Death",
-        "img": "./img/book-muerte.webp",
-        "link": "https://drive.google.com/file/d/1KdALt6U9_M_M0Gl0yt9XmrjSRrnUiTUB/view",
-        "button": "Download"
-      },
-      {
-        "title": "Families with Purpose",
-        "img": "./img/book-familiaProposito.webp",
-        "link": "https://drive.google.com/file/d/1kTrFGZVQHMhD371zRwaXcyXvRtiYLGQ_/view",
-        "button": "Download"
-      },
-      {
-        "title": "Courtship Guided by God",
-        "img": "./img/book-noviazgo.webp",
-        "link": "https://drive.google.com/file/d/1CgdalSRh-eHUZ6-koZED5KqrA32P0gqS/view",
-        "button": "Download"
-      },
-      {
         "title": "PDF of the Masterclass on The Psychology of God",
         "img": "./img/MASTERCLASS-PSICOLOGIA.webp",
         "link": "https://drive.google.com/file/d/1jhvegae0_X0Tq2dqOzGkXn5gp3agufrd/view",
-        "button": "Download"
-      },{
-        "title": "Building a Marriage that Works",
-        "img": "./img/book-Matrimonio.webp",
-        "link": "https://drive.google.com/file/d/1wmg_ciWBBU3j0eGvJ_S03HComu3NPPGA/view",
         "button": "Download"
       }
     ]

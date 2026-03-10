@@ -65,6 +65,7 @@ function setLanguage(lang) {
           services.innerHTML = '';
           data.services.items.forEach((item, idx) => {
           const aos = idx % 2 === 0 ? 'flip-left' : 'flip-right';
+          
           services.innerHTML += `
             <div class="container-servicios--card"  data-aos="${aos}">
               <div class="card-contenido">
@@ -72,7 +73,11 @@ function setLanguage(lang) {
                   <h3>${item.title}</h3>
                   <p>${item.text}</p>
                 </div>
-                <a href="#" class="btn btn-servicios">${item.button}</a>
+                <a href="${item.link || '#'}" 
+                  class="btn btn-servicios ${!item.link ? 'modal-trigger' : ''}" 
+                  ${item.link ? 'target="_blank"' : ''}>
+                  ${item.button}
+                </a>
               </div>
               <img class="container-servicios--card-img" src="${item.img}" alt="${item.title}">
             </div>
@@ -541,18 +546,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 function attachModalTriggers() {
-  document.querySelectorAll('.btn-invitaciones, .btn-servicios').forEach(btn => {
+  document.querySelectorAll('.modal-trigger, .btn-invitaciones').forEach(btn => {
     btn.addEventListener('click', function(e) {
       e.preventDefault();
+
       let motivo = '';
+
       if (this.classList.contains('btn-invitaciones')) {
         motivo = 'Solicitar invitación';
       } else {
-        // Busca el h3 más cercano hacia arriba en la jerarquía
-        const h3 = this.closest('.container-servicios--card, .swiper-slide, .container__invitaciones--contenido')?.querySelector('h3');
+        const h3 = this.closest('.container-servicios--card, .swiper-slide, .container__invitaciones--contenido')
+          ?.querySelector('h3');
+
         if (h3) motivo = h3.textContent.trim();
       }
+
       document.getElementById('motivoModal').value = motivo;
+
       const modal = new bootstrap.Modal(document.getElementById('formModal'));
       modal.show();
     });
